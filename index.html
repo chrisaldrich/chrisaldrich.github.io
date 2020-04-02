@@ -157,6 +157,8 @@ Error message and password prompt
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/close-all</li>
 
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/encryption</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/fold-all</li>
@@ -164,6 +166,8 @@ Error message and password prompt
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/full-screen</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
+
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/manager</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/more-page-actions</li>
 
@@ -186,6 +190,8 @@ Error message and password prompt
 <li>$:/config/TiddlerInfo/Mode</li>
 
 <li>$:/config/Tiddlers/TitleLinks</li>
+
+<li>$:/config/TimestampDisable</li>
 
 <li>$:/config/Toolbar/Text</li>
 
@@ -255,9 +261,13 @@ Error message and password prompt
 
 <li>$:/temp/search</li>
 
+<li>$:/theme</li>
+
 <li>$:/themes/tiddlywiki/snowwhite</li>
 
 <li>$:/themes/tiddlywiki/vanilla</li>
+
+<li>$:/view</li>
 
 <li>2020-03-18</li>
 
@@ -274,8 +284,6 @@ Error message and password prompt
 <li>A TiddlyWiki on My Own Domain!</li>
 
 <li>Chris Aldrich</li>
-
-<li>chrisaldrich</li>
 
 <li>Completed</li>
 
@@ -339,16 +347,22 @@ Error message and password prompt
 <div created="20200320171653391" creator="chrisaldrich" modified="20200320171653391" modifier="chrisaldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/close-all">
 <pre>show</pre>
 </div>
+<div created="20200402080127393" creator="Chris Aldrich" modified="20200402080128015" modifier="Chris Aldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel">
+<pre>show</pre>
+</div>
 <div created="20200402073323806" creator="chrisaldrich" modified="20200402073325218" modifier="chrisaldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/encryption">
 <pre>hide</pre>
 </div>
 <div created="20200320171701366" creator="chrisaldrich" modified="20200320171703188" modifier="chrisaldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/fold-all">
 <pre>hide</pre>
 </div>
-<div created="20200402073335034" creator="chrisaldrich" modified="20200402073335034" modifier="chrisaldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/full-screen">
-<pre>show</pre>
+<div created="20200402073335034" creator="chrisaldrich" modified="20200402080104968" modifier="Chris Aldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/full-screen">
+<pre>hide</pre>
 </div>
 <div created="20200318210135324" modified="20200318210135324" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
+<pre>show</pre>
+</div>
+<div created="20200402080135874" creator="Chris Aldrich" modified="20200402080135874" modifier="Chris Aldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/manager">
 <pre>show</pre>
 </div>
 <div created="20200318210228686" modified="20200318210228686" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/more-page-actions">
@@ -357,14 +371,14 @@ Error message and password prompt
 <div created="20200318210145099" modified="20200318210145099" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-journal">
 <pre>show</pre>
 </div>
-<div created="20200318210142447" modified="20200318210142447" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/permaview">
-<pre>show</pre>
+<div created="20200318210142447" creator="Chris Aldrich" modified="20200402080121385" modifier="Chris Aldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/permaview">
+<pre>hide</pre>
 </div>
-<div created="20200320171748129" creator="chrisaldrich" modified="20200320171748129" modifier="chrisaldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/storyview">
-<pre>show</pre>
+<div created="20200320171748129" creator="chrisaldrich" modified="20200402080102807" modifier="Chris Aldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/storyview">
+<pre>hide</pre>
 </div>
-<div created="20200320171739351" creator="chrisaldrich" modified="20200320171739351" modifier="chrisaldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/tag-manager">
-<pre>show</pre>
+<div created="20200320171739351" creator="chrisaldrich" modified="20200402080201209" modifier="Chris Aldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/tag-manager">
+<pre>hide</pre>
 </div>
 <div created="20200402073314968" creator="chrisaldrich" modified="20200402073314968" modifier="chrisaldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/theme">
 <pre>show</pre>
@@ -383,6 +397,9 @@ Error message and password prompt
 </div>
 <div created="20200319023226933" creator="chrisaldrich" modified="20200319023226933" modifier="chrisaldrich" title="$:/config/Tiddlers/TitleLinks">
 <pre>yes</pre>
+</div>
+<div created="20200402080003583" creator="Chris Aldrich" modified="20200402080003583" modifier="Chris Aldrich" title="$:/config/TimestampDisable">
+<pre>no</pre>
 </div>
 <div created="20200319023244176" creator="chrisaldrich" modified="20200319023251217" modifier="chrisaldrich" title="$:/config/Toolbar/Text">
 <pre>no</pre>
@@ -9719,11 +9736,11 @@ IndieWeb</pre>
 <div created="20200319023300622" creator="chrisaldrich" modified="20200402044109745" modifier="chrisaldrich" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20200319010110544" creator="chrisaldrich" modified="20200402074654201" modifier="Chris Aldrich" title="$:/state/tab/moresidebar-1850697562">
-<pre>$:/core/ui/MoreSideBar/All</pre>
+<div created="20200319010110544" creator="chrisaldrich" modified="20200402075835400" modifier="Chris Aldrich" title="$:/state/tab/moresidebar-1850697562">
+<pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20200318205933272" creator="chrisaldrich" modified="20200402074653089" modifier="Chris Aldrich" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/More</pre>
+<div created="20200318205933272" creator="chrisaldrich" modified="20200402080212610" modifier="Chris Aldrich" title="$:/state/tab/sidebar--595412856">
+<pre>Contents</pre>
 </div>
 <div created="20200402065443246" creator="chrisaldrich" modified="20200402065443246" modifier="chrisaldrich" title="$:/state/toc/Contents-IndieWeb-1843068618">
 <pre>open</pre>
@@ -9737,7 +9754,7 @@ IndieWeb</pre>
 <div created="20200319022404294" creator="h" modified="20200402074333095" modifier="Chris ldrich" title="$:/status/UserName">
 <pre>Chris Aldrich</pre>
 </div>
-<div created="20200402072014375" creator="chrisaldrich" list="GettingStarted $:/ControlPanel" modified="20200402075404295" modifier="Chris Aldrich" title="$:/StoryList">
+<div created="20200402080234041" creator="Chris Aldrich" list="[[A TiddlyWiki on My Own Domain!]] [[Chris Aldrich]] IndieWeb" modified="20200402145224429" modifier="Chris Aldrich" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200320171902433" creator="chrisaldrich" modified="20200402075232109" modifier="Chris Aldrich" title="$:/temp/advancedsearch">
@@ -9803,6 +9820,9 @@ IndieWeb</pre>
 </div>
 <div created="20200319022254809" creator="chrisaldrich" modified="20200402075232109" modifier="Chris Aldrich" title="$:/temp/search">
 <pre></pre>
+</div>
+<div created="20200402080210759" creator="Chris Aldrich" modified="20200402080217673" modifier="Chris Aldrich" title="$:/theme">
+<pre>$:/themes/tiddlywiki/vanilla</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.21">
 <pre>{
@@ -9913,6 +9933,9 @@ IndieWeb</pre>
     }
 }</pre>
 </div>
+<div created="20200402080015468" creator="Chris Aldrich" modified="20200402080034510" modifier="Chris Aldrich" title="$:/view">
+<pre>classic</pre>
+</div>
 <div created="20200318212021058" creator="chrisaldrich" modified="20200402074707462" modifier="Chris Aldrich" tags="Journal" title="2020-03-18">
 <pre>New notes for a Tiddler. </pre>
 </div>
@@ -9991,7 +10014,7 @@ Just a generally pleasant, warm, sunny day.</pre>
 !! Weather
 </pre>
 </div>
-<div created="20200402064927183" creator="chrisaldrich" modified="20200402075007433" modifier="Chris Aldrich" tags="IndieWeb" title="A TiddlyWiki on My Own Domain!">
+<div created="20200402064927183" creator="chrisaldrich" modified="20200402145237156" modifier="Chris Aldrich" tags="IndieWeb TiddlyWiki" title="A TiddlyWiki on My Own Domain!">
 <pre>It looks like I've been able to: 
 
 * set up a GitHub pages website
@@ -10019,9 +10042,6 @@ PGP Public Key &lt;span class=&quot;p-pgp&quot;&gt;&lt;a href=&quot;https://keyb
 &lt;link href=&quot;mailto:chrisaldrich@jhu.edu&quot; rel=&quot;me&quot;&gt;
 &lt;link href=&quot;mailto:christopherjaldrich@gmail.com&quot; rel=&quot;me&quot;&gt;
 &lt;/div&gt;</pre>
-</div>
-<div created="20200402073529445" creator="chrisaldrich" modified="20200402074601178" modifier="Chris Aldrich" title="chrisaldrich">
-<pre></pre>
 </div>
 <div created="20200318211835479" creator="Chris Aldrich" modified="20200402074953768" modifier="Chris Aldrich" tags="Tasks" title="Completed">
 <pre>&lt;$list filter=&quot;[!has[draft.of]tag[task]tag[done]sort[created]]&quot;&gt;
