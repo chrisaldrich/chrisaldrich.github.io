@@ -153,7 +153,11 @@ Error message and password prompt
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/close-all</li>
 
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/encryption</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/fold-all</li>
+
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/full-screen</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
 
@@ -166,6 +170,8 @@ Error message and password prompt
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/storyview</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/tag-manager</li>
+
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/theme</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/timestamp</li>
 
@@ -251,15 +257,15 @@ Error message and password prompt
 
 <li>2020-03-23</li>
 
+<li>2020-03-24</li>
+
 <li>2020-04-01</li>
 
 <li>2020-04-02</li>
 
-<li>24th March 2020</li>
-
 <li>A TiddlyWiki on My Own Domain!</li>
 
-<li>chrisaldrich</li>
+<li>Chris Aldrich</li>
 
 <li>Completed</li>
 
@@ -317,8 +323,14 @@ Error message and password prompt
 <div created="20200320171653391" creator="chrisaldrich" modified="20200320171653391" modifier="chrisaldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/close-all">
 <pre>show</pre>
 </div>
+<div created="20200402073323806" creator="chrisaldrich" modified="20200402073325218" modifier="chrisaldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/encryption">
+<pre>hide</pre>
+</div>
 <div created="20200320171701366" creator="chrisaldrich" modified="20200320171703188" modifier="chrisaldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/fold-all">
 <pre>hide</pre>
+</div>
+<div created="20200402073335034" creator="chrisaldrich" modified="20200402073335034" modifier="chrisaldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/full-screen">
+<pre>show</pre>
 </div>
 <div created="20200318210135324" modified="20200318210135324" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
 <pre>show</pre>
@@ -336,6 +348,9 @@ Error message and password prompt
 <pre>show</pre>
 </div>
 <div created="20200320171739351" creator="chrisaldrich" modified="20200320171739351" modifier="chrisaldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/tag-manager">
+<pre>show</pre>
+</div>
+<div created="20200402073314968" creator="chrisaldrich" modified="20200402073314968" modifier="chrisaldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/theme">
 <pre>show</pre>
 </div>
 <div created="20200320171754465" creator="chrisaldrich" modified="20200320171755984" modifier="chrisaldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/timestamp">
@@ -9681,11 +9696,11 @@ Error message and password prompt
 <div created="20200319023300622" creator="chrisaldrich" modified="20200402044109745" modifier="chrisaldrich" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20200319010110544" modified="20200319022334808" title="$:/state/tab/moresidebar-1850697562">
-<pre>$:/core/ui/MoreSideBar/Shadows</pre>
+<div created="20200319010110544" creator="chrisaldrich" modified="20200402073440613" modifier="chrisaldrich" title="$:/state/tab/moresidebar-1850697562">
+<pre>$:/core/ui/MoreSideBar/Orphans</pre>
 </div>
-<div created="20200318205933272" creator="chrisaldrich" modified="20200402072745379" modifier="chrisaldrich" title="$:/state/tab/sidebar--595412856">
-<pre>Contents</pre>
+<div created="20200318205933272" creator="chrisaldrich" modified="20200402073344580" modifier="chrisaldrich" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/More</pre>
 </div>
 <div created="20200402065443246" creator="chrisaldrich" modified="20200402065443246" modifier="chrisaldrich" title="$:/state/toc/Contents-IndieWeb-1843068618">
 <pre>open</pre>
@@ -9699,7 +9714,7 @@ Error message and password prompt
 <div created="20200319022404294" creator="h" modified="20200319022406899" modifier="chrisaldric" title="$:/status/UserName">
 <pre>chrisaldrich</pre>
 </div>
-<div created="20200402072014375" creator="chrisaldrich" list="2020-03-23 2020-04-02" modified="20200402073203257" modifier="chrisaldrich" title="$:/StoryList">
+<div created="20200402072014375" creator="chrisaldrich" list="[[Chris Aldrich]] 2020-04-02" modified="20200402073442519" modifier="chrisaldrich" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200320171902433" creator="chrisaldrich" modified="20200402072123238" modifier="chrisaldrich" title="$:/temp/advancedsearch">
@@ -9910,6 +9925,19 @@ Still cloudy and cool; mostly cloudy, but I can see some blue sky and sun today 
 !! Weather
 Generally sunny, but cool most of the day. Much brighter than the last few days</pre>
 </div>
+<div created="20200324151056541" creator="chrisaldrich" modified="20200402073239673" modifier="chrisaldrich" tags="Journal" title="2020-03-24">
+<pre>!!Notes
+
+
+!! Daily Diary
+7:22 AM Wake up
+7:40 AM Watch lecture 2 of City of God
+
+
+---
+!! Weather
+</pre>
+</div>
 <div created="20200402043028014" creator="chrisaldrich" modified="20200402073127758" modifier="chrisaldrich" tags="Journal" title="2020-04-01">
 <pre>!!Notes
 * Tried setting up TiddlyWiki to save to GitHub Pages.
@@ -9941,19 +9969,6 @@ Just a generally pleasant, warm, sunny day.</pre>
 !! Weather
 </pre>
 </div>
-<div created="20200324151056541" creator="chrisaldrich" modified="20200325060831564" modifier="chrisaldrich" tags="Journal" title="24th March 2020">
-<pre>!!Notes
-
-
-!! Daily Diary
-7:22 AM Wake up
-7:40 AM Watch lecture 2 of City of God
-
-
----
-!! Weather
-</pre>
-</div>
 <div created="20200402064927183" creator="chrisaldrich" modified="20200402065556153" modifier="chrisaldrich" tags="IndieWeb" title="A TiddlyWiki on My Own Domain!">
 <pre>It looks like I've been able to:
 
@@ -9964,7 +9979,7 @@ Just a generally pleasant, warm, sunny day.</pre>
 * push the changes to GitHub
 * and finally create a pull request to modify them on GitHub and publish them to the site!</pre>
 </div>
-<div created="20200402071124304" creator="chrisaldrich" modified="20200402071145858" modifier="chrisaldrich" title="chrisaldrich">
+<div created="20200402071124304" creator="chrisaldrich" modified="20200402073456204" modifier="chrisaldrich" title="Chris Aldrich">
 <pre>Hi I'm Chris. Welcome to my little wiki. Thanks for stopping by.</pre>
 </div>
 <div created="20200318211835479" modified="20200319003210319" tags="Tasks" title="Completed">
