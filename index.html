@@ -321,8 +321,6 @@ Error message and password prompt
 
 <li>Create an h-card for my TiddlyWiki</li>
 
-<li>Draft of 'Self-hosting TiddlyWiki with GitHub Pages' by Chris Aldrich</li>
-
 <li>Homeschooling</li>
 
 <li>IndieWeb</li>
@@ -9709,14 +9707,14 @@ Error message and password prompt
 <div created="20200404005946777" creator="Chris Aldrich" modified="20200404030621182" modifier="Chris Aldrich" title="$:/state/plugin-info-334910430-$:/core---1812962263">
 <pre>readme</pre>
 </div>
-<div created="20200318210826734" creator="chrisaldrich" modified="20200404172442587" modifier="Chris Aldrich" title="$:/state/showeditpreview">
-<pre>no</pre>
+<div created="20200318210826734" creator="chrisaldrich" modified="20200404184925064" modifier="Chris Aldrich" title="$:/state/showeditpreview">
+<pre>yes</pre>
 </div>
 <div created="20200404031809315" creator="Chris Aldrich" modified="20200404164856685" modifier="Chris Aldrich" title="$:/state/ShowPaletteEditor">
 <pre>no</pre>
 </div>
-<div created="20200318210456273" creator="Chris Aldrich" modified="20200404173147170" modifier="Chris Aldrich" title="$:/state/sidebar">
-<pre>yes</pre>
+<div created="20200318210456273" creator="Chris Aldrich" modified="20200404212245808" modifier="Chris Aldrich" title="$:/state/sidebar">
+<pre>no</pre>
 </div>
 <div created="20200402042114053" creator="chrisaldrich" modified="20200404031420623" modifier="Chris Aldrich" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Shadows</pre>
@@ -9766,7 +9764,7 @@ Error message and password prompt
 <div created="20200319022404294" creator="h" modified="20200402074333095" modifier="Chris ldrich" title="$:/status/UserName">
 <pre>Chris Aldrich</pre>
 </div>
-<div created="20200404183219221" creator="Chris Aldrich" list="2020-04-04 [[Draft of 'Self-hosting TiddlyWiki with GitHub Pages' by Chris Aldrich]] [[A TiddlyWiki on My Own Domain!]] . [[Chris Aldrich]] ToDo" modified="20200404183723078" modifier="Chris Aldrich" title="$:/StoryList">
+<div created="20200404183219221" creator="Chris Aldrich" list="[[Self-hosting TiddlyWiki with GitHub Pages]] [[A TiddlyWiki on My Own Domain!]]" modified="20200404183723078" modifier="Chris Aldrich" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200320171902433" creator="chrisaldrich" modified="20200404183721012" modifier="Chris Aldrich" title="$:/temp/advancedsearch">
@@ -10105,62 +10103,6 @@ PGP Public Key &lt;span class=&quot;p-pgp&quot;&gt;&lt;a href=&quot;https://keyb
 <div created="20200402070947959" creator="chrisaldrich" modified="20200402074932059" modifier="Chris Aldrich" tags="task" title="Create an h-card for my TiddlyWiki">
 <pre></pre>
 </div>
-<div created="20200404172235768" creator="Chris Aldrich" draft.of="Self-hosting TiddlyWiki with GitHub Pages" draft.title="Self-hosting TiddlyWiki with GitHub Pages" modified="20200404184648708" modifier="Chris Aldrich" tags="TiddlyWiki IndieWeb" title="Draft of 'Self-hosting TiddlyWiki with GitHub Pages' by Chris Aldrich">
-<pre>TiddlyWiki is most often used as a private wiki for personal note taking and creating private journals. However, because it is a single file index.html written in HTML, CSS and some JavaScript, I thought it would make an ideal candidate for a simple-to-use personal website that can be hosted on one's own domain! As a researcher who appreciates the IndieWeb and Domain of One's Own philosophies and uses my personal website as a commonplace book for both work and personal reasons, I just couldn't resist.
-
-TiddlyWiki is easy to use, highly flexible, modifiable, and can be easily copied, backed up, and shared. There's an active community of users and developers for the platform which dates back to 2011 (fc TK). There are a variety of examples and documentation online and plugins are literally as simple as dragging and dropping some files from one source directly into your own Wiki. For those interested in the &lt;abbr title=&quot;open educational resources&quot;&gt;OER&lt;/abbr&gt; movement, individual Tiddlers (TiddlyWiki's name for cards or discrete entries within the wiki) can be easily dragged and dropped from other TiddlyWikis to copy them! 
-
-There are some useful instructions for hosting it almost everywhere--except on one's own domain name.
-
-The few other easy options were relying on hosting my site on someone else's service as a subdomain. Much as I like the idea of &lt;a href=&quot;http://tiddlyspot.com/&quot;&gt;TiddlySpot&lt;/a&gt; I really wanted to use my own domain name (not to mention that it's non-obvious how to host a newer TiddlyWiki version 5 (TW5) instance there). I'd also seen &lt;a href=&quot;http://tiddlyspace.com/&quot;&gt;TiddlySpace&lt;/a&gt; shut down a few years ago and didn't want to deal with that potentiality&amp;mdash;though I will admit that exporting would be as simple as downloading and moving a single file!
-
-So after a month or so at tinkering around at several complicated solutions that always seemed beyond my grasp, I went back to IndieWeb basics. What is their recommendation for the easiest way to get a website up and running? The fact that an empty TiddlyWiki file is named index.html gave me my answer: set up a GitHub Pages-based website and simply connect it to my domain!
-
-However, since that path requires a bit of tinkering, I thought I'd briefly document the process I took so others can follow along easily.
-
-First I'll presume you've got a domain name and a host that will allow you to change the CNAME for where your domain name is pointed. In short, you're going to upload the single file &quot;empty&quot; TiddlyWiki index.html to a GitHub repo and then point your domain name at it. This is even simpler than it sounds because this last sentence has a lot of jargon that I'll unpack. Even the idea of GitHub may scare a lot of people, but you won't need to use any git commands or need to know how git works since I'll describe steps that entirely use the graphical user interface and don't come anywhere near using the command line.
-
-Let's start! 
-
-
-
-Uses built-in github saver to store tiddlyWiki index.html and a github pages hosted page that helps to download that page to your browser.
-
-Step-by-Step Tutorial
-* Get TiddlyWiki
-** Go to https://tiddlywiki.com/ and save the index.html file to a local directory.
-
-* Github - repo and tokens
-You'll need to use git to commit/push that file to a repo at GitHub under your login name
-At github, create a new repo and follow the directions to save the index.html as a file in the repo
-You'll probably want to make this a private repo if your tiddlyWiki is for private use
-you can add any other readme or other files if you want
-Check https://github.com/-username-/-newrepo- that your new repo looks fine and has the index.html file
-Personal Access Tokens
-
-You'll need a Personal Access Token in order to download and to store the GitHub index.html tiddlyWiki file. (I'll note that you can also use your 
-
-At GitHub, click on your user icon, select Settings, then Developer Settings
-In the Personal Access Token page, &quot;Create a new token&quot;
-any name
-You must select the 'repo' scope (permission) (i've forgotten to do this more than i care to admit)
-Once created, immediately copy this string somewhere - the text of the PAT needs to be copied in to the tiddlyGithub downloader and to the GitHub save settings and the bookmarklet
-Note that once you refresh the page, you aren't allowed to see the PAT clear-text. However, it is trivial to make new PATs as needed (and delete old PATS that aren't needed).
-tiddlyGithub - downloader
-go to https://netrc.github.io/tiddlyGithub and enter your username, repo name, and the PAT, and click 'save'
-these values are stored in browser local storage
-code running in your browser will now download the index.html and run it
-This will be the URL you use to download; bookmark this
-tiddlyWiki - GitHub Saver
-Once the tiddlyWiki is running, click on the settings icon and get to the 'Saving' panel, and the 'GitHub Saver' section
-enter all the info as shown. (Note, you can use a different PAT, doesn't matter as long as it has 'repo' scope)
-There's no explicit save button, just 'X' out of the settings control panel
-Now just edit a tiddly and save it. You'll see that the circle-checkmark icon is red, indicating changes to save. You can click on it to force a save. I've found it's best to just wait for the running tiddlyWiki to schedule the save on it's own.
-
-Almost every error I've found with this is just related to copying the PAT wrong. E.g. some control-C operations add a blank at the end of the PAT.
-
-And I've found some times that the tiddlyWiki GitHub saver has lost the PAT.</pre>
-</div>
 <div created="20200323153740565" creator="chrisaldrich" modified="20200402074921135" modifier="Chris Aldrich" tags="Contents Evie Education" title="Homeschooling">
 <pre>* English 
 ** Reading (20 minutes) M-F
@@ -10226,53 +10168,100 @@ And I've found some times that the tiddlyWiki GitHub saver has lost the PAT.</pr
 <div created="20200402145246655" creator="Chris Aldrich" modified="20200402145347392" modifier="Chris Aldrich" tags="TiddlyWiki" title="savetiddlers">
 <pre>I used https://github.com/buggyj/savetiddlers as a Chrome Extension to save/back up my local computer TiddlyWiki</pre>
 </div>
-<div created="20200404172235768" creator="Chris Aldrich" modified="20200404183016136" modifier="Chris Aldrich" tags="TiddlyWiki IndieWeb" title="Self-hosting TiddlyWiki with GitHub Pages">
-<pre>TiddlyWiki is most often used as a private wiki for personal note taking and creating private journals. However, because it is a single file index.html written in HTML, CSS and some JavaScript, I thought it would make an ideal candidate for a simple-to-use personal website that can be hosted on one's own domain! As a researcher who appreciates the IndieWeb and Domain of One's Own philosophies and uses my personal website as a commonplace book for both work and personal reasons, I just couldn't resist.
+<div created="20200404172235768" creator="Chris Aldrich" modified="20200404212300539" modifier="Chris Aldrich" tags="TiddlyWiki IndieWeb" title="Self-hosting TiddlyWiki with GitHub Pages">
+<pre>TiddlyWiki is most often used as a private wiki for personal note taking and creating private journals. 
 
-TiddlyWiki is easy to use, highly flexible, modifiable, and can be easily copied, backed up, and shared. There's an active community of users and developers for the platform which dates back to 2011 (fc TK). There are a variety of examples and documentation online and plugins are literally as simple as dragging and dropping some files from one source directly into your own Wiki. There are some useful instructions for hosting it almost everywhere--except on one's own domain name.
+Because it is a single text file usually named `index.html` written in HTML, CSS and some JavaScript, I thought it would make an ideal candidate for a simple-to-use personal website that can be hosted on one's own domain. As a researcher who appreciates the IndieWeb and Domain of One's Own philosophies and uses my personal website as a &lt;a href=&quot;https://indieweb.org/commonplace_book&quot;&gt;commonplace book&lt;/a&gt; for both work and personal reasons, how could I resist.
 
-Sadly there didn't seem to be any simple instructions for self-hosting a public version of a TiddlyWiki on my own domain. The few other easy options were relying on hosting my site on someone else's service as a subdomain. Much as I like the idea of &lt;a href=&quot;http://tiddlyspot.com/&quot;&gt;TiddlySpot&lt;/a&gt; I really wanted to use my own domain name (not to mention that it's non-obvious how to host a newer TiddlyWiki version 5 (TW5) instance there). I'd also seen &lt;a href=&quot;http://tiddlyspace.com/&quot;&gt;TiddlySpace&lt;/a&gt; shut down a few years ago and didn't want to deal with that potentiality. 
+!! TiddlyWiki
+TiddlyWiki is easy to use, highly flexible, modifiable, and can be easily copied, backed up, and shared. There's an active community of &lt;a href=&quot;https://groups.google.com/forum/#!forum/tiddlywiki&quot;&gt;users&lt;/a&gt; and &lt;a href=&quot;https://groups.google.com/forum/#!forum/tiddlywikidev&quot;&gt;developers&lt;/a&gt; for the platform which dates back to 2004. There are a variety of examples and documentation online and plugins are literally as simple as dragging and dropping some files from one source directly into your own Wiki. For those interested in the &lt;abbr title=&quot;open educational resources&quot;&gt;OER&lt;/abbr&gt; movement, individual Tiddlers (TiddlyWiki's name for cards or discrete entries within the wiki) can be easily dragged and dropped from other TiddlyWikis to copy them! 
 
-So after a month or so at tinkering around at several complicated solutions that always seemed beyond my grasp, I went back to IndieWeb basics. What is the easiest way to get a website up and running? The fact that an empty TiddlyWiki file is named index.html gave me my answer: set up a GitHub Pages-based website and simply connect it to my domain!
+There are some useful instructions for hosting it almost everywhere--except on one's own domain name.
+
+The few easy options I've found for hosting a TiddlyWiki publicly online as a website were rely on someone else's service as a subdomain. As much as I like the idea of &lt;a href=&quot;http://tiddlyspot.com/&quot;&gt;TiddlySpot&lt;/a&gt; I really wanted to use my own domain name (not to mention that it's non-obvious how to host a newer TiddlyWiki version 5 (TW5) instance there). I'd also seen &lt;a href=&quot;http://tiddlyspace.com/&quot;&gt;TiddlySpace&lt;/a&gt; shut down a few years ago and didn't want to deal with that potentiality&amp;mdash;though I will admit that exporting would be as simple as downloading and moving a single file!
+
+So after a month or so at tinkering around at several complicated solutions that always seemed beyond my grasp, I went back to IndieWeb basics. What is their recommendation for the easiest way to get a website up and running? The fact that an empty TiddlyWiki file is named `index.html` gave me my answer: set up a &lt;a href=&quot;https://indieweb.org/GitHub_Pages&quot;&gt;GitHub Pages-based website&lt;/a&gt; and simply connect it to my domain!
+
+However, as simple as this pathway may seem to some, I thought I'd briefly document the process I took so others can do the same for themselves.
+
+First I'll presume you've got a domain name and a host that will allow you to change the CNAME for where your domain name is pointed. (If you don't, check out https://indieweb.org/personal-domain for details.) 
+
+In short, you're going to upload a single file to your GitHub account and then point your domain name at it. 
+
+The idea of GitHub may scare a lot of people, but you won't need to use git, know any git commands, or even know how git works since I'll describe steps that entirely use the graphical user interface and don't come anywhere near using the command line or any complicated GitHub applications. It'll be as easy as dragging and dropping.
+
+Let's start! 
+
+!! Step-by-Step Tutorial
+
+!!! Get TiddlyWiki
+* Go to https://tiddlywiki.com/ and click on the &quot;Download Empty&quot; button on their homepage. This will allow you to save a file called `index.html` to a convenient place on your computer.
+
+* This one file is the entirety of your future website! Guard it well.
+
+!!! GitHub
+
+* If you don't already have one, create an account at https://github.com/
+** You'll use this account and their free &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; service to host your website for free as long as the project folder (also known as a repository) you are hosting is public.
+
+* At GitHub &lt;a href=&quot;https://github.com/new&quot;&gt;create a new repository&lt;/a&gt;.
+** Name it `username.github.io`, where `username` is your username (or organization name if you're doing it for your organization) on GitHub.
+** Give your repository an optional descriptive name. I named mine &quot;A TiddlyWiki commonplace book&quot;
+** Choose the &quot;Public&quot; option, otherwise no one will be able to visit your new website.
+** Click &quot;Create Repository&quot;
+
+* Upload your TiddlyWiki to your new repository
+** In the Quick Set Up box click on the link for &quot;uploading an existing file&quot;.
+** On the subsequent page you can either drag and drop the empty TiddlyWiki `index.html` file you saved on your computer or you can click &quot;choose your files&quot; to find and upload the file. 
+** If you like, you can optionally add any additional README, License, or gitignore files as necessary. If you don't know what these are you can safely skip them or revisit doing this later.
+** Under &quot;Commit changes&quot; give your upload a short title; the suggested &quot;Add files via upload&quot; is fine. You can add an optional extended description if you like.
+** Click on the &quot;Commit Changes&quot; button.
+*** P.S.: If you haven't done so before you've just made your first Git commit. Congratulations!!
+** Your https://github.com/username/username.github.io repository folder should now be ready and have your `index.html` file in it.
 
 
+!!! Setting up your domain
+* Here you may need to consult with the the instructions your specific domain name registrar or host has for pointing your domain name (or subdomain) at your new GitHub Pages website. Usually they will have step by step instructions for doing this, but they can also often do it for you via email or phone support if you prefer.
+** Examples:
+*** Instructions for Reclaim Hosting: https://community.reclaimhosting.com/t/mapping-a-domain-to-custom-dns-records/32
+*** Instructions for 1&amp;1 using a subdomain: https://www.ionos.com/help/domains/configuring-cname-records-for-subdomains/configuring-a-cname-record-for-a-subdomain/
 
-Uses built-in github saver to store tiddlyWiki index.html and a github pages hosted page that helps to download that page to your browser.
+* Now you'll want to configure your GitHub Pages site to dovetail with your domain.
+** In your newly created GitHub repository, click on the &quot;Settings&quot; tab in the top right corner or go to https://github.com/username/username.github.io/settings
+** Scroll down the page to the &quot;GitHub Pages&quot; section
+** In the &quot;Custom Domain&quot; section enter your domain name `example.com` into the field and click the &quot;Save&quot; button.
 
-Step-by-Step Tutorial
-* Get TiddlyWiki
-** Go to https://tiddlywiki.com/ and save the index.html file to a local directory.
+!!! Setting up your website
 
-* Github - repo and tokens
-You'll need to use git to commit/push that file to a repo at GitHub under your login name
-At github, create a new repo and follow the directions to save the index.html as a file in the repo
-You'll probably want to make this a private repo if your tiddlyWiki is for private use
-you can add any other readme or other files if you want
-Check https://github.com/-username-/-newrepo- that your new repo looks fine and has the index.html file
-Personal Access Tokens
+* It may take a while for the DNS system to propagate the changes from your host, but you should be able to visit your website and see your empty TiddlyWiki online. Congrations! You've got a new website.
 
-You'll need a Personal Access Token in order to download and to store the GitHub index.html tiddlyWiki file. (I'll note that you can also use your 
+* You'll notice in the TiddlyWiki documentation that the first rule of TiddlyWiki is to always save or back up your wiki! 
+** (The second rule, in true Fight Club fashion, is--let's say it together--to always save or back up your wiki!)
+** Since our wiki is on GitHub, we'll want to use the &lt;a href=&quot;https://tiddlywiki.com/#Saving%20to%20a%20Git%20service
+&quot;&gt;Save to a Git Service instructions&lt;/a&gt;. Once set up, the changes to our TiddlyWiki should automatically self-save (this can be changed within your wiki's Control Panel too) or they can be saved manually using the TiddlyWiki checkmark save functionality. 
+** I'll note that you can presently use your GitHub password in these settings, but this isn't quite as secure as generating a custom token (or password), and sometime in late 2020, GitHub won't allow you to use your basic account password this way, so you may as well set up the personal access token now.
 
-At GitHub, click on your user icon, select Settings, then Developer Settings
-In the Personal Access Token page, &quot;Create a new token&quot;
-any name
-You must select the 'repo' scope (permission) (i've forgotten to do this more than i care to admit)
-Once created, immediately copy this string somewhere - the text of the PAT needs to be copied in to the tiddlyGithub downloader and to the GitHub save settings and the bookmarklet
-Note that once you refresh the page, you aren't allowed to see the PAT clear-text. However, it is trivial to make new PATs as needed (and delete old PATS that aren't needed).
-tiddlyGithub - downloader
-go to https://netrc.github.io/tiddlyGithub and enter your username, repo name, and the PAT, and click 'save'
-these values are stored in browser local storage
-code running in your browser will now download the index.html and run it
-This will be the URL you use to download; bookmark this
-tiddlyWiki - GitHub Saver
-Once the tiddlyWiki is running, click on the settings icon and get to the 'Saving' panel, and the 'GitHub Saver' section
-enter all the info as shown. (Note, you can use a different PAT, doesn't matter as long as it has 'repo' scope)
-There's no explicit save button, just 'X' out of the settings control panel
-Now just edit a tiddly and save it. You'll see that the circle-checkmark icon is red, indicating changes to save. You can click on it to force a save. I've found it's best to just wait for the running tiddlyWiki to schedule the save on it's own.
+* Setting up Personal Access Tokens
+** You will need a Personal Access Token (essentially a password that will be specific to your TiddlyWiki account) in order to save your TiddlyWiki file. 
+** On GitHub, click on your user icon, select &quot;Settings&quot;, then &quot;Developer Settings&quot;
+** Next click on the &quot;Personal Access Tokens&quot; tab and then click &quot;Generate new token&quot;
+** Give your token a descriptive name like &quot;TiddlyWiki&quot; 
+** Under scopes, select &quot;repo&quot; (and all of its sub-scopes)
+** Click the &quot;Generate Token&quot; button at the bottom of the page.
+** Once created, immediately copy this string somewhere safe since navigating away from the page will not allow you to recover it. (If you do, you'll need to regenerate a new token.)
+** Finally copy the text of your token into the Tiddler noted above in place of your password. There's no explicit save button, just 'X' out of the settings control panel and click your TiddlyWiki's main save button. 
+** Your token value should be stored in browser local storage.
+** Now you can edit any Tiddler and save it.
+*** After edits to your wiki, you'll see that the checkmark icon on the page is red (depending on your theme), indicating changes to save. You can click on it to force a save. 
+***  I've found it convenient to wait for the TiddlyWiki to schedule the save on its own, however, make sure you've saved any changes you want before closing your browser tab. 
+*** Sometimes saves aren't always successful and you'll see error warnings, but usually they'll clear themselves up on subsequent auto saves.
+*** If necessary, you can visit your GitHub repository for your wiki and it will indicate the interval of time since the last save.
 
-Almost every error I've found with this is just related to copying the PAT wrong. E.g. some control-C operations add a blank at the end of the PAT.
-
-And I've found some times that the tiddlyWiki GitHub saver has lost the PAT.</pre>
+!!! We're done!
+* Everything after this you may be able to either handle yourself by poking around your new wiki or you can find lots of help in the two Google Groups listed above or by searching around online, in fora, or even step-by-step videos on YouTube.
+* If you've done this as part of the IndieWeb or A Domain of One's Own, be sure to log yourself into the &lt;a href=&quot;https://indieweb.org/&quot;&gt;IndieWeb wiki&lt;/a&gt; and add yourself to the examples on their &lt;a href=&quot;https://indieweb.org/TiddlyWiki&quot;&gt;TiddlyWiki page&lt;/a&gt; where you might also find some other useful ideas.
+* If you like, you can delve deeper into GitHub and use one of their apps or command line functionality to regularly back up your website to your desktop, or you can make branches of your site on your local computer and then push those changes up to the cloud.
+* If you find problems or encounter issues, feel free to drop me a line or catch me or others in the &lt;a href=&quot;indieweb.org/indieweb/&quot;&gt;IndieWeb chat&lt;/a&gt;.</pre>
 </div>
 <div created="20200318212218627" creator="Chris Aldrich" modified="20200402074848771" modifier="Chris Aldrich" tags="task done" title="Take out the garbage">
 <pre></pre>
