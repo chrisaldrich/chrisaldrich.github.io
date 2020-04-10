@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistFriday, April 10, 2020 @ 16:19</title>
+<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistFriday, April 10, 2020 @ 16:27</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -12884,7 +12884,7 @@ very-muted-foreground: #888888</pre>
 <div created="20200319010110544" creator="chrisaldrich" modified="20200410230759044" modifier="Chris Aldrich" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20200318205933272" creator="chrisaldrich" modified="20200410231536201" modifier="Chris Aldrich" title="$:/state/tab/sidebar--595412856">
+<div created="20200318205933272" creator="chrisaldrich" modified="20200410232104624" modifier="Chris Aldrich" title="$:/state/tab/sidebar--595412856">
 <pre>Books</pre>
 </div>
 <div created="20200404031542211" creator="Chris Aldrich" modified="20200404165217741" modifier="Chris Aldrich" title="$:/state/tabs/controlpanel/toolbars-1345989671">
@@ -12914,7 +12914,7 @@ very-muted-foreground: #888888</pre>
 <div created="20200319022404294" creator="h" modified="20200402074333095" modifier="Chris ldrich" title="$:/status/UserName">
 <pre>Chris Aldrich</pre>
 </div>
-<div created="20200410230043369" creator="Chris Aldrich" list="[[The Art of Memory by Frances Yates]] [[Chapter 8: Lullism as an Art of Memory]] [[Raymundus Lullus]] [[Chapter 7]] [[Chapter 6]] [[Chapter 5]] [[Chapter 4]] . ToDo" modified="20200410231732234" modifier="Chris Aldrich" title="$:/StoryList">
+<div created="20200410232152833" creator="Chris Aldrich" list="[[The Art of Memory by Frances Yates]] Books . ToDo" modified="20200410232328711" modifier="Chris Aldrich" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200320171902433" creator="chrisaldrich" modified="20200410230311414" modifier="Chris Aldrich" title="$:/temp/advancedsearch">
@@ -13734,8 +13734,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200405062346109" creator="Chris Aldrich" dependents="" description="Basic theme" modified="20200405062346109" modifier="Chris Aldrich" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" server-url="https://tiddlywiki.com/library/v5.1.21/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.21/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.21">
 <pre></pre>
 </div>
-<div created="20200319022254809" creator="chrisaldrich" modified="20200410230311414" modifier="Chris Aldrich" title="$:/temp/search">
-<pre></pre>
+<div created="20200319022254809" creator="chrisaldrich" modified="20200410232201525" modifier="Chris Aldrich" title="$:/temp/search">
+<pre>baty</pre>
 </div>
 <div created="20200405062346079" creator="Chris Aldrich" modified="20200405062346079" modifier="Chris Aldrich" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html" url="https://tiddlywiki.com/library/v5.1.21/index.html">
 <pre>loaded</pre>
@@ -14051,8 +14051,25 @@ Still generally overcast, dreary, and grey outside.
 
 For example, type search text in the standard search and select one of the results, or just click outside of it (to hide the popup list): each of the words you search for will be highlighted separately in the text of the tiddlers.</pre>
 </div>
-<div created="20200407192320592" creator="Chris Aldrich" list-before="$:/core/ui/SideBar/Open" modified="20200407225612621" modifier="Chris Aldrich" tags="$:/tags/SideBar" title="Books">
-<pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+<div created="20200407192320592" creator="Chris Aldrich" list-before="$:/core/ui/SideBar/Open" modified="20200410232727460" modifier="Chris Aldrich" tags="$:/tags/SideBar" title="Books">
+<pre>&lt;$button tooltip=&quot;Add a book&quot;&gt;Add a book
+&lt;$action-createtiddler
+$basetitle='New Book'
+text=&quot;{{||$:/jab/viewtemplate/book}}&quot;
+tags='Books'
+startdate=' '
+enddate=' '
+goodreads=' '
+$savetitle='$:/.user/CreateBook!!newBook'
+/&gt;
+
+&lt;$action-sendmessage
+$message=&quot;tm-edit-tiddler&quot;
+$param={{$:/.user/CreateBook!!newBook}}/&gt;
+&lt;/$button&gt;
+
+
+&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc-selective-expandable 'Books' sort[title]&gt;&gt;
 &lt;/div&gt;</pre>
 </div>
@@ -14244,7 +14261,7 @@ Try adding it into the card displayed on the homepage as default?</pre>
 <div color="#0080ff" created="20200405050418448" creator="Chris Aldrich" modified="20200405050418448" modifier="Chris Aldrich" title="productivity">
 <pre></pre>
 </div>
-<div created="20200410231745755" creator="Chris Aldrich" modified="20200410231948478" modifier="Chris Aldrich" tags="[[Raymundus Lullus]]" title="Raymundus Lullus">
+<div created="20200410231745755" creator="Chris Aldrich" modified="20200410232023584" modifier="Chris Aldrich" title="Raymundus Lullus">
 <pre>
 &lt;&lt;&lt;
 Ramon Llull TOSF (Catalan: [rəˈmoɲ ˈʎuʎ]; c. 1232[1] – c. 1315; Anglicised Raymond Lully, Raymond Lull; in Latin Raimundus, or Raymundus Lullus, or Raimundo Lulio, or Lullius) was a mathematician, polymath, philosopher, logician, Franciscan tertiary and writer from the Kingdom of Majorca. He is credited with writing the first major work of Catalan literature. Recently surfaced manuscripts show his work to have predated by several centuries prominent work on elections theory. He is also considered a pioneer of computation theory, especially given his influence on Leibniz.
