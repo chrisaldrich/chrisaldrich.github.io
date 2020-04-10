@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistFriday, April 10, 2020 @ 15:52</title>
+<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistFriday, April 10, 2020 @ 15:53</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -646,6 +646,8 @@ Error message and password prompt
 
 <li>Add TW5 Highlight searched text plugin</li>
 
+<li>bookify</li>
+
 <li>Books</li>
 
 <li>Chris Aldrich</li>
@@ -655,8 +657,6 @@ Error message and password prompt
 <li>Contents</li>
 
 <li>Create an h-card for my TiddlyWiki</li>
-
-<li>Draft of 'bookify' by Chris Aldrich</li>
 
 <li>Education</li>
 
@@ -12893,7 +12893,7 @@ very-muted-foreground: #888888</pre>
 <div created="20200319022404294" creator="h" modified="20200402074333095" modifier="Chris ldrich" title="$:/status/UserName">
 <pre>Chris Aldrich</pre>
 </div>
-<div created="20200410224622087" creator="Chris Aldrich" list="$:/AdvancedSearch [[Draft of 'bookify' by Chris Aldrich]] α . ToDo" modified="20200410225153858" modifier="Chris Aldrich" title="$:/StoryList">
+<div created="20200410224622087" creator="Chris Aldrich" list="bookify α . ToDo" modified="20200410225153858" modifier="Chris Aldrich" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200320171902433" creator="chrisaldrich" modified="20200410225144798" modifier="Chris Aldrich" title="$:/temp/advancedsearch">
@@ -14030,6 +14030,14 @@ Still generally overcast, dreary, and grey outside.
 
 For example, type search text in the standard search and select one of the results, or just click outside of it (to hide the popup list): each of the words you search for will be highlighted separately in the text of the tiddlers.</pre>
 </div>
+<div created="20200410225221189" creator="Chris Aldrich" modified="20200410225308669" modifier="Chris Aldrich" tags="bookmarklet" title="bookify">
+<pre>Click the below button to create your own &quot;insert&quot;-bookmarklet. Don't forget to rename it as &quot;New bookmarklet&quot;-tiddlers will be ignored.
+
+&lt;$list filter=&quot;[tag{!!title}type[application/javascript]!prefix[New bookmarklet]] +[sort[title]]&quot;&gt;&lt;div&gt;&lt;$link&gt;Show &lt;/$link&gt;&lt;$macrocall $name=&quot;bookmarklet&quot; script={{!!text}} text={{!!title}} /&gt;&lt;/div&gt;
+&lt;/$list&gt;
+
+&lt;$button message=&quot;tw-new-tiddler&quot; param=&quot;New bookmarklet&quot;&gt;New bookmarklet&lt;/$button&gt;</pre>
+</div>
 <div created="20200407192320592" creator="Chris Aldrich" list-before="$:/core/ui/SideBar/Open" modified="20200407225612621" modifier="Chris Aldrich" tags="$:/tags/SideBar" title="Books">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc-selective-expandable 'Books' sort[title]&gt;&gt;
@@ -14093,14 +14101,6 @@ Perhaps add it in `&lt;head&gt;`?
 2020-04-10 Tried adding it into the Contents page which is shown as the default on the homepage. I suspect that js;dr is preventing it from showing.
 
 Try adding it into the card displayed on the homepage as default?</pre>
-</div>
-<div created="20200410225221189" creator="Chris Aldrich" draft.of="bookify" draft.title="bookify" modified="20200410225221189" modifier="Chris Aldrich" title="Draft of 'bookify' by Chris Aldrich">
-<pre>Click the below button to create your own &quot;insert&quot;-bookmarklet. Don't forget to rename it as &quot;New bookmarklet&quot;-tiddlers will be ignored.
-
-&lt;$list filter=&quot;[tag{!!title}type[application/javascript]!prefix[New bookmarklet]] +[sort[title]]&quot;&gt;&lt;div&gt;&lt;$link&gt;Show &lt;/$link&gt;&lt;$macrocall $name=&quot;bookmarklet&quot; script={{!!text}} text={{!!title}} /&gt;&lt;/div&gt;
-&lt;/$list&gt;
-
-&lt;$button message=&quot;tw-new-tiddler&quot; param=&quot;New bookmarklet&quot;&gt;New bookmarklet&lt;/$button&gt;</pre>
 </div>
 <div color="#008000" created="20200405050452807" creator="Chris Aldrich" modified="20200405050452807" modifier="Chris Aldrich" title="Education">
 <pre></pre>
