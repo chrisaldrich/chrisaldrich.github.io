@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistFriday, April 10, 2020 @ 15:51</title>
+<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistFriday, April 10, 2020 @ 15:52</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -655,6 +655,8 @@ Error message and password prompt
 <li>Contents</li>
 
 <li>Create an h-card for my TiddlyWiki</li>
+
+<li>Draft of 'bookify' by Chris Aldrich</li>
 
 <li>Education</li>
 
@@ -12819,8 +12821,8 @@ very-muted-foreground: #888888</pre>
 <div created="20200405062314766" creator="Chris Aldrich" modified="20200405062316697" modifier="Chris Aldrich" title="$:/state/tab--1222648149">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Plugins</pre>
 </div>
-<div created="20200402042114053" creator="chrisaldrich" modified="20200410224624413" modifier="Chris Aldrich" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/System</pre>
+<div created="20200402042114053" creator="chrisaldrich" modified="20200410225152272" modifier="Chris Aldrich" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Filter</pre>
 </div>
 <div created="20200405031859910" creator="Chris Aldrich" modified="20200405031908983" modifier="Chris Aldrich" title="$:/state/tab--1568374741">
 <pre>$:/core/ui/TiddlerInfo/Advanced</pre>
@@ -12891,11 +12893,11 @@ very-muted-foreground: #888888</pre>
 <div created="20200319022404294" creator="h" modified="20200402074333095" modifier="Chris ldrich" title="$:/status/UserName">
 <pre>Chris Aldrich</pre>
 </div>
-<div created="20200410224622087" creator="Chris Aldrich" list="α . ToDo" modified="20200410224701999" modifier="Chris Aldrich" title="$:/StoryList">
+<div created="20200410224622087" creator="Chris Aldrich" list="$:/AdvancedSearch [[Draft of 'bookify' by Chris Aldrich]] α . ToDo" modified="20200410225153858" modifier="Chris Aldrich" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20200320171902433" creator="chrisaldrich" modified="20200410224622087" modifier="Chris Aldrich" title="$:/temp/advancedsearch">
-<pre>import</pre>
+<div created="20200320171902433" creator="chrisaldrich" modified="20200410225144798" modifier="Chris Aldrich" title="$:/temp/advancedsearch">
+<pre>bookify</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -13711,7 +13713,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200405062346109" creator="Chris Aldrich" dependents="" description="Basic theme" modified="20200405062346109" modifier="Chris Aldrich" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" server-url="https://tiddlywiki.com/library/v5.1.21/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.21/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.21">
 <pre></pre>
 </div>
-<div created="20200319022254809" creator="chrisaldrich" modified="20200410224622087" modifier="Chris Aldrich" title="$:/temp/search">
+<div created="20200319022254809" creator="chrisaldrich" modified="20200410225144799" modifier="Chris Aldrich" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20200405062346079" creator="Chris Aldrich" modified="20200405062346079" modifier="Chris Aldrich" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html" url="https://tiddlywiki.com/library/v5.1.21/index.html">
@@ -14092,6 +14094,14 @@ Perhaps add it in `&lt;head&gt;`?
 
 Try adding it into the card displayed on the homepage as default?</pre>
 </div>
+<div created="20200410225221189" creator="Chris Aldrich" draft.of="bookify" draft.title="bookify" modified="20200410225221189" modifier="Chris Aldrich" title="Draft of 'bookify' by Chris Aldrich">
+<pre>Click the below button to create your own &quot;insert&quot;-bookmarklet. Don't forget to rename it as &quot;New bookmarklet&quot;-tiddlers will be ignored.
+
+&lt;$list filter=&quot;[tag{!!title}type[application/javascript]!prefix[New bookmarklet]] +[sort[title]]&quot;&gt;&lt;div&gt;&lt;$link&gt;Show &lt;/$link&gt;&lt;$macrocall $name=&quot;bookmarklet&quot; script={{!!text}} text={{!!title}} /&gt;&lt;/div&gt;
+&lt;/$list&gt;
+
+&lt;$button message=&quot;tw-new-tiddler&quot; param=&quot;New bookmarklet&quot;&gt;New bookmarklet&lt;/$button&gt;</pre>
+</div>
 <div color="#008000" created="20200405050452807" creator="Chris Aldrich" modified="20200405050452807" modifier="Chris Aldrich" title="Education">
 <pre></pre>
 </div>
@@ -14393,7 +14403,7 @@ This is not as straightforward as it seems. I'll need to somehow add this to a s
 ** The inner form refers to entities that compose its inner structure.
 * [[OneNote Review|https://zettelkasten.de/posts/one-note-review/&quot;&gt;https://zettelkasten.de/posts/one-note-review/]] (Read 5:51 PM)</pre>
 </div>
-<div created="20200410224903999" creator="Chris Aldrich" modified="20200410224927047" modifier="Chris Aldrich" tags="" title="α" type="application/javascript">
+<div created="20200410224903999" creator="Chris Aldrich" modified="20200410225247532" modifier="Chris Aldrich" tags="bookify" title="α" type="application/javascript">
 <pre>var insert= &quot;α&quot;;
 var ta= document.activeElement;
 var tag=ta.tagName.toLowerCase();
