@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistFriday, April 10, 2020 @ 17:11BoffoSocko.com | Personal Wiki</title>
+<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistFriday, April 10, 2020 @ 17:17BoffoSocko.com | Personal Wiki</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -683,6 +683,8 @@ Error message and password prompt
 <li>Contents</li>
 
 <li>Create an h-card for my TiddlyWiki</li>
+
+<li>Draft of 'The Art of Memory by Frances Yates' by Chris Aldrich</li>
 
 <li>Education</li>
 
@@ -12863,7 +12865,7 @@ very-muted-foreground: #888888</pre>
 <div created="20200404031809315" creator="Chris Aldrich" modified="20200404164856685" modifier="Chris Aldrich" title="$:/state/ShowPaletteEditor">
 <pre>no</pre>
 </div>
-<div created="20200318210456273" creator="Chris Aldrich" modified="20200410233841768" modifier="Chris Aldrich" title="$:/state/sidebar">
+<div created="20200318210456273" creator="Chris Aldrich" modified="20200411001248834" modifier="Chris Aldrich" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200405062314766" creator="Chris Aldrich" modified="20200405062316697" modifier="Chris Aldrich" title="$:/state/tab--1222648149">
@@ -12944,7 +12946,7 @@ very-muted-foreground: #888888</pre>
 <div created="20200319022404294" creator="h" modified="20200402074333095" modifier="Chris ldrich" title="$:/status/UserName">
 <pre>Chris Aldrich</pre>
 </div>
-<div created="20200410234548769" creator="Chris Aldrich" list="[[The Art of Memory by Frances Yates]] [[Books that Matter: The City of God by Charles T. Mathewes]] . ToDo" modified="20200411001052093" modifier="Chris Aldrich" title="$:/StoryList">
+<div created="20200410234548769" creator="Chris Aldrich" list="[[Draft of 'The Art of Memory by Frances Yates' by Chris Aldrich]] Books . ToDo" modified="20200411001423141" modifier="Chris Aldrich" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200320171902433" creator="chrisaldrich" modified="20200410230311414" modifier="Chris Aldrich" title="$:/temp/advancedsearch">
@@ -13764,8 +13766,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200405062346109" creator="Chris Aldrich" dependents="" description="Basic theme" modified="20200405062346109" modifier="Chris Aldrich" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" server-url="https://tiddlywiki.com/library/v5.1.21/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.21/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.21">
 <pre></pre>
 </div>
-<div created="20200319022254809" creator="chrisaldrich" modified="20200411000640442" modifier="Chris Aldrich" title="$:/temp/search">
-<pre>about</pre>
+<div created="20200319022254809" creator="chrisaldrich" modified="20200411001309092" modifier="Chris Aldrich" title="$:/temp/search">
+<pre>book</pre>
 </div>
 <div created="20200405062346079" creator="Chris Aldrich" modified="20200405062346079" modifier="Chris Aldrich" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html" url="https://tiddlywiki.com/library/v5.1.21/index.html">
 <pre>loaded</pre>
@@ -14102,11 +14104,11 @@ Still generally overcast, dreary, and grey outside.
 
 For example, type search text in the standard search and select one of the results, or just click outside of it (to hide the popup list): each of the words you search for will be highlighted separately in the text of the tiddlers.</pre>
 </div>
-<div created="20200407192320592" creator="Chris Aldrich" list-before="$:/core/ui/SideBar/Open" modified="20200410235308912" modifier="Chris Aldrich" tags="$:/tags/SideBar" title="Books">
+<div created="20200407192320592" creator="Chris Aldrich" list-before="$:/core/ui/SideBar/Open" modified="20200411001745659" modifier="Chris Aldrich" tags="$:/tags/SideBar" title="Books">
 <pre>&lt;$button tooltip=&quot;Add a book&quot;&gt;Add a book
 &lt;$action-createtiddler
 $basetitle='New Book'
-text=&quot;{{||$:/jab/viewtemplate/book}}&quot;
+text=&quot;&amp;lt;$list filter=&amp;quote;[!has[draft.of]tag[TagNameTK]sort[created]]&amp;quote;&gt;&lt;br/&gt;&lt;$link to={{!!title}}&gt;&lt;br/&gt;&lt;$view field=&amp;quote;title&amp;quote;/&gt;&lt;br/&gt;&lt;/$link&gt;&lt;br/&gt;&lt;/$list&gt;&lt;br/&gt;{{||$:/jab/viewtemplate/book}}&quot;
 tags='Books'
 startdate=' '
 enddate=' '
@@ -14119,14 +14121,17 @@ $message=&quot;tm-edit-tiddler&quot;
 $param={{$:/.user/CreateBook!!newBook}}/&gt;
 &lt;/$button&gt;
 
+---
 
 &lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc-selective-expandable 'Books' sort[title]&gt;&gt;
 &lt;/div&gt;</pre>
 </div>
-<div created="20200410232939044" creator="Chris Aldrich" enddate="" goodreads="https://www.goodreads.com/book/show/33244923-books-that-matter" modified="20200411001146586" modifier="Chris Aldrich" startdate=" 2020-03-23" tags="Books" title="Books that Matter: The City of God by Charles T. Mathewes">
+<div created="20200410232939044" creator="Chris Aldrich" enddate="" goodreads="https://www.goodreads.com/book/show/33244923-books-that-matter" modified="20200411001219387" modifier="Chris Aldrich" startdate=" 2020-03-23" tags="Books" title="Books that Matter: The City of God by Charles T. Mathewes">
 <pre>&lt;a href=&quot;https://www.goodreads.com/book/show/33244923-books-that-matter&quot; style=&quot;float: left; padding-right: 20px&quot;&gt;&lt;img border=&quot;0&quot; alt=&quot;Books that Matter: The City of God&quot; src=&quot;https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1480903432l/33244923._SX98_.jpg&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/33244923-books-that-matter&quot;&gt;Books that Matter: The City of God&lt;/a&gt; by &lt;a href=&quot;https://www.goodreads.com/author/show/194128.Charles_T_Mathewes&quot;&gt;Charles T. Mathewes&lt;/a&gt;&lt;br/&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+
+
 &lt;$list filter=&quot;[!has[draft.of]tag[Books that Matter: The City of God by Charles T. Mathewes]sort[created]]&quot;&gt;
 
 &lt;$link to={{!!title}}&gt;
@@ -14196,6 +14201,19 @@ Perhaps add it in `&lt;head&gt;`?
 2020-04-10 Tried adding it into the Contents page which is shown as the default on the homepage. I suspect that js;dr is preventing it from showing.
 
 Try adding it into the card displayed on the homepage as default?</pre>
+</div>
+<div created="20200407192542863" creator="Chris Aldrich" draft.of="The Art of Memory by Frances Yates" draft.title="The Art of Memory by Frances Yates" enddate="" goodreads="https://www.goodreads.com/review/show/1196277117" modified="20200411001425336" modifier="Chris Aldrich" startdate="2015-11-08" tags="Memory Books reading" title="Draft of 'The Art of Memory by Frances Yates' by Chris Aldrich">
+<pre>&lt;$list filter=&quot;[!has[draft.of]tag[The Art of Memory by Frances Yates]sort[created]]&quot;&gt;
+
+&lt;$link to={{!!title}}&gt;
+     &lt;$view field=&quot;title&quot;/&gt;
+&lt;/$link&gt;
+
+&lt;/$list&gt;
+
+---
+
+{{||$:/jab/viewtemplate/book}}</pre>
 </div>
 <div color="#008000" created="20200405050452807" creator="Chris Aldrich" icon="$:/images/fa5/solid/book" modified="20200410230451882" modifier="Chris Aldrich" title="Education">
 <pre></pre>
