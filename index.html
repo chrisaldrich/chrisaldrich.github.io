@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistSaturday, April 11, 2020 @ 20:10</title>
+<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistSaturday, April 11, 2020 @ 20:15</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -716,6 +716,8 @@ Error message and password prompt
 <li>Contents</li>
 
 <li>Create an h-card for my TiddlyWiki</li>
+
+<li>Draft of '$:/core/ui/PageTemplate' by Chris Aldrich</li>
 
 <li>Education</li>
 
@@ -12960,7 +12962,7 @@ very-muted-foreground: #888888</pre>
 <div created="20200404031809315" creator="Chris Aldrich" modified="20200404164856685" modifier="Chris Aldrich" title="$:/state/ShowPaletteEditor">
 <pre>no</pre>
 </div>
-<div created="20200318210456273" creator="Chris Aldrich" modified="20200412031003963" modifier="Chris Aldrich" title="$:/state/sidebar">
+<div created="20200318210456273" creator="Chris Aldrich" modified="20200412031511022" modifier="Chris Aldrich" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200405062314766" creator="Chris Aldrich" modified="20200405062316697" modifier="Chris Aldrich" title="$:/state/tab--1222648149">
@@ -13059,11 +13061,11 @@ very-muted-foreground: #888888</pre>
 <div created="20200319022404294" creator="h" modified="20200402074333095" modifier="Chris ldrich" title="$:/status/UserName">
 <pre>Chris Aldrich</pre>
 </div>
-<div created="20200411004644693" creator="Chris Aldrich" list="2020-04-11 Footer $:/AdvancedSearch $:/tags/BelowStory [[Webmentions into header of TW5]] $:/plugins/indieweb/core/rawMarkup . ToDo [[Create an h-card for my TiddlyWiki]] task [[Write up documentation for Webmention with TiddlyWiki]]" modified="20200412031012336" modifier="Chris Aldrich" title="$:/StoryList">
+<div created="20200411004644693" creator="Chris Aldrich" list="Footer $:/AdvancedSearch [[Draft of '$:/core/ui/PageTemplate' by Chris Aldrich]] $:/tags/BelowStory [[Webmentions into header of TW5]] $:/plugins/indieweb/core/rawMarkup . ToDo [[Create an h-card for my TiddlyWiki]] task [[Write up documentation for Webmention with TiddlyWiki]]" modified="20200412031246927" modifier="Chris Aldrich" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20200320171902433" creator="chrisaldrich" modified="20200412030345055" modifier="Chris Aldrich" title="$:/temp/advancedsearch">
-<pre>$:/tags/BelowStory</pre>
+<div created="20200320171902433" creator="chrisaldrich" modified="20200412031244545" modifier="Chris Aldrich" title="$:/temp/advancedsearch">
+<pre>$:/core/ui/PageTemplate</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -13879,7 +13881,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200405062346109" creator="Chris Aldrich" dependents="" description="Basic theme" modified="20200405062346109" modifier="Chris Aldrich" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" server-url="https://tiddlywiki.com/library/v5.1.21/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.21/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.21">
 <pre></pre>
 </div>
-<div created="20200319022254809" creator="chrisaldrich" modified="20200412030345055" modifier="Chris Aldrich" title="$:/temp/search">
+<div created="20200319022254809" creator="chrisaldrich" modified="20200412031244545" modifier="Chris Aldrich" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20200405062346079" creator="Chris Aldrich" modified="20200405062346079" modifier="Chris Aldrich" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html" url="https://tiddlywiki.com/library/v5.1.21/index.html">
@@ -14401,6 +14403,56 @@ Finished chapter 9 on Acts as the follow up for Luke.</pre>
 
 </pre>
 </div>
+<div draft.of="$:/core/ui/PageTemplate" draft.title="$:/core/ui/PageTemplate" modified="20200412031256411" modifier="Chris Aldrich" title="Draft of '$:/core/ui/PageTemplate' by Chris Aldrich">
+<pre>\whitespace trim
+\define containerClasses()
+tc-page-container tc-page-view-$(storyviewTitle)$ tc-language-$(languageTitle)$
+\end
+\import [[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
+
+&lt;$set name=&quot;tv-config-toolbar-icons&quot; value={{$:/config/Toolbar/Icons}}&gt;
+
+&lt;$set name=&quot;tv-config-toolbar-text&quot; value={{$:/config/Toolbar/Text}}&gt;
+
+&lt;$set name=&quot;tv-config-toolbar-class&quot; value={{$:/config/Toolbar/ButtonClass}}&gt;
+
+&lt;$set name=&quot;tv-show-missing-links&quot; value={{$:/config/MissingLinks}}&gt;
+
+&lt;$set name=&quot;storyviewTitle&quot; value={{$:/view}}&gt;
+
+&lt;$set name=&quot;languageTitle&quot; value={{{ [{$:/language}get[name]] }}}&gt;
+
+&lt;div class=&lt;&lt;containerClasses&gt;&gt;&gt;
+
+&lt;$navigator story=&quot;$:/StoryList&quot; history=&quot;$:/HistoryList&quot; openLinkFromInsideRiver={{$:/config/Navigation/openLinkFromInsideRiver}} openLinkFromOutsideRiver={{$:/config/Navigation/openLinkFromOutsideRiver}} relinkOnRename={{$:/config/RelinkOnRename}}&gt;
+
+&lt;$dropzone&gt;
+
+&lt;$list filter=&quot;[all[shadows+tiddlers]tag[$:/tags/PageTemplate]!has[draft.of]]&quot; variable=&quot;listItem&quot;&gt;
+
+&lt;$transclude tiddler=&lt;&lt;listItem&gt;&gt;/&gt;
+
+&lt;/$list&gt;
+
+&lt;/$dropzone&gt;
+
+&lt;/$navigator&gt;
+
+&lt;/div&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+</pre>
+</div>
 <div color="#008000" created="20200405050452807" creator="Chris Aldrich" icon="$:/images/fa5/solid/book" modified="20200410230451882" modifier="Chris Aldrich" title="Education">
 <pre></pre>
 </div>
@@ -14435,8 +14487,8 @@ to [[$:/plugins/indieweb/core/rawMarkup]]</pre>
 * https://github.com/TheDiveO/TW5FontAwesome
 </pre>
 </div>
-<div created="20200412030405574" creator="Chris Aldrich" modified="20200412030929823" modifier="Chris Aldrich" tags="$:/tags/BelowStory" title="Footer">
-<pre>Proudly powered by &lt;a href=&quot;https://tiddlywiki.com&quot;&gt;TiddlyWiki&lt;/a&gt; with &lt;a href=&quot;http://indieweb.org&quot; rel=&quot;nofollow&quot; alt=&quot;IndieWeb&quot;&gt;principles from &lt;img src=&quot;https://boffosocko.com/wp-content/uploads/2018/01/indieweb-badge.png&quot; alt=&quot;IndieWebCamp&quot; width=&quot;80&quot; height=&quot;15&quot; style=&quot;image-rendering:pixelated;&quot; /&gt;&lt;/a&gt;&lt;br /&gt; &lt;a href=&quot;http://microformats.org/wiki/get-started&quot;&gt;&lt;img src=&quot;https://boffosocko.com/wp-content/uploads/2018/01/microformats-badge.png&quot; width=&quot;80&quot; height=&quot;15&quot; alt=&quot;Microformats.org&quot; style=&quot;image-rendering:pixelated;&quot;&gt;&lt;/a&gt; &lt;a title=&quot;This site accepts webmentions.&quot; href=&quot;https://www.w3.org/TR/webmention/&quot;&gt;&lt;img src=&quot;https://boffosocko.com/wp-content/uploads/2018/01/webmention-badge.png&quot; width=&quot;80&quot; height=&quot;15&quot; alt=&quot;Webmention&quot; style=&quot;image-rendering:pixelated;&quot;&gt;&lt;/a&gt; &lt;a href=&quot;https://creativecommons.org/licenses/by/3.0/&quot;&gt;&lt;img src=&quot;https://boffosocko.com/wp-content/uploads/2018/01/cc-commons-badge.png&quot; width=&quot;80&quot; height=&quot;15&quot; alt=&quot;Creative Commons Attribution 3.0&quot; style=&quot;image-rendering:pixelated;&quot;&gt;&lt;/a&gt;&lt;br /&gt;&amp;copy; 2019-2020 Chris Aldrich | Except where otherwise noted, text content&lt;br /&gt;on this site is licensed under a &lt;a href=&quot;https://creativecommons.org/licenses/by/3.0/&quot;&gt;Creative Commons Attribution 3.0 License&lt;/a&gt;.</pre>
+<div created="20200412030405574" creator="Chris Aldrich" modified="20200412031516496" modifier="Chris Aldrich" tags="$:/tags/BelowStory" title="Footer">
+<pre>Proudly powered by &lt;a href=&quot;https://tiddlywiki.com&quot;&gt;TiddlyWiki&lt;/a&gt; with &lt;a href=&quot;http://indieweb.org&quot; rel=&quot;nofollow&quot; alt=&quot;IndieWeb&quot;&gt;principles from &lt;img src=&quot;https://boffosocko.com/wp-content/uploads/2018/01/indieweb-badge.png&quot; alt=&quot;IndieWebCamp&quot; width=&quot;80&quot; height=&quot;15&quot; style=&quot;image-rendering:pixelated;&quot; /&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://microformats.org/wiki/get-started&quot;&gt;&lt;img src=&quot;https://boffosocko.com/wp-content/uploads/2018/01/microformats-badge.png&quot; width=&quot;80&quot; height=&quot;15&quot; alt=&quot;Microformats.org&quot; style=&quot;image-rendering:pixelated;&quot;&gt;&lt;/a&gt; &lt;a title=&quot;This site accepts webmentions.&quot; href=&quot;https://www.w3.org/TR/webmention/&quot;&gt;&lt;img src=&quot;https://boffosocko.com/wp-content/uploads/2018/01/webmention-badge.png&quot; width=&quot;80&quot; height=&quot;15&quot; alt=&quot;Webmention&quot; style=&quot;image-rendering:pixelated;&quot;&gt;&lt;/a&gt; &lt;a href=&quot;https://creativecommons.org/licenses/by/3.0/&quot;&gt;&lt;img src=&quot;https://boffosocko.com/wp-content/uploads/2018/01/cc-commons-badge.png&quot; width=&quot;80&quot; height=&quot;15&quot; alt=&quot;Creative Commons Attribution 3.0&quot; style=&quot;image-rendering:pixelated;&quot;&gt;&lt;/a&gt;&lt;br/&gt;&amp;copy; 2019-2020 Chris Aldrich | Except where otherwise noted, text content&lt;br /&gt;on this site is licensed under a &lt;a href=&quot;https://creativecommons.org/licenses/by/3.0/&quot;&gt;Creative Commons Attribution 3.0 License&lt;/a&gt;.</pre>
 </div>
 <div created="20200323153740565" creator="chrisaldrich" modified="20200411190306841" modifier="Chris Aldrich" tags="Contents Evie Education" title="Home school">
 <pre>!! Schedule
