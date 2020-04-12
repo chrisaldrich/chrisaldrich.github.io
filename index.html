@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistSaturday, April 11, 2020 @ 20:15</title>
+<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistSaturday, April 11, 2020 @ 20:16</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -716,8 +716,6 @@ Error message and password prompt
 <li>Contents</li>
 
 <li>Create an h-card for my TiddlyWiki</li>
-
-<li>Draft of '$:/core/ui/PageTemplate' by Chris Aldrich</li>
 
 <li>Education</li>
 
@@ -13061,7 +13059,7 @@ very-muted-foreground: #888888</pre>
 <div created="20200319022404294" creator="h" modified="20200402074333095" modifier="Chris ldrich" title="$:/status/UserName">
 <pre>Chris Aldrich</pre>
 </div>
-<div created="20200411004644693" creator="Chris Aldrich" list="Footer $:/AdvancedSearch [[Draft of '$:/core/ui/PageTemplate' by Chris Aldrich]] $:/tags/BelowStory [[Webmentions into header of TW5]] $:/plugins/indieweb/core/rawMarkup . ToDo [[Create an h-card for my TiddlyWiki]] task [[Write up documentation for Webmention with TiddlyWiki]]" modified="20200412031246927" modifier="Chris Aldrich" title="$:/StoryList">
+<div created="20200411004644693" creator="Chris Aldrich" list=". ToDo [[Create an h-card for my TiddlyWiki]] task [[Write up documentation for Webmention with TiddlyWiki]]" modified="20200412031246927" modifier="Chris Aldrich" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200320171902433" creator="chrisaldrich" modified="20200412031244545" modifier="Chris Aldrich" title="$:/temp/advancedsearch">
@@ -14403,56 +14401,6 @@ Finished chapter 9 on Acts as the follow up for Luke.</pre>
 
 </pre>
 </div>
-<div draft.of="$:/core/ui/PageTemplate" draft.title="$:/core/ui/PageTemplate" modified="20200412031256411" modifier="Chris Aldrich" title="Draft of '$:/core/ui/PageTemplate' by Chris Aldrich">
-<pre>\whitespace trim
-\define containerClasses()
-tc-page-container tc-page-view-$(storyviewTitle)$ tc-language-$(languageTitle)$
-\end
-\import [[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
-
-&lt;$set name=&quot;tv-config-toolbar-icons&quot; value={{$:/config/Toolbar/Icons}}&gt;
-
-&lt;$set name=&quot;tv-config-toolbar-text&quot; value={{$:/config/Toolbar/Text}}&gt;
-
-&lt;$set name=&quot;tv-config-toolbar-class&quot; value={{$:/config/Toolbar/ButtonClass}}&gt;
-
-&lt;$set name=&quot;tv-show-missing-links&quot; value={{$:/config/MissingLinks}}&gt;
-
-&lt;$set name=&quot;storyviewTitle&quot; value={{$:/view}}&gt;
-
-&lt;$set name=&quot;languageTitle&quot; value={{{ [{$:/language}get[name]] }}}&gt;
-
-&lt;div class=&lt;&lt;containerClasses&gt;&gt;&gt;
-
-&lt;$navigator story=&quot;$:/StoryList&quot; history=&quot;$:/HistoryList&quot; openLinkFromInsideRiver={{$:/config/Navigation/openLinkFromInsideRiver}} openLinkFromOutsideRiver={{$:/config/Navigation/openLinkFromOutsideRiver}} relinkOnRename={{$:/config/RelinkOnRename}}&gt;
-
-&lt;$dropzone&gt;
-
-&lt;$list filter=&quot;[all[shadows+tiddlers]tag[$:/tags/PageTemplate]!has[draft.of]]&quot; variable=&quot;listItem&quot;&gt;
-
-&lt;$transclude tiddler=&lt;&lt;listItem&gt;&gt;/&gt;
-
-&lt;/$list&gt;
-
-&lt;/$dropzone&gt;
-
-&lt;/$navigator&gt;
-
-&lt;/div&gt;
-
-&lt;/$set&gt;
-
-&lt;/$set&gt;
-
-&lt;/$set&gt;
-
-&lt;/$set&gt;
-
-&lt;/$set&gt;
-
-&lt;/$set&gt;
-</pre>
-</div>
 <div color="#008000" created="20200405050452807" creator="Chris Aldrich" icon="$:/images/fa5/solid/book" modified="20200410230451882" modifier="Chris Aldrich" title="Education">
 <pre></pre>
 </div>
@@ -14928,8 +14876,10 @@ Then I threw the appropriate `&lt;link&gt;` s in with rel-me, etc. See the actua
 <div created="20200411004648753" creator="Chris Aldrich" modified="20200411023847267" modifier="Chris Aldrich" tags="Contents" title="Words">
 <pre>&lt;&lt;list-links &quot;[tag[Words]!sort[created]]&quot;&gt;&gt;</pre>
 </div>
-<div created="20200411230348465" creator="Chris Aldrich" modified="20200411230414218" modifier="Chris Aldrich" tags="TiddlyWiki task" title="Write up documentation for Webmention with TiddlyWiki">
-<pre></pre>
+<div created="20200411230348465" creator="Chris Aldrich" modified="20200412031651033" modifier="Chris Aldrich" tags="TiddlyWiki task" title="Write up documentation for Webmention with TiddlyWiki">
+<pre>[[$:/plugins/indieweb/core/rawMarkup]]
+
+[[Webmentions into header of TW5]]</pre>
 </div>
 <div created="20200323231319453" creator="chrisaldrich" modified="20200402074807292" modifier="Chris Aldrich" tags="Contents productivity" title="Zettelkasten">
 <pre>[[Overview|https://zettelkasten.de/posts/overview/]] (Read 3/23/20 4:12 PM) 
