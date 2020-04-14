@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistTuesday, April 14, 2020 @ 14:22</title>
+<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistTuesday, April 14, 2020 @ 14:23</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -733,8 +733,6 @@ Error message and password prompt
 
 <li>Create an h-card for my TiddlyWiki</li>
 
-<li>Draft of 'Webmention for TiddlyWiki' by Chris Aldrich</li>
-
 <li>Education</li>
 
 <li>Evie</li>
@@ -810,6 +808,8 @@ Error message and password prompt
 <li>Untitled</li>
 
 <li>Untitled 1</li>
+
+<li>Webmention for TiddlyWiki</li>
 
 <li>Webmentions into header of TW5</li>
 
@@ -13150,7 +13150,7 @@ very-muted-foreground: #888888</pre>
 <div created="20200319022404294" creator="h" modified="20200402074333095" modifier="Chris ldrich" title="$:/status/UserName">
 <pre>Chris Aldrich</pre>
 </div>
-<div created="20200413144548792" creator="Chris Aldrich" list="[[Write up documentation for Webmention with TiddlyWiki]] [[Draft of 'Webmention for TiddlyWiki' by Chris Aldrich]] task" modified="20200414212141262" modifier="Chris Aldrich" title="$:/StoryList">
+<div created="20200413144548792" creator="Chris Aldrich" list="[[Write up documentation for Webmention with TiddlyWiki]] [[Webmention for TiddlyWiki]] task" modified="20200414212141262" modifier="Chris Aldrich" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200320171902433" creator="chrisaldrich" modified="20200412053034716" modifier="Chris Aldrich" title="$:/temp/advancedsearch">
@@ -14725,112 +14725,6 @@ Finished chapter 9 on Acts as the follow up for Luke.</pre>
 * Wrote up [[article about process|http://tw.boffosocko.com/#An%20h-card%20for%20my%20TiddlyWiki]]
 </pre>
 </div>
-<div created="20200414212144934" creator="Chris Aldrich" draft.of="Webmention for TiddlyWiki" draft.title="Webmention for TiddlyWiki" modified="20200414212144934" modifier="Chris Aldrich" title="Draft of 'Webmention for TiddlyWiki' by Chris Aldrich">
-<pre>[[$:/plugins/indieweb/core/rawMarkup]]
-
-[[Webmentions into header of TW5]]
-
-! [[Webmention for TiddlyWiki]] to enable website to website notifications and communication
-
-!! What is a Webmention?
-
-[[Webmention|https://indieweb.org/Webmention]] is a relatively recent web standard (or W3C recommendation) that allows notifications when one website mentions a URL on another website. Think of it like @mentions on social platforms, but instead of just working within a particular website from one account to another, they work ''//across //'' websites. My website can now @mention your website!
-
-I've written a primer in the past for those who are interested in delving deeper into the idea and its implications: //[[Webmentions: Enabling Better Communication on the Internet|https://boffosocko.com/2018/07/19/webmentions-enabling-better-communication-on-the-internet-2/]]//.
-
-The goal is for other websites to be able to reference content in my TiddlyWiki website, and if those websites support sending the notifications as either webmentions (or the older pingbacks), I'll get a notification that my content was referenced elsewhere on the web. This is just the beginning of allowing two way communication between websites.
-
-My exploration today is how to quickly get these up and running on a public TiddlyWiki instance. The public part is important because webmentions won't work for non-public URLs which includes private TiddlyWikis. If you're wondering [[how to self-host a TiddlyWiki on your own domain|https://boffosocko.com/2020/04/04/self-hosting-tiddlywiki-with-github-pages/]], I've recently written up a tutorial for doing just that. At the end of this article, I'll make a few notes about how one might use webmentions, particularly in a TiddlyWiki ecosystem.
-
-I'll start out by saying that writing a full JavaScript implementation of the Webmention spec is beyond my capabilities presently, but it could be something that TiddlyWiki core might implement in the future. (Maybe something like [[Lazymention|https://indieweb.org/lazymention]] which is written in node.js might be leveraged?) 
-
-Here I'm going to focus on using a third party service to do all of the heavy lifting and code our behalf. It's relatively common, especially in the static website space, for websites to rely on third party or [[publisher services|https://indieweb.org/Webmention#Publisher_Services]] to either send or receive Webmentions on their behalf.  Given my current knowledge of TiddlyWiki and how its internals work and my knowledge of Webmention services, I thought it would be quickest and easiest to look at using the [[Webmention.io|https://webmention.io/]] service to handle receiving these @mentions from other sites on my behalf.  
-
-While this article may seem long, I'm hoping it's detailed enough for those who are code averse to follow the recipe and do this themselves. If you can create a Tiddler, cut and paste some text, and follow the tutorial you won't need to know anything about code. I did the entire thing myself in about five minutes from start to finish.
-
-!! Receiving Webmention notifications for your TiddlyWiki
-
-As a quick overview, we're going to cut and paste a few lines of code into a special tiddler of our TiddlyWiki based website. This will allow us to do two things:
-
-# Log into Webmention.io to create an account
-# Allow other sites that send webmentions to us to find an endpoint on our TiddlyWiki website that accepts them on our behalf.
-
-We'll then rely on the Webmention.io dashboard to show us our notifications or received webmentions.
-
-!!! Logging into Webmention.io
-
-Webmention.io requires you to log in with your domain name/URL and relies on you being able to authenticate yourself using it. Since I'm not aware of an [[IndieAuth|https://indieweb.org/IndieAuth]] or equivalent mechanism for using TiddlyWiki to log into Webmention.io, the quickest method to accomplish this is to rely on [[RelMeAuth|https://indieweb.org/RelMeAuth]] using [[IndieAuth.com|https://indieauth.com/]] to log  into Webmention.io using either a Twitter or GitHub account. From a non-technical perspective, we'll be using either our Twitter or GitHub account and it's OAuth2 security to log into the service.
-
-First we want to put a link to our public TiddlyWiki website into the website field on either Twitter or GitHub using the profile settings of one of those services. Here's what mine looks like on GitHub:
-
-Image TK - image taken, just upload
-
-Next we want to place a corresponding link to the relevant service into the `&lt;head&gt;` of our TiddlyWiki site using one (it's okay to use both) of the the following lines of code:
-
-&quot;&quot;&quot;
-`&lt;link rel=&quot;me&quot; href=&quot;https://twitter.com/username&quot; /&gt;
-&lt;link rel=&quot;me&quot; href=&quot;https://github.com/username&quot; /&gt;`
-&quot;&quot;&quot;
-
-Where you will replace the `username` in these links with the respective usernames of your accounts. (I'll note that you don't need to do this for both accounts, you can use either Twitter or GitHub.)
-
-To place these lines into the appropriate location on your TiddlyWiki, you'll want to create a tiddler with a name like $:/plugins/indieweb/core/rawMarkup and the tag $:/tags/RawMarkup.
-
-Then cut and paste one or both of these links as appropriate into this tiddler and save it (and your TiddlyWiki).
-
-You should now be able to go to webmention.io and enter the URL for your TiddlyWiki into the web sign in box and click &quot;sign in&quot;. The service will parse your website's page, find the link to either Twitter or GitHub and present you with the appropriate sign in button for one or both of those services. Click on the button for your chosen service. IndieAuth.com will then take you to that service to log into it, or, if you're already logged in, it will take you back to webmention.io to your new account. 
-
-!!! Creating your Webmention endpoint
-
-Within webmention.io you can now go to the &quot;[[settings|https://webmention.io/settings]]&quot; page which will give you two more links which are your webmention and pingback endpoints. They will look something like this:
-
-`&lt;link rel=&quot;webmention&quot; href=&quot;https://webmention.io/example.com/webmention&quot; /&gt;
-&lt;link rel=&quot;pingback&quot; href=&quot;https://webmention.io/example.com/xmlrpc&quot; /&gt;`
-
-where `example.com` will be replaced with the URL for your website.
-
-Now you should cut and paste these two `&lt;link&gt;`s  into the same tiddler you created above: $:/plugins/indieweb/core/rawMarkup. Now save the Tiddler and your TiddlyWiki. (Be sure to leave the previous links in case you need to log back into webmention.io in the future.)
-
-!!! You're done!
-
-That hopefully wasn't too hard.  
-
-But what does this do? When another website links to your website and sends you a notification, the code on your page will delegate the receipt of the webmention to webmention.io which will verify that the sending site has your URL on a publicly viewable page (this helps to cut down on spam problems that pingbacks used to have). It will then store the notification for you. 
-
-If you need a reminder to check them occasionally, maybe you could add a Tiddler with the link to your dashboard to appear on your wiki when you open it next. 
-
-Perhaps in a future tutorial I'll delve into the specifics of actually showing these mentions directly within your TiddlyWiki on the Tiddlers to which they relate.
-
-!!! Optional Webmention badge
-
-Some may notice that I've put a small Webmention badge into the [[footer|Footer]] of my TiddlyWiki site to visually indicate to human readers that the site accepts webmentions.  You can optionally do this for fun if you'd like.
-
-
-!! Sending Webmentions with TiddlyWiki
-
-Sending Webmentions seems to be an issue as the [[fragment|https://indieweb.org/fragment]]-based URLs that TiddlyWiki uses as permalinks using JavaScript seem to cause an issue with many receivers. They apparently have problems resolving and parsing pages due to [[js;dr|https://indieweb.org/js;dr]] related issues. I would send webmentions manually, but most receivers I'm aware of have this js;dr problem. I'm not sure if there is an easy way around this issue.
-
-
-!! Hyperchats, Wikis, and Open Educational Resources
-
-What's interesting about supporting Webmention, particularly from a TiddlyWiki perspective, is that if my TiddlyWiki is notified of mentions of it from outside sources, I can quickly cut and paste those responses directly into my Wiki pages in a pseudo-comment section similar to the comments section on [[this post|http://tw.boffosocko.com/#Self-hosting%20TiddlyWiki%20with%20GitHub%20Pages]] which could serve as a model. If those mentions of a particular Tiddler are from other TiddlyWikis, I could also choose to drag-and-drop (or import) them into my TiddlyWiki! 
-
-If I want to go a step further, I could transclude those imported Tiddlers into the Tiddler that they're in reference to. Perhaps I might do this under a heading of &quot;@mentions&quot; or perhaps &quot;Comments&quot; and suddenly I've got a way of displaying two-way conversations on my own TiddlyWiki site. 
-
-As is mentioned in Kicks Condor's [[post about Hyperchat Modality|https://www.kickscondor.com/comments/the-hyperchat-modality/]], one could potentially use custom theming information (cleverly named &quot;whostyles&quot; in that post) from imported Tiddlers (or themes from other platforms) to identify the web identities of the sites they're received from. I'll also mention Kicks' post about [[Hypertexting|https://www.kickscondor.com/hypertexting/]] which is related and forms an interesting melange of websites, blogs, wikis, and hypertext of all kinds to form a more interesting web medium.
-
-For the broader information collecting and building or academic communities (and here I can't help thinking about the Open Educational Resources space that uses Creative Commons licensing to build their teaching resources), one could use these webmentions as a means of notifying sites that their content has been used, changed, or updated (typically those using Creative Commons will credit their source using a link). Then the receiver of the notification could optionally add to or change their version or even just collect the changes. This becomes particularly useful when the Tiddlers can be easily dragged and dropped between TiddyWikis!
-
-As an explicit example, imagine a professor who wanted to build a textbook anthology, but who could do so by dragging and dropping a variety of Tiddlers from one site to another to create a quick textbook or reader for their students. This idea is particularly exciting to me when combined with the idea behind [[TW5-powered ebooks|https://groups.google.com/d/msg/tiddlywiki/_VLufc4Svp8/jALzYZ09BAAJ]]!
-
-What could you imagine doing with webmention notifications on //your// TiddlyWiki site?
-
-
-
-
-
-</pre>
-</div>
 <div color="#008000" created="20200405050452807" creator="Chris Aldrich" icon="$:/images/fa5/solid/book" modified="20200410230451882" modifier="Chris Aldrich" title="Education">
 <pre></pre>
 </div>
@@ -15496,6 +15390,108 @@ An Urgency of Teachers: the Work of Critical Digital Pedagogy by Jesse Stommel a
 <div title="Untitled 1">
 <pre>http://tw.boffosocko.com/favicon.ico</pre>
 </div>
+<div created="20200414212144934" creator="Chris Aldrich" modified="20200414212307534" modifier="Chris Aldrich" tags="IndieWeb article TiddlyWiki" title="Webmention for TiddlyWiki">
+<pre>[[Webmention for TiddlyWiki]] to enable website to website notifications and communication
+
+!! What is a Webmention?
+
+[[Webmention|https://indieweb.org/Webmention]] is a relatively recent web standard (or W3C recommendation) that allows notifications when one website mentions a URL on another website. Think of it like @mentions on social platforms, but instead of just working within a particular website from one account to another, they work ''//across //'' websites. My website can now @mention your website!
+
+I've written a primer in the past for those who are interested in delving deeper into the idea and its implications: //[[Webmentions: Enabling Better Communication on the Internet|https://boffosocko.com/2018/07/19/webmentions-enabling-better-communication-on-the-internet-2/]]//.
+
+The goal is for other websites to be able to reference content in my TiddlyWiki website, and if those websites support sending the notifications as either webmentions (or the older pingbacks), I'll get a notification that my content was referenced elsewhere on the web. This is just the beginning of allowing two way communication between websites.
+
+My exploration today is how to quickly get these up and running on a public TiddlyWiki instance. The public part is important because webmentions won't work for non-public URLs which includes private TiddlyWikis. If you're wondering [[how to self-host a TiddlyWiki on your own domain|https://boffosocko.com/2020/04/04/self-hosting-tiddlywiki-with-github-pages/]], I've recently written up a tutorial for doing just that. At the end of this article, I'll make a few notes about how one might use webmentions, particularly in a TiddlyWiki ecosystem.
+
+I'll start out by saying that writing a full JavaScript implementation of the Webmention spec is beyond my capabilities presently, but it could be something that TiddlyWiki core might implement in the future. (Maybe something like [[Lazymention|https://indieweb.org/lazymention]] which is written in node.js might be leveraged?) 
+
+Here I'm going to focus on using a third party service to do all of the heavy lifting and code our behalf. It's relatively common, especially in the static website space, for websites to rely on third party or [[publisher services|https://indieweb.org/Webmention#Publisher_Services]] to either send or receive Webmentions on their behalf.  Given my current knowledge of TiddlyWiki and how its internals work and my knowledge of Webmention services, I thought it would be quickest and easiest to look at using the [[Webmention.io|https://webmention.io/]] service to handle receiving these @mentions from other sites on my behalf.  
+
+While this article may seem long, I'm hoping it's detailed enough for those who are code averse to follow the recipe and do this themselves. If you can create a Tiddler, cut and paste some text, and follow the tutorial you won't need to know anything about code. I did the entire thing myself in about five minutes from start to finish.
+
+!! Receiving Webmention notifications for your TiddlyWiki
+
+As a quick overview, we're going to cut and paste a few lines of code into a special tiddler of our TiddlyWiki based website. This will allow us to do two things:
+
+# Log into Webmention.io to create an account
+# Allow other sites that send webmentions to us to find an endpoint on our TiddlyWiki website that accepts them on our behalf.
+
+We'll then rely on the Webmention.io dashboard to show us our notifications or received webmentions.
+
+!!! Logging into Webmention.io
+
+Webmention.io requires you to log in with your domain name/URL and relies on you being able to authenticate yourself using it. Since I'm not aware of an [[IndieAuth|https://indieweb.org/IndieAuth]] or equivalent mechanism for using TiddlyWiki to log into Webmention.io, the quickest method to accomplish this is to rely on [[RelMeAuth|https://indieweb.org/RelMeAuth]] using [[IndieAuth.com|https://indieauth.com/]] to log  into Webmention.io using either a Twitter or GitHub account. From a non-technical perspective, we'll be using either our Twitter or GitHub account and it's OAuth2 security to log into the service.
+
+First we want to put a link to our public TiddlyWiki website into the website field on either Twitter or GitHub using the profile settings of one of those services. Here's what mine looks like on GitHub:
+
+Image TK - image taken, just upload
+
+Next we want to place a corresponding link to the relevant service into the `&lt;head&gt;` of our TiddlyWiki site using one (it's okay to use both) of the the following lines of code:
+
+&quot;&quot;&quot;
+`&lt;link rel=&quot;me&quot; href=&quot;https://twitter.com/username&quot; /&gt;
+&lt;link rel=&quot;me&quot; href=&quot;https://github.com/username&quot; /&gt;`
+&quot;&quot;&quot;
+
+Where you will replace the `username` in these links with the respective usernames of your accounts. (I'll note that you don't need to do this for both accounts, you can use either Twitter or GitHub.)
+
+To place these lines into the appropriate location on your TiddlyWiki, you'll want to create a tiddler with a name like $:/plugins/indieweb/core/rawMarkup and the tag $:/tags/RawMarkup.
+
+Then cut and paste one or both of these links as appropriate into this tiddler and save it (and your TiddlyWiki).
+
+You should now be able to go to webmention.io and enter the URL for your TiddlyWiki into the web sign in box and click &quot;sign in&quot;. The service will parse your website's page, find the link to either Twitter or GitHub and present you with the appropriate sign in button for one or both of those services. Click on the button for your chosen service. IndieAuth.com will then take you to that service to log into it, or, if you're already logged in, it will take you back to webmention.io to your new account. 
+
+!!! Creating your Webmention endpoint
+
+Within webmention.io you can now go to the &quot;[[settings|https://webmention.io/settings]]&quot; page which will give you two more links which are your webmention and pingback endpoints. They will look something like this:
+
+`&lt;link rel=&quot;webmention&quot; href=&quot;https://webmention.io/example.com/webmention&quot; /&gt;
+&lt;link rel=&quot;pingback&quot; href=&quot;https://webmention.io/example.com/xmlrpc&quot; /&gt;`
+
+where `example.com` will be replaced with the URL for your website.
+
+Now you should cut and paste these two `&lt;link&gt;`s  into the same tiddler you created above: $:/plugins/indieweb/core/rawMarkup. Now save the Tiddler and your TiddlyWiki. (Be sure to leave the previous links in case you need to log back into webmention.io in the future.)
+
+!!! You're done!
+
+That hopefully wasn't too hard.  
+
+But what does this do? When another website links to your website and sends you a notification, the code on your page will delegate the receipt of the webmention to webmention.io which will verify that the sending site has your URL on a publicly viewable page (this helps to cut down on spam problems that pingbacks used to have). It will then store the notification for you. 
+
+If you need a reminder to check them occasionally, maybe you could add a Tiddler with the link to your dashboard to appear on your wiki when you open it next. 
+
+Perhaps in a future tutorial I'll delve into the specifics of actually showing these mentions directly within your TiddlyWiki on the Tiddlers to which they relate.
+
+!!! Optional Webmention badge
+
+Some may notice that I've put a small Webmention badge into the [[footer|Footer]] of my TiddlyWiki site to visually indicate to human readers that the site accepts webmentions.  You can optionally do this for fun if you'd like.
+
+
+!! Sending Webmentions with TiddlyWiki
+
+Sending Webmentions seems to be an issue as the [[fragment|https://indieweb.org/fragment]]-based URLs that TiddlyWiki uses as permalinks using JavaScript seem to cause an issue with many receivers. They apparently have problems resolving and parsing pages due to [[js;dr|https://indieweb.org/js;dr]] related issues. I would send webmentions manually, but most receivers I'm aware of have this js;dr problem. I'm not sure if there is an easy way around this issue.
+
+
+!! Hyperchats, Wikis, and Open Educational Resources
+
+What's interesting about supporting Webmention, particularly from a TiddlyWiki perspective, is that if my TiddlyWiki is notified of mentions of it from outside sources, I can quickly cut and paste those responses directly into my Wiki pages in a pseudo-comment section similar to the comments section on [[this post|http://tw.boffosocko.com/#Self-hosting%20TiddlyWiki%20with%20GitHub%20Pages]] which could serve as a model. If those mentions of a particular Tiddler are from other TiddlyWikis, I could also choose to drag-and-drop (or import) them into my TiddlyWiki! 
+
+If I want to go a step further, I could transclude those imported Tiddlers into the Tiddler that they're in reference to. Perhaps I might do this under a heading of &quot;@mentions&quot; or perhaps &quot;Comments&quot; and suddenly I've got a way of displaying two-way conversations on my own TiddlyWiki site. 
+
+As is mentioned in Kicks Condor's [[post about Hyperchat Modality|https://www.kickscondor.com/comments/the-hyperchat-modality/]], one could potentially use custom theming information (cleverly named &quot;whostyles&quot; in that post) from imported Tiddlers (or themes from other platforms) to identify the web identities of the sites they're received from. I'll also mention Kicks' post about [[Hypertexting|https://www.kickscondor.com/hypertexting/]] which is related and forms an interesting melange of websites, blogs, wikis, and hypertext of all kinds to form a more interesting web medium.
+
+For the broader information collecting and building or academic communities (and here I can't help thinking about the Open Educational Resources space that uses Creative Commons licensing to build their teaching resources), one could use these webmentions as a means of notifying sites that their content has been used, changed, or updated (typically those using Creative Commons will credit their source using a link). Then the receiver of the notification could optionally add to or change their version or even just collect the changes. This becomes particularly useful when the Tiddlers can be easily dragged and dropped between TiddyWikis!
+
+As an explicit example, imagine a professor who wanted to build a textbook anthology, but who could do so by dragging and dropping a variety of Tiddlers from one site to another to create a quick textbook or reader for their students. This idea is particularly exciting to me when combined with the idea behind [[TW5-powered ebooks|https://groups.google.com/d/msg/tiddlywiki/_VLufc4Svp8/jALzYZ09BAAJ]]!
+
+What could you imagine doing with webmention notifications on //your// TiddlyWiki site?
+
+
+
+
+
+</pre>
+</div>
 <div created="20200405162003661" creator="Chris Aldrich" modified="20200411224754119" modifier="Chris Aldrich" tags="IndieWeb task done" title="Webmentions into header of TW5">
 <pre>We'll need to add the following lines to the `&lt;head&gt;` somehow:
 
@@ -15531,10 +15527,12 @@ Invitations to:
 <div created="20200411004648753" creator="Chris Aldrich" modified="20200411023847267" modifier="Chris Aldrich" tags="Contents" title="Words">
 <pre>&lt;&lt;list-links &quot;[tag[Words]!sort[created]]&quot;&gt;&gt;</pre>
 </div>
-<div created="20200411230348465" creator="Chris Aldrich" modified="20200414212210541" modifier="Chris Aldrich" tags="TiddlyWiki task" title="Write up documentation for Webmention with TiddlyWiki">
+<div created="20200411230348465" creator="Chris Aldrich" modified="20200414212327680" modifier="Chris Aldrich" tags="TiddlyWiki task" title="Write up documentation for Webmention with TiddlyWiki">
 <pre>[[$:/plugins/indieweb/core/rawMarkup]]
 
-[[Webmentions into header of TW5]]</pre>
+[[Webmentions into header of TW5]]
+
+see article here: [[Webmention for TiddlyWiki]]</pre>
 </div>
 <div created="20200323231319453" creator="chrisaldrich" modified="20200402074807292" modifier="Chris Aldrich" tags="Contents productivity" title="Zettelkasten">
 <pre>[[Overview|https://zettelkasten.de/posts/overview/]] (Read 3/23/20 4:12 PM) 
