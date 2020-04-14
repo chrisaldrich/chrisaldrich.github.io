@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistMonday, April 13, 2020 @ 20:31</title>
+<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistTuesday, April 14, 2020 @ 14:19</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -13043,7 +13043,7 @@ very-muted-foreground: #888888</pre>
 <div created="20200404031809315" creator="Chris Aldrich" modified="20200404164856685" modifier="Chris Aldrich" title="$:/state/ShowPaletteEditor">
 <pre>no</pre>
 </div>
-<div created="20200318210456273" creator="Chris Aldrich" modified="20200414022522576" modifier="Chris Aldrich" title="$:/state/sidebar">
+<div created="20200318210456273" creator="Chris Aldrich" modified="20200414160649297" modifier="Chris Aldrich" title="$:/state/sidebar">
 <pre>no</pre>
 </div>
 <div created="20200405062314766" creator="Chris Aldrich" modified="20200405062316697" modifier="Chris Aldrich" title="$:/state/tab--1222648149">
@@ -15423,7 +15423,7 @@ Invitations to:
 <div created="20200411004648753" creator="Chris Aldrich" modified="20200411023847267" modifier="Chris Aldrich" tags="Contents" title="Words">
 <pre>&lt;&lt;list-links &quot;[tag[Words]!sort[created]]&quot;&gt;&gt;</pre>
 </div>
-<div created="20200411230348465" creator="Chris Aldrich" modified="20200414033127396" modifier="Chris Aldrich" tags="TiddlyWiki task" title="Write up documentation for Webmention with TiddlyWiki">
+<div created="20200411230348465" creator="Chris Aldrich" modified="20200414211911468" modifier="Chris Aldrich" tags="TiddlyWiki task" title="Write up documentation for Webmention with TiddlyWiki">
 <pre>[[$:/plugins/indieweb/core/rawMarkup]]
 
 [[Webmentions into header of TW5]]
@@ -15457,7 +15457,7 @@ We'll then rely on the Webmention.io dashboard to show us our notifications or r
 
 !!! Logging into Webmention.io
 
-Since I'm not aware of an [[IndieAuth|https://indieweb.org/IndieAuth]] or equivalent mechanism for using TiddlyWiki to log into Webmention.io, the quickest method to accomplish this is to rely on [[RelMeAuth|https://indieweb.org/RelMeAuth]] using [[IndieAuth.com|https://indieauth.com/]] to log  into Webmention.io using either a Twitter or GitHub account. From a non-technical perspective, we'll be using either our Twitter or GitHub account and it's OAuth2 security to log into the service.
+Webmention.io requires you to log in with your domain name/URL and relies on you being able to authenticate yourself using it. Since I'm not aware of an [[IndieAuth|https://indieweb.org/IndieAuth]] or equivalent mechanism for using TiddlyWiki to log into Webmention.io, the quickest method to accomplish this is to rely on [[RelMeAuth|https://indieweb.org/RelMeAuth]] using [[IndieAuth.com|https://indieauth.com/]] to log  into Webmention.io using either a Twitter or GitHub account. From a non-technical perspective, we'll be using either our Twitter or GitHub account and it's OAuth2 security to log into the service.
 
 First we want to put a link to our public TiddlyWiki website into the website field on either Twitter or GitHub using the profile settings of one of those services. Here's what mine looks like on GitHub:
 
@@ -15506,7 +15506,7 @@ Some may notice that I've put a small Webmention badge into the [[footer|Footer]
 
 !! Sending Webmentions with TiddlyWiki
 
-Sending Webmentions seems to be an issue as the [[fragment|https://indieweb.org/fragment]]-based URLs that TiddlyWiki uses as permalinks using JavaScript seem to cause an issue with many receivers. They apparently have problems resolving and parsing pages due to [[js;dr|https://indieweb.org/js;dr]] related issues. I would send webmentions manually, but most receivers I'm aware of have this js;dr problem.
+Sending Webmentions seems to be an issue as the [[fragment|https://indieweb.org/fragment]]-based URLs that TiddlyWiki uses as permalinks using JavaScript seem to cause an issue with many receivers. They apparently have problems resolving and parsing pages due to [[js;dr|https://indieweb.org/js;dr]] related issues. I would send webmentions manually, but most receivers I'm aware of have this js;dr problem. I'm not sure if there is an easy way around this issue.
 
 
 !! Hyperchats, Wikis, and Open Educational Resources
@@ -15515,9 +15515,9 @@ What's interesting about supporting Webmention, particularly from a TiddlyWiki p
 
 If I want to go a step further, I could transclude those imported Tiddlers into the Tiddler that they're in reference to. Perhaps I might do this under a heading of &quot;@mentions&quot; or perhaps &quot;Comments&quot; and suddenly I've got a way of displaying two-way conversations on my own TiddlyWiki site. 
 
-As is mentioned in Kicks Condor's [[post about Hyperchat Modality|https://www.kickscondor.com/comments/the-hyperchat-modality/]], one could potentially use custom theming information (cleverly named &quot;whostyles&quot;) from imported Tiddlers (or themes from other platforms) to identify the web identities of the sites they're received from. I'll also mention Kicks' post about [[Hypertexting|https://www.kickscondor.com/hypertexting/]] which is related and forms an interesting melange of websites, blogs, wikis, and hypertext of all kinds to form a more interesting web medium.
+As is mentioned in Kicks Condor's [[post about Hyperchat Modality|https://www.kickscondor.com/comments/the-hyperchat-modality/]], one could potentially use custom theming information (cleverly named &quot;whostyles&quot; in that post) from imported Tiddlers (or themes from other platforms) to identify the web identities of the sites they're received from. I'll also mention Kicks' post about [[Hypertexting|https://www.kickscondor.com/hypertexting/]] which is related and forms an interesting melange of websites, blogs, wikis, and hypertext of all kinds to form a more interesting web medium.
 
-For the broader information collecting and building or academic communities (and here I can't help thinking about the Open Educational Resources space that uses Creative Commons licensing to build their teaching resources), one could use these webmentions as a means of notifying sites that their content has been used, changed, or updated. Then the receiver of the notification could optionally add to or change their version or even just collect the changes. This becomes particularly useful when the Tiddlers can be easily dragged and dropped between TiddyWikis!
+For the broader information collecting and building or academic communities (and here I can't help thinking about the Open Educational Resources space that uses Creative Commons licensing to build their teaching resources), one could use these webmentions as a means of notifying sites that their content has been used, changed, or updated (typically those using Creative Commons will credit their source using a link). Then the receiver of the notification could optionally add to or change their version or even just collect the changes. This becomes particularly useful when the Tiddlers can be easily dragged and dropped between TiddyWikis!
 
 As an explicit example, imagine a professor who wanted to build a textbook anthology, but who could do so by dragging and dropping a variety of Tiddlers from one site to another to create a quick textbook or reader for their students. This idea is particularly exciting to me when combined with the idea behind [[TW5-powered ebooks|https://groups.google.com/d/msg/tiddlywiki/_VLufc4Svp8/jALzYZ09BAAJ]]!
 
