@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistMonday, April 13, 2020 @ 17:07</title>
+<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistMonday, April 13, 2020 @ 17:14</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -13043,8 +13043,8 @@ very-muted-foreground: #888888</pre>
 <div created="20200404031809315" creator="Chris Aldrich" modified="20200404164856685" modifier="Chris Aldrich" title="$:/state/ShowPaletteEditor">
 <pre>no</pre>
 </div>
-<div created="20200318210456273" creator="Chris Aldrich" modified="20200413204327516" modifier="Chris Aldrich" title="$:/state/sidebar">
-<pre>no</pre>
+<div created="20200318210456273" creator="Chris Aldrich" modified="20200414000729048" modifier="Chris Aldrich" title="$:/state/sidebar">
+<pre>yes</pre>
 </div>
 <div created="20200405062314766" creator="Chris Aldrich" modified="20200405062316697" modifier="Chris Aldrich" title="$:/state/tab--1222648149">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Plugins</pre>
@@ -15343,24 +15343,28 @@ Invitations to:
 <div created="20200411004648753" creator="Chris Aldrich" modified="20200411023847267" modifier="Chris Aldrich" tags="Contents" title="Words">
 <pre>&lt;&lt;list-links &quot;[tag[Words]!sort[created]]&quot;&gt;&gt;</pre>
 </div>
-<div created="20200411230348465" creator="Chris Aldrich" modified="20200414000726829" modifier="Chris Aldrich" tags="TiddlyWiki task" title="Write up documentation for Webmention with TiddlyWiki">
+<div created="20200411230348465" creator="Chris Aldrich" modified="20200414001456567" modifier="Chris Aldrich" tags="TiddlyWiki task" title="Write up documentation for Webmention with TiddlyWiki">
 <pre>[[$:/plugins/indieweb/core/rawMarkup]]
 
 [[Webmentions into header of TW5]]
 
 ! Webmention for TiddlyWiki to enable website to website notifications and communication
 
-!! Webmention is a relatively recent W3C recommendation that allows notifications when one website mentions a URL on another website. Think of it like @mentions on social platforms, but these actually work across different domain names. I've written a broad based primer in the past for those who are interested: //[[Webmentions: Enabling Better Communication on the Internet|https://boffosocko.com/2018/07/19/webmentions-enabling-better-communication-on-the-internet-2/]]//.
+!! What is a Webmention?
+
+Webmention is a relatively recent web standard (or W3C recommendation) that allows notifications when one website mentions a URL on another website. Think of it like @mentions on social platforms, but these actually work across different domain names. 
+
+I've written a primer in the past for those who are interested in knowing more: //[[Webmentions: Enabling Better Communication on the Internet|https://boffosocko.com/2018/07/19/webmentions-enabling-better-communication-on-the-internet-2/]]//.
 
 The goal is for other websites to be able to reference content in my TiddlyWiki website, and if those websites support sending the notifications as either webmentions (or the older pingbacks), I'll get a notification that my content was referenced elsewhere on the web. This is just the beginning of allowing two way communication between websites.
 
-My exploration today is how to quickly get these up and running on a public TiddlyWiki instance. At the bottom I'll make a few notes about how one might use these, particularly in a TiddlyWiki ecosystem.
+My exploration today is how to quickly get these up and running on a public TiddlyWiki instance. (The public part is important because webmentions won't work for private TiddlyWikis.) At the bottom I'll make a few notes about how one might use these, particularly in a TiddlyWiki ecosystem.
 
 I'll start out by saying that writing a full JavaScript implementation of the Webmention spec is beyond my capabilities presently, but it could potentially be something that TiddlyWiki core might implement in the future. (Maybe something like [[Lazymention|https://indieweb.org/lazymention]] which is in node.js might be leveraged?) 
 
-Here I'm going to focus on using a third party service to do a portion of the work on our behalf. It's relatively common, especially in the static website space, for websites to rely on third party or [[publisher services|https://indieweb.org/Webmention#Publisher_Services]] to either send or receive Webmentions on their behalf.  Given my current knowledge of TiddlyWiki and how its internals work and my knowledge of Webmention services, I thought it would be quickest and easiest to look at using the Webmention.io service to handle receiving @mentions from other sites on my behalf.  
+Here I'm going to focus on using a third party service to do all of the heavy lifting and code our behalf. It's relatively common, especially in the static website space, for websites to rely on third party or [[publisher services|https://indieweb.org/Webmention#Publisher_Services]] to either send or receive Webmentions on their behalf.  Given my current knowledge of TiddlyWiki and how its internals work and my knowledge of Webmention services, I thought it would be quickest and easiest to look at using the [[Webmention.io|https://webmention.io/]] service to handle receiving these @mentions from other sites on my behalf.  
 
-While this article may seem long, I'm hoping it's detailed enough for those who are code averse to follow the recipe and do this themselves. I think I did the entire thing myself in about five minutes from start to finish.
+While this article may seem long, I'm hoping it's detailed enough for those who are code averse to follow the recipe and do this themselves. If you can create a Tiddler, cut and paste some text, and follow the turorial you won't need to know anything about code. I did the entire thing myself in about five minutes from start to finish.
 
 !! Receiving Webmention notifications for your TiddlyWiki
 
@@ -15371,8 +15375,7 @@ As a quick overview, we're going to cut and paste a few lines of code to the `&l
 
 We'll then rely on the Webmention.io dashboard to show us our notifications or received Webmentions.
 
-
-!! Logging into Webmention.io
+!!! Logging into Webmention.io
 
 Since I'm not aware of an [[IndieAuth|https://indieweb.org/IndieAuth]] or equivalent mechanism for using TiddlyWiki to log into Webmention.io, the quickest method to accomplish this is to rely on [[RelMeAuth|https://indieweb.org/RelMeAuth]] using [[IndieAuth.com|https://indieauth.com/]] to log  into Webmention.io using either a Twitter or GitHub account.
 
@@ -15395,8 +15398,7 @@ Then cut and paste one or both of these links as appropriate into this tiddler a
 
 You should now be able to go to webmention.io and enter the URL for your TiddlyWiki into the web sign in box and click &quot;sign in&quot;. The service will parse your website's page, find the link to either Twitter or GitHub and present you with the appropriate sign in button for one or both of those services. Click on the button for your chosen service. IndieAuth.com with then take you to that service to log into it, or, if you're already logged in, it will take you back to webmention.io to your new account. 
 
-
-!! Creating your Webmention endpoint
+!!! Creating your Webmention endpoint
 
 Within webmention.io you can now go to the &quot;settings&quot; page which will give you two more links which are your webmention and pingback endpoints that will look like:
 
@@ -15407,7 +15409,7 @@ where example.com will be replaced with the URL for your website.
 
 Now you should cut and paste these two `&lt;link&gt;`s  into the same tiddler you created above: $:/plugins/indieweb/core/rawMarkup. Now save the Tiddler and your TiddlyWiki.
 
-You're done!
+!!! You're done!
 
 But what does this do? When another website links to your website and sends you a notification, the code on your page will delegate the receipt of the webmention to webmention.io which will verify that the sending site has your URL on a publicly viewable page (this helps to cut down on spam problems that pingbacks used to have). It will then store the notification for you. 
 
