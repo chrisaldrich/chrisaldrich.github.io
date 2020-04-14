@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistMonday, April 13, 2020 @ 17:14</title>
+<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistMonday, April 13, 2020 @ 17:20</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -15343,7 +15343,7 @@ Invitations to:
 <div created="20200411004648753" creator="Chris Aldrich" modified="20200411023847267" modifier="Chris Aldrich" tags="Contents" title="Words">
 <pre>&lt;&lt;list-links &quot;[tag[Words]!sort[created]]&quot;&gt;&gt;</pre>
 </div>
-<div created="20200411230348465" creator="Chris Aldrich" modified="20200414001456567" modifier="Chris Aldrich" tags="TiddlyWiki task" title="Write up documentation for Webmention with TiddlyWiki">
+<div created="20200411230348465" creator="Chris Aldrich" modified="20200414002025973" modifier="Chris Aldrich" tags="TiddlyWiki task" title="Write up documentation for Webmention with TiddlyWiki">
 <pre>[[$:/plugins/indieweb/core/rawMarkup]]
 
 [[Webmentions into header of TW5]]
@@ -15400,28 +15400,33 @@ You should now be able to go to webmention.io and enter the URL for your TiddlyW
 
 !!! Creating your Webmention endpoint
 
-Within webmention.io you can now go to the &quot;settings&quot; page which will give you two more links which are your webmention and pingback endpoints that will look like:
+Within webmention.io you can now go to the &quot;[[settings|https://webmention.io/settings]]&quot; page which will give you two more links which are your webmention and pingback endpoints. They will look like this:
 
-`&lt;link rel=&quot;webmention&quot; href=&quot;https://webmention.io/tw.boffosocko.com/webmention&quot; /&gt;
-&lt;link rel=&quot;pingback&quot; href=&quot;https://webmention.io/tw.boffosocko.com/xmlrpc&quot; /&gt;`
+`&lt;link rel=&quot;webmention&quot; href=&quot;https://webmention.io/example.com/webmention&quot; /&gt;
+&lt;link rel=&quot;pingback&quot; href=&quot;https://webmention.io/example.com/xmlrpc&quot; /&gt;`
 
-where example.com will be replaced with the URL for your website.
+where `example.com` will be replaced with the URL for your website.
 
-Now you should cut and paste these two `&lt;link&gt;`s  into the same tiddler you created above: $:/plugins/indieweb/core/rawMarkup. Now save the Tiddler and your TiddlyWiki.
+Now you should cut and paste these two `&lt;link&gt;`s  into the same tiddler you created above: $:/plugins/indieweb/core/rawMarkup. Now save the Tiddler and your TiddlyWiki. (Be sure to leave the previous links in case you need to log back into webmention.io in the future.)
 
 !!! You're done!
 
+That hopefully wasn't too hard.  
+
 But what does this do? When another website links to your website and sends you a notification, the code on your page will delegate the receipt of the webmention to webmention.io which will verify that the sending site has your URL on a publicly viewable page (this helps to cut down on spam problems that pingbacks used to have). It will then store the notification for you. 
 
-If you need a reminder to check them occasionally, maybe you could add a Tiddler to appear on your wiki when you open it next. 
+If you need a reminder to check them occasionally, maybe you could add a Tiddler with the link to your dashboard to appear on your wiki when you open it next. 
 
 !!! Optional Webmention badge
 
-Some may notice that I've put a small Webmention badge into the footer of my TiddlyWiki site to visually indicate to human readers that the site accepts webmentions.  
+Some may notice that I've put a small Webmention badge into the footer of my TiddlyWiki site to visually indicate to human readers that the site accepts webmentions.  You can optionally do this for fun if you'd like.
+
 
 !! Sending Webmentions with TiddlyWiki
 
-Sending Webmentions seems to be a whole other situation as the fragment-based URLs that TiddlyWiki uses as permalinks using JavaScript seem to cause an issue with many receivers which may have problems resolving and parsing pages due to js;dr related problems. (Link TK)
+Sending Webmentions seems to be a whole other situation as the fragment-based URLs that TiddlyWiki uses as permalinks using JavaScript seem to cause an issue with many receivers which may have problems resolving and parsing pages due to js;dr related problems. (Link TK) I would send webmentions manually, but most receivers will have this js;dr problem.
+
+
 
 !! Hyperchats, Wikis, and Open Educational Resources
 
