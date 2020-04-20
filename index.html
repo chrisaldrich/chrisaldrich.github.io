@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistMonday, April 20, 2020 @ 15:24</title>
+<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistMonday, April 20, 2020 @ 15:30</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -637,8 +637,6 @@ Error message and password prompt
 
 <li>Contents</li>
 
-<li>Draft of 'Books' by Chris Aldrich</li>
-
 <li>Education</li>
 
 <li>Evie</li>
@@ -1067,7 +1065,7 @@ Click here: {{$:/core/ui/Buttons/palette}}
 &lt;/$vars&gt;
 </pre>
 </div>
-<div caption="links" created="20200126143031898" modified="20200420082808676" tags="refs tb $:/tags/ViewTemplate" title="$:/.giffmex/ViewTemplate/refslinks">
+<div caption="links" created="20200126143031898" dummy="yes" modified="20200420082808676" tags="refs tb $:/tags/ViewTemplate" title="$:/.giffmex/ViewTemplate/refslinks">
 <pre>\define mycrit() (?i)\b$(searchspx)$\b
 
 &lt;hr&gt;References: 
@@ -14674,7 +14672,7 @@ exports.context = contextWidget;
 <pre>yes</pre>
 </div>
 <div created="20200420035939423" creator="Chris Aldrich" modified="20200420035939423" modifier="Chris Aldrich" title="$:/state/sidebar">
-<pre>no</pre>
+<pre>yes</pre>
 </div>
 <div created="20200420040855088" creator="Chris Aldrich" modified="20200420040955770" modifier="Chris Aldrich" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/System</pre>
@@ -14739,7 +14737,7 @@ exports.context = contextWidget;
 <div created="20200319022404294" creator="h" modified="20200402074333095" modifier="Chris ldrich" title="$:/status/UserName">
 <pre>Chris Aldrich</pre>
 </div>
-<div list="[[Memory Craft: Improve your memory using the most powerful methods from around the world]] [[Memory Craft notes]] [[Draft of 'Books' by Chris Aldrich]] . ToDo task [[Wiki Session for IndieWeb]] [[TiddlyBlink home]]" title="$:/StoryList">
+<div list=". ToDo task [[Wiki Session for IndieWeb]] [[TiddlyBlink home]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200127163609843" list="$:/jd/fullscreen-editor/EditButton $:/core/ui/Buttons/delete $:/core/ui/Buttons/cancel $:/core/ui/Buttons/save" modified="20200304200339220" tags="tb" title="$:/tags/EditToolbar">
@@ -15770,71 +15768,6 @@ Ramus praised Quintilian for his idea of 'dividing and composing' to indicate th
 &lt;&lt;toc-selective-expandable 'Contents' sort[title]&gt;&gt;
 &lt;/div&gt;</pre>
 </div>
-<div color="#008040" created="20200407192320592" creator="Chris Aldrich" draft.of="Books" draft.title="Books" icon="$:/images/fa5/solid/book" list-before="$:/core/ui/SideBar/Open" modified="20200417163427537" modifier="Chris Aldrich" tags="$:/tags/SideBar" title="Draft of 'Books' by Chris Aldrich">
-<pre>&lt;$button tooltip=&quot;Add a book&quot;&gt;Add a book
-&lt;$action-createtiddler
-$basetitle='New Book'
-text=&quot;&lt;$list filter=&amp;quote;[!has[draft.of]tag[TagNameTK]sort[created]]&amp;quote;&gt;
-&lt;$link to={{!!title}}&gt;
-&lt;$view field=&amp;quote;title&amp;quote;/&gt;
-&lt;/$link&gt;
-&lt;/$list&gt;
-
-{{||$:/jab/viewtemplate/book}}&quot;
-tags='Books'
-bookauthor=' '
-startdate=' '
-enddate=' '
-goodreads=' '
-$savetitle='$:/.user/CreateBook!!newBook'
-/&gt;
-
-&lt;$action-sendmessage
-$message=&quot;tm-edit-tiddler&quot;
-$param={{$:/.user/CreateBook!!newBook}}/&gt;
-&lt;/$button&gt;
-
----
-
-!! Reading
-
-&lt;$list filter=&quot;[!has[draft.of]tag[Books]tag[reading]sort[created]]&quot;&gt;
-
-&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt; by &lt;$view field=&quot;bookauthor&quot;/&gt;&lt;/$link&gt;
-
-&lt;/$list&gt;
-
-!! Read (Finished)
-
-&lt;$list filter=&quot;[!has[draft.of]tag[Books]tag[read]sort[created]]&quot;&gt;
-
-&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt; by &lt;$view field=&quot;bookauthor&quot;/&gt;&lt;/$link&gt;
-
-&lt;/$list&gt;
-
-!! Want to read
-
-&lt;$list filter=&quot;[!has[draft.of]tag[Books]tag[want to read]sort[created]]&quot;&gt;
-
-&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt; by &lt;$view field=&quot;bookauthor&quot;/&gt;&lt;/$link&gt;
-
-&lt;/$list&gt;
-
-!! Abandoned
-
-&lt;$list filter=&quot;[!has[draft.of]tag[Books]tag[abandoned read]sort[created]]&quot;&gt;
-
-&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt; by &lt;$view field=&quot;bookauthor&quot;/&gt;&lt;/$link&gt;
-
-&lt;/$list&gt;
-
-!! Full List
-
-&lt;div class=&quot;tc-table-of-contents&quot;&gt;
-&lt;&lt;toc-selective-expandable 'Books' sort[title]&gt;&gt;
-&lt;/div&gt;
-</pre>
-</div>
 <div color="#008000" created="20200405050452807" creator="Chris Aldrich" icon="$:/images/fa5/solid/book" modified="20200410230451882" modifier="Chris Aldrich" title="Education">
 <pre></pre>
 </div>
@@ -16006,7 +15939,7 @@ He wrote many controversial works. He is known also for a 1520 book on the art o
 <div color="#8080c0" created="20200410230418745" creator="Chris Aldrich" icon="$:/images/fa5/regular/lightbulb" modified="20200410230720899" modifier="Chris Aldrich" title="Memory">
 <pre></pre>
 </div>
-<div tags="" title="Memory Craft notes">
+<div tags="task" title="Memory Craft notes">
 <pre>[[Memory Craft: Improve your memory using the most powerful methods from around the world]]
 
 !!Notes
