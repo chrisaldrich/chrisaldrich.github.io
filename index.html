@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistMonday, April 20, 2020 @ 11:52</title>
+<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistMonday, April 20, 2020 @ 11:54</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -590,10 +590,6 @@ Error message and password prompt
 <li>Contents</li>
 
 <li>Create an h-card for my TiddlyWiki</li>
-
-<li>Draft of '$:/.giffmex/buttons/newnote-datetime' by Chris Aldrich</li>
-
-<li>Draft of '$:/.giffmex/ViewToolbar/new-note-here' by Chris Aldrich</li>
 
 <li>Education</li>
 
@@ -14703,7 +14699,7 @@ exports.context = contextWidget;
 <div created="20200319022404294" creator="h" modified="20200402074333095" modifier="Chris ldrich" title="$:/status/UserName">
 <pre>Chris Aldrich</pre>
 </div>
-<div list="[[2020-04-20 11:21:03 Installed TiddlyBlink]] [[TiddlyBlink home]] $:/.giffmex/meta/TiddlyBlink.gears.and.doo-hickeys [[Draft of '$:/.giffmex/buttons/newnote-datetime' by Chris Aldrich]] [[Draft of '$:/.giffmex/ViewToolbar/new-note-here' by Chris Aldrich]]" title="$:/StoryList">
+<div list="[[2020-04-20 11:21:03 Installed TiddlyBlink]] [[TiddlyBlink home]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200127163609843" list="$:/jd/fullscreen-editor/EditButton $:/core/ui/Buttons/delete $:/core/ui/Buttons/cancel $:/core/ui/Buttons/save" modified="20200304200339220" tags="tb" title="$:/tags/EditToolbar">
@@ -15633,36 +15629,6 @@ Finished chapter 9 on Acts as the follow up for Luke.</pre>
 2020-04-12
 
 * Wrote up [[article about process|http://tw.boffosocko.com/#An%20h-card%20for%20my%20TiddlyWiki]]
-</pre>
-</div>
-<div caption="{{$:/core/images/new-journal-button}} {{$:/language/Buttons/NewJournal/Caption}}" created="20200102141336827" description="{{$:/language/Buttons/NewJournal/Hint}}" draft.of="$:/.giffmex/buttons/newnote-datetime" draft.title="$:/.giffmex/buttons/newnote-datetime" modified="20200304195043957" tags="tb $:/tags/PageControls" title="Draft of '$:/.giffmex/buttons/newnote-datetime' by Chris Aldrich">
-<pre>\define journalButton()
-&lt;$button tooltip={{$:/language/Buttons/NewJournal/Hint}} aria-label={{$:/language/Buttons/NewJournal/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt; actions={{$:/.giffmex/actions/new-journal}}&gt;
-&lt;$list filter=&quot;[&lt;tv-config-toolbar-icons&gt;match[yes]]&quot;&gt;
-{{$:/core/images/timestamp-on}}
-&lt;/$list&gt;
-&lt;$list filter=&quot;[&lt;tv-config-toolbar-text&gt;match[yes]]&quot;&gt;
-&lt;span class=&quot;tc-btn-text&quot;&gt;&lt;$text text={{$:/language/Buttons/NewJournal/Caption}}/&gt;&lt;/span&gt;
-&lt;/$list&gt;
-&lt;/$button&gt;
-\end
-&lt;&lt;journalButton&gt;&gt;
-</pre>
-</div>
-<div caption="{{$:/core/images/new-journal-button}} {{$:/language/Buttons/NewJournalHere/Caption}}" created="20200127162624895" description="{{$:/language/Buttons/NewJournalHere/Hint}}" draft.of="$:/.giffmex/ViewToolbar/new-note-here" draft.title="$:/.giffmex/ViewToolbar/new-note-here" modified="20200304195448159" tags="tb $:/tags/ViewToolbar" title="Draft of '$:/.giffmex/ViewToolbar/new-note-here' by Chris Aldrich">
-<pre>\define button()
-&lt;$button class=&lt;&lt;tv-config-toolbar-class&gt;&gt; actions=&lt;&lt;actions&gt;&gt;&gt;
-{{$:/core/images/new-button}}
-&lt;/$button&gt;
-\end
-
-\define actions()
-&lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot; title=&lt;&lt;journalTitle&gt;&gt; text=&quot;&quot;&quot;[[$(tid)$]]&quot;&quot;&quot;/&gt;
-\end
-
-&lt;$wikify name=tid text=&lt;&lt;currentTiddler&gt;&gt;&gt;
-&lt;&lt;button&gt;&gt;
-&lt;/$wikify&gt;
 </pre>
 </div>
 <div color="#008000" created="20200405050452807" creator="Chris Aldrich" icon="$:/images/fa5/solid/book" modified="20200410230451882" modifier="Chris Aldrich" title="Education">
