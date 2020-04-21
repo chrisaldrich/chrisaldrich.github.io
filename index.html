@@ -261,6 +261,8 @@ Error message and password prompt
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/timestamp</li>
 
+<li>$:/config/Plugins/Disabled/$:/plugins/bj/tiddlyclip</li>
+
 <li>$:/config/RelinkOnRename</li>
 
 <li>$:/config/TextEditor/EnableToolbar</li>
@@ -1370,6 +1372,9 @@ color: #e65915;
 </div>
 <div created="20200320171754465" creator="chrisaldrich" modified="20200320171755984" modifier="chrisaldrich" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/timestamp">
 <pre>show</pre>
+</div>
+<div created="20200421043615670" creator="Chris Aldrich" modified="20200421043615670" modifier="Chris Aldrich" title="$:/config/Plugins/Disabled/$:/plugins/bj/tiddlyclip">
+<pre>yes</pre>
 </div>
 <div created="20200106214031452" modified="20200304195600676" tags="tb" title="$:/config/RelinkOnRename">
 <pre>yes</pre>
@@ -14788,8 +14793,8 @@ exports.context = contextWidget;
 <div created="20200420035939423" creator="Chris Aldrich" modified="20200420035939423" modifier="Chris Aldrich" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20200420040855088" creator="Chris Aldrich" modified="20200420040955770" modifier="Chris Aldrich" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Standard</pre>
+<div created="20200420040855088" creator="Chris Aldrich" modified="20200421043540103" modifier="Chris Aldrich" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
 <div title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Toolbars</pre>
@@ -14857,7 +14862,7 @@ exports.context = contextWidget;
 <div created="20200319022404294" creator="h" modified="20200402074333095" modifier="Chris ldrich" title="$:/status/UserName">
 <pre>Chris Aldrich</pre>
 </div>
-<div created="20200421042332411" creator="Chris Aldrich" list="[[2020-04-20 19:00:00 TiddlyClip]] [[TiddlyWiki Bookmarklet]] . ToDo task [[Wiki Session for IndieWeb]] [[TiddlyBlink home]]" modified="20200421043207962" modifier="Chris Aldrich" title="$:/StoryList">
+<div created="20200421042332411" creator="Chris Aldrich" list="[[2020-04-20 19:00:00 TiddlyClip]] [[A TiddlyWiki on My Own Domain!]] [[TiddlyWiki Bookmarklet]] . ToDo task [[Wiki Session for IndieWeb]] [[TiddlyBlink home]]" modified="20200421043609038" modifier="Chris Aldrich" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200127163609843" list="$:/jd/fullscreen-editor/EditButton $:/core/ui/Buttons/delete $:/core/ui/Buttons/cancel $:/core/ui/Buttons/save" modified="20200304200339220" tags="tb" title="$:/tags/EditToolbar">
@@ -14872,8 +14877,8 @@ exports.context = contextWidget;
 <div created="20200127144249151" list="$:/.giffmex/ViewToolbar/new-note-here $:/.giffmex/ViewToolbar/new-note-here-datetime $:/.giffmex/viewtoolbar/viewrefs $:/jd/fullscreen-editor/EditButton $:/core/ui/Buttons/more-tiddler-actions $:/core/ui/Buttons/info $:/core/ui/Buttons/new-here $:/core/ui/Buttons/new-journal-here $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/edit $:/core/ui/Buttons/delete $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/core/ui/Buttons/open-window $:/core/ui/Buttons/close-others $:/core/ui/Buttons/close $:/core/ui/Buttons/fold-others $:/core/ui/Buttons/fold" modified="20200304200401109" tags="tb" title="$:/tags/ViewToolbar">
 <pre></pre>
 </div>
-<div created="20200420040853437" creator="Chris Aldrich" modified="20200421042219117" modifier="Chris Aldrich" title="$:/temp/advancedsearch">
-<pre>hypothes</pre>
+<div created="20200420040853437" creator="Chris Aldrich" modified="20200421043533517" modifier="Chris Aldrich" title="$:/temp/advancedsearch">
+<pre>plugins</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -14936,7 +14941,7 @@ exports.context = contextWidget;
 <div title="$:/temp/NewTagName">
 <pre></pre>
 </div>
-<div created="20200420040849447" creator="Chris Aldrich" modified="20200421042219118" modifier="Chris Aldrich" title="$:/temp/search">
+<div created="20200420040849447" creator="Chris Aldrich" modified="20200421043533517" modifier="Chris Aldrich" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20200402080210759" creator="Chris Aldrich" modified="20200412050954626" modifier="Chris Aldrich" title="$:/theme">
@@ -15505,7 +15510,7 @@ Adding this changed the nature of:
 <div tags="task" title="2020-04-20 13:37:33 Finish Art of Memory Chapter 10 and notes">
 <pre>[[Chatper 10: Ramism as an Art of Memory]]</pre>
 </div>
-<div created="20200421042107222" creator="Chris Aldrich" modified="20200421043443904" modifier="Chris Aldrich" tags="[[TiddlyWiki Changelog]]" title="2020-04-20 19:00:00 TiddlyClip" type="text/vnd.tiddlywiki">
+<div created="20200421042107222" creator="Chris Aldrich" modified="20200421043708246" modifier="Chris Aldrich" tags="[[TiddlyWiki Changelog]]" title="2020-04-20 19:00:00 TiddlyClip" type="text/vnd.tiddlywiki">
 <pre>[[TiddlyClip|https://github.com/buggyj/tiddlyclip]]  
 
 Added to my Chrome browser. 
@@ -15518,26 +15523,7 @@ The GitHub repo for this was last updated 9 months ago (a single file), while th
 
 I really should be adding these to a test TW instead of my production set up.
 
-Get rid of the following tiddlers:
-
-&quot;&quot;&quot;
-$:/config/EditorTypeMappings/application/json
-$:/plugins/bj/tiddlyclip/convert.js
-$:/plugins/bj/tiddlyclip/icon
-$:/plugins/bj/tiddlyclip/multitid.js
-$:/plugins/bj/tiddlyclip/sublink.js
-$:/plugins/bj/tiddlyclip/tcadapter.js
-$:/plugins/bj/tiddlyclip/template
-$:/plugins/bj/tiddlyclip/tidpaste.js
-$:/plugins/bj/tiddlyclip/ui/Buttons/tiddlyclip
-[[defaultPin]]
-[[defaultSnap]]
-[[defaultSnip]]
-[[defaultTip]]
-[[SnapRuleMode]]
-[[TiddlyClipConfig]]
-
-&quot;&quot;&quot;</pre>
+Disabled: $:/plugins/bj/tiddlyclip</pre>
 </div>
 <div created="20200421041657984" creator="Chris Aldrich" modified="20200421041839506" modifier="Chris Aldrich" tags="[[TiddlyWiki Changelog]]" title="2020-04-20 21:18:00 Removed date/timestamp from subtitle">
 <pre>Removed date/timestamp from TiddlyWiki subtitle
