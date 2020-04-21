@@ -623,6 +623,8 @@ Error message and password prompt
 
 <li>Becoming Free Becoming Black</li>
 
+<li>Bookmarklet for pasting content into TiddlyWiki</li>
+
 <li>Bookmarklets for TiddlyWiki</li>
 
 <li>Books</li>
@@ -664,8 +666,6 @@ Error message and password prompt
 <li>Cut and paste!</li>
 
 <li>Difference between a comedian and a comic</li>
-
-<li>Draft of 'New Tiddler 1' by Chris Aldrich</li>
 
 <li>Draft of 'New Tiddler' by Chris Aldrich</li>
 
@@ -14884,7 +14884,7 @@ exports.context = contextWidget;
 <div created="20200319022404294" creator="h" modified="20200402074333095" modifier="Chris ldrich" title="$:/status/UserName">
 <pre>Chris Aldrich</pre>
 </div>
-<div created="20200421042332411" creator="Chris Aldrich" list="$:/Import [[Isaac Asimov on Knowledge and Wisdom]] [[Draft of 'New Tiddler 1' by Chris Aldrich]] [[Draft of 'New Tiddler' by Chris Aldrich]] . ToDo [[2020-04-20 13:37:33 Finish Art of Memory Chapter 10 and notes]] [[Memory Craft notes]] task [[Wiki Session for IndieWeb]] [[TiddlyBlink home]]" modified="20200421092005720" modifier="Chris Aldrich" title="$:/StoryList">
+<div created="20200421042332411" creator="Chris Aldrich" list="$:/Import [[Isaac Asimov on Knowledge and Wisdom]] [[Bookmarklet for pasting content into TiddlyWiki]] [[Draft of 'New Tiddler' by Chris Aldrich]] . ToDo [[2020-04-20 13:37:33 Finish Art of Memory Chapter 10 and notes]] [[Memory Craft notes]] task [[Wiki Session for IndieWeb]] [[TiddlyBlink home]]" modified="20200421092005720" modifier="Chris Aldrich" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200127163609843" list="$:/jd/fullscreen-editor/EditButton $:/core/ui/Buttons/delete $:/core/ui/Buttons/cancel $:/core/ui/Buttons/save" modified="20200304200339220" tags="tb" title="$:/tags/EditToolbar">
@@ -15670,6 +15670,38 @@ Why couldn't/shouldn't I delegate my h-card on subdomains or other personal site
 
 {{||$:/jab/viewtemplate/book}}</pre>
 </div>
+<div created="20200421085247219" creator="Chris Aldrich" modified="20200421093136460" modifier="Chris Aldrich" tags="TiddlyWiki bookmarklets" title="Bookmarklet for pasting content into TiddlyWiki">
+<pre>!! Bookmarklets for TW5? 
+
+I frequently want to cut and paste content (quotes, passages, etc.) into my TiddlyWiki and it shouldn't take forever. I spent some time digging around this evening to try to find something useful, but the best I could find was [[a thread from last July|https://groups.google.com/forum/#!searchin/tiddlywiki/bookmarklet|sort:date/tiddlywiki/T6QBXNYEUO8/U_GNWyyeCAAJ]].
+
+!! Ideal solution
+
+Ideally I'd love to have the ability to take RSS or JSON feed data from any number of data sources and pipe them into my TW5 instance. For example, I highlight and annotate a lot of material using [[Hypothes.is|https://web.hypothes.is/]], so it would be awesome if I could take the RSS feed of my account and pipe it into TW5 with the text I highlighted, the annotations I may have made, and the tags I added. Then I could move that data around as need within the wiki. The difficult part seems to be getting it all there in the first place.
+
+Similarly if other services like Pinboard, Pocket, Huffduffer, Goodreads, Letterboxd, Reading.am, etc. could be imported quickly and automatically into my wiki, then I would have a lot of material to begin working with to potentially remix and create new content.
+
+!! A Bookmarklet solution
+
+Until I find that functionality, I thought it would at least be useful to have a JavaScript bookmarklet so that I could highlight a portion of a web page and then use a bookmarklet to quickly copy that highlighted portion so I could go to my wiki and then simply type `ctrl-v` to create a new tiddler with not only the highlight pre-blockquoted, but with a via link to the original source that's preformatted as a wiki link.
+
+Since I wasted an hour putting the thing together and it'll take me a lot of use to get all that time back, I thought I'd pass it along if others might need something similar.
+
+I'm far from the best coder, so I can't warrant anything other than to say that it works for me in Chrome and is reasonably likely to work in other major browsers.
+
+!! Directions
+
+Drag this bookmarklet link into your browser's bookmark bar:
+
+&lt;a href=&quot;javascript:(function(){let text=&quot;&quot;; if(window.getSelection()!=''){text=window.getSelection().toString()+&quot;\n&quot;;}prompt(&quot;Press Ctrl+C, Escape&quot;, &quot;%3C%3C%3C&quot;+text+&quot;\n&quot;+&quot;%3C%3C%3C&quot;+&quot;%2D%2D%2Dvia%20%5B%5B&quot;+document.title+&quot;%7C&quot;+location.href+&quot;%5D%5D&quot;);})()
+&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; draggable=&quot;true&quot;&gt;+TW5&lt;/a&gt;
+
+To use it, optionally highlight some text on a web page you'd like to copy. Then click on the bookmarklet in your browser. A pop up message will appear that you can copy (use `ctrl-c`) and then close the pop up window. Then go to your wiki and click `ctrl-v` to paste it. An import tiddler will let you create a new tiddler with a pre-formatted blockquote of the content and an attribution link to the original. If necessary, you can add tags, notes, or make any other necessary changes before saving.
+
+It should appear something like this example: 
+
+{{Isaac Asimov on Knowledge and Wisdom}}</pre>
+</div>
 <div created="20200421062752057" creator="Chris Aldrich" modified="20200421062936195" modifier="Chris Aldrich" tags="TiddlyWiki task" title="Bookmarklets for TiddlyWiki" type="text/vnd.tiddlywiki">
 <pre>This seems to be one of the better threads I've seen on bookmarklets or clipping tools for TW:
 [[Clip web page to TW? - Google Groups|https://groups.google.com/forum/#!searchin/tiddlywiki/bookmarklet|sort:date/tiddlywiki/T6QBXNYEUO8/U_GNWyyeCAAJ]]
@@ -15967,34 +15999,7 @@ A comedian says funny things. A comic says things funny.
 
 -- Ed Wynn via [[imdb.com|https://www.imdb.com/name/nm0943956/bio#quotes]] </pre>
 </div>
-<div created="20200421085247219" creator="Chris Aldrich" draft.of="New Tiddler 1" draft.title="Bookmarklet for pasting content into TiddlyWiki" modified="20200421091804295" modifier="Chris Aldrich" tags="TiddlyWiki bookmarklets" title="Draft of 'New Tiddler 1' by Chris Aldrich">
-<pre>!! Bookmarklets for TW5? 
-
-I frequently want to cut and paste content (quotes, passages, etc.) into my TiddlyWiki and it shouldn't take forever. I spent some time digging around this evening to try to find something useful, but the best I could find was [[a thread from last July|https://groups.google.com/forum/#!searchin/tiddlywiki/bookmarklet|sort:date/tiddlywiki/T6QBXNYEUO8/U_GNWyyeCAAJ]].
-
-!! Ideal solution
-
-Ideally I'd love to have the ability to take RSS or JSON feed data from any number of data sources and pipe them into my TW5 instance. For example, I highlight and annotate a lot of material using [[Hypothes.is|https://web.hypothes.is/]], so it would be awesome if I could take the RSS feed of my account and pipe it into TW5 with the text I highlighted, the annotations I may have made, and the tags I added. Then I could move that data around as need within the wiki. The difficult part seems to be getting it all there in the first place.
-
-Similarly if other services like Pinboard, Pocket, Huffduffer, Goodreads, Letterboxd, Reading.am, etc. could be imported quickly and automatically into my wiki, then I would have a lot of material to begin working with to potentially remix and create new content.
-
-!! A Bookmarklet solution
-
-Until I find that functionality, I thought it would at least be useful to have a JavaScript bookmarklet so that I could highlight a portion of a web page and then use a bookmarklet to quickly copy that highlighted portion so I could go to my wiki and then simply type `ctrl-v` to create a new tiddler with not only the highlight pre-blockquoted, but with a via link to the original source that's preformatted as a wiki link.
-
-Since I wasted an hour putting the thing together and it'll take me a lot of use to get all that time back, I thought I'd pass it along if others might need something similar.
-
-I'm far from the best coder, so I can't warrant anything other than to say that it works for me in Chrome and is reasonably likely to work in other major browsers.
-
-!! Directions
-
-Drag this bookmarklet link into your browser's bookmark bar:
-
-&lt;button&gt;&lt;a href=&quot;javascript:(function()%7Bjavascript%3Avoid(prompt(%22Copy%20the%20text%20below%20and%20paste%20into%20your%20TiddlyWiki%20to%20create%20a%20link%3A%22%2C%20%22%5B%5B%22%2Bdocument.title%2B%22%7C%22%2Blocation.href%2B%22%5D%5D%22))%7D)()&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;+TW5&lt;/a&gt;&lt;/button&gt;
-
-To use it, optionally highlight some text on a web page you'd like to copy. Then click on the bookmarklet in your browser. A pop up message will appear that you can copy (use `ctrl-c`) and then close the pop up window. Then go to your wiki and click `ctrl-v` to paste it. A new Tiddler window will appear with a pre-formatted blockquote of the content and an attribution of </pre>
-</div>
-<div created="20200421075456349" creator="Chris Aldrich" draft.of="New Tiddler" draft.title="New Tiddler" modified="20200421084946329" modifier="Chris Aldrich" tags="" title="Draft of 'New Tiddler' by Chris Aldrich">
+<div created="20200421075456349" creator="Chris Aldrich" draft.of="New Tiddler" draft.title="New Tiddler" modified="20200421092500292" modifier="Chris Aldrich" tags="" title="Draft of 'New Tiddler' by Chris Aldrich">
 <pre>javascript:(function()%7Bjavascript%3Avoid(prompt(&quot;Copy the text below and paste into your TiddlyWiki to create a link%3A&quot;%2C &quot;%5B%5B&quot;%2Bdocument.title%2B&quot;%7C&quot;%2Blocation.href%2B&quot;%5D%5D&quot;))%7D)()
 
 ORIGINAL
