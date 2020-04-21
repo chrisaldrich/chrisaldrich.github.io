@@ -1334,7 +1334,7 @@ color: #e65915;
 <div created="20200402075704612" creator="Chris Aldrich" modified="20200402075704612" modifier="Chris Aldrich" title="$:/config/Navigation/UpdateHistory">
 <pre>yes</pre>
 </div>
-<div created="20200319022434623" creator="chrisaldrich" modified="20200420040518049" modifier="Chris Aldrich" title="$:/config/NewJournal/Text">
+<div created="20200319022434623" creator="chrisaldrich" modified="20200421212301135" modifier="Chris Aldrich" title="$:/config/NewJournal/Text">
 <pre>!!Notes
 
 !! Daily Diary
@@ -1342,7 +1342,8 @@ color: #e65915;
 
 !! Tiddlers Created
 
-{{{ [sameday:created[YYYY0MM0DD]] }}}
+{{{ [sameday:created[YYYY0MM0DD]]+[!is[system]] }}}
+{{{ [sameday:created[YYYY0MM0DD]]+[is[system]] }}}
 
 ---
 !! Weather</pre>
@@ -14827,8 +14828,8 @@ exports.context = contextWidget;
 <div created="20200420040855088" creator="Chris Aldrich" modified="20200421043540103" modifier="Chris Aldrich" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
-<div title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Toolbars</pre>
+<div created="20200421212241606" creator="Chris Aldrich" modified="20200421212241606" modifier="Chris Aldrich" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Palette</pre>
 </div>
 <div title="$:/state/tab--2005612311">
 <pre>$:/plugins/flibbles/relink/ui/TiddlerInfo/References</pre>
@@ -14842,8 +14843,8 @@ exports.context = contextWidget;
 <div title="$:/state/tab-1528275152">
 <pre>$:/core/ui/DefaultSearchResultList</pre>
 </div>
-<div created="20200421044252317" creator="Chris Aldrich" modified="20200421044252317" modifier="Chris Aldrich" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20200421044252317" creator="Chris Aldrich" modified="20200421212242413" modifier="Chris Aldrich" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
 <div title="$:/state/tab-2041214758">
 <pre>$:/plugins/flibbles/relink/ui/TiddlerInfo/References</pre>
@@ -14851,8 +14852,8 @@ exports.context = contextWidget;
 <div created="20200421210443948" creator="Chris Aldrich" modified="20200421210443948" modifier="Chris Aldrich" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Orphans</pre>
 </div>
-<div created="20200421041846067" creator="Chris Aldrich" modified="20200421210647651" modifier="Chris Aldrich" title="$:/state/tab/sidebar--595412856">
-<pre>Books</pre>
+<div created="20200421041846067" creator="Chris Aldrich" modified="20200421212023943" modifier="Chris Aldrich" title="$:/state/tab/sidebar--595412856">
+<pre>Contents</pre>
 </div>
 <div created="20200421044255149" creator="Chris Aldrich" modified="20200421044304070" modifier="Chris Aldrich" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
@@ -14896,7 +14897,7 @@ exports.context = contextWidget;
 <div created="20200319022404294" creator="h" modified="20200402074333095" modifier="Chris ldrich" title="$:/status/UserName">
 <pre>Chris Aldrich</pre>
 </div>
-<div created="20200421042332411" creator="Chris Aldrich" list="[[ars notoria]]" modified="20200421211853171" modifier="Chris Aldrich" title="$:/StoryList">
+<div created="20200421042332411" creator="Chris Aldrich" list="2020-04-21" modified="20200421212239253" modifier="Chris Aldrich" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200127163609843" list="$:/jd/fullscreen-editor/EditButton $:/core/ui/Buttons/delete $:/core/ui/Buttons/cancel $:/core/ui/Buttons/save" modified="20200304200339220" tags="tb" title="$:/tags/EditToolbar">
@@ -14975,8 +14976,8 @@ exports.context = contextWidget;
 <div created="20200421073823368" creator="Chris Aldrich" modified="20200421155923757" modifier="Chris Aldrich" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
-<div created="20200420040849447" creator="Chris Aldrich" modified="20200421210600700" modifier="Chris Aldrich" title="$:/temp/search">
-<pre>ars notoria</pre>
+<div created="20200420040849447" creator="Chris Aldrich" modified="20200421212235632" modifier="Chris Aldrich" title="$:/temp/search">
+<pre>contents</pre>
 </div>
 <div created="20200402080210759" creator="Chris Aldrich" modified="20200412050954626" modifier="Chris Aldrich" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -15567,19 +15568,21 @@ Disabled: $:/plugins/bj/tiddlyclip</pre>
 <pre>Removed date/timestamp from TiddlyWiki subtitle
 `&lt;br/&gt;&lt;&lt;now DDD,&amp;nbsp;MMM&amp;nbsp;DD,&amp;nbsp;YYYY&gt;&gt; @ &lt;&lt;now &quot;0hh:0mm&quot;&gt;&gt;`</pre>
 </div>
-<div created="20200421161603206" creator="Chris Aldrich" modified="20200421161708392" modifier="Chris Aldrich" tags="Journal" title="2020-04-21">
+<div created="20200421161603206" creator="Chris Aldrich" modified="20200421213705092" modifier="Chris Aldrich" tags="Journal" title="2020-04-21">
 <pre>!!Notes
 
 !! Daily Diary
 
-
 !! Tiddlers Created
 
-{{{ [sameday:created[20200421]] }}}
+{{{ [sameday:created[20200421]]+[!is[system]] }}}
+{{{ [sameday:created[20200421]]+[is[system]] }}}
 
 ---
 !! Weather
-Finally sunny and pleasant in the morning! Still some scattered clouds, but it's a better start.</pre>
+Finally sunny and pleasant in the morning! Still some scattered clouds, but it's a better start.
+
+Afternoon: it's still sunny, but definitely not hot</pre>
 </div>
 <div created="20200421200818472" creator="Chris Aldrich" modified="20200421201136782" modifier="Chris Aldrich" tags="Japanese" title="2020-04-21 13:08:18 Japanese movies and television">
 <pre>Totoro
