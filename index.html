@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistMonday, April 20, 2020 @ 17:15</title>
+<title>Chris Aldrich — the wiki-based commonplace bookof a Modern Day CyberneticistMonday, April 20, 2020 @ 17:20</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -383,6 +383,8 @@ Error message and password prompt
 
 <li>$:/images/fa5/solid/wind</li>
 
+<li>$:/Import</li>
+
 <li>$:/Import!!popup-.</li>
 
 <li>$:/Import!!popup-$:/.user/CreateBook</li>
@@ -651,6 +653,8 @@ Error message and password prompt
 
 <li>Home school</li>
 
+<li>hypothesis.html</li>
+
 <li>IndieWeb</li>
 
 <li>IndieWeb for TiddlyWiki to do list</li>
@@ -736,8 +740,6 @@ Error message and password prompt
 <li>Untitled</li>
 
 <li>Untitled 1</li>
-
-<li>Untitled 3</li>
 
 <li>Webmention for TiddlyWiki</li>
 
@@ -10953,6 +10955,11 @@ tc-page-container tc-page-view-$(storyviewTitle)$ tc-language-$(languageTitle)$
 <div caption="wind (Solid)" tags="$:/tags/Image [[Font Awesome 5]] Solid" title="$:/images/fa5/solid/wind">
 <pre>&lt;svg class=&quot;tc-image-wind tc-image-button&quot; width=&quot;22pt&quot; height=&quot;22pt&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M156.7 256H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h142.2c15.9 0 30.8 10.9 33.4 26.6 3.3 20-12.1 37.4-31.6 37.4-14.1 0-26.1-9.2-30.4-21.9-2.1-6.3-8.6-10.1-15.2-10.1H81.6c-9.8 0-17.7 8.8-15.9 18.4 8.6 44.1 47.6 77.6 94.2 77.6 57.1 0 102.7-50.1 95.2-108.6C249 291 205.4 256 156.7 256zM16 224h336c59.7 0 106.8-54.8 93.8-116.7-7.6-36.2-36.9-65.5-73.1-73.1-55.4-11.6-105.1 24.9-114.9 75.5-1.9 9.6 6.1 18.3 15.8 18.3h32.8c6.7 0 13.1-3.8 15.2-10.1C325.9 105.2 337.9 96 352 96c19.4 0 34.9 17.4 31.6 37.4-2.6 15.7-17.4 26.6-33.4 26.6H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16zm384 32H243.7c19.3 16.6 33.2 38.8 39.8 64H400c26.5 0 48 21.5 48 48s-21.5 48-48 48c-17.9 0-33.3-9.9-41.6-24.4-2.9-5-8.7-7.6-14.5-7.6h-33.8c-10.9 0-19 10.8-15.3 21.1 17.8 50.6 70.5 84.8 129.4 72.3 41.2-8.7 75.1-41.6 84.7-82.7C526 321.5 470.5 256 400 256z&quot;/&gt;&lt;/svg&gt;</pre>
 </div>
+<div status="complete" title="$:/Import">
+<pre>The following tiddlers were imported:
+
+# [[hypothesis.html]]</pre>
+</div>
 <div created="20200420035622851" modified="20200420035625872" title="$:/Import!!popup-.">
 <pre>no</pre>
 </div>
@@ -14732,7 +14739,7 @@ exports.context = contextWidget;
 <div created="20200319022404294" creator="h" modified="20200402074333095" modifier="Chris ldrich" title="$:/status/UserName">
 <pre>Chris Aldrich</pre>
 </div>
-<div list="[[Untitled 3]] . ToDo task [[Wiki Session for IndieWeb]] [[TiddlyBlink home]]" title="$:/StoryList">
+<div list="$:/Import . ToDo task [[Wiki Session for IndieWeb]] [[TiddlyBlink home]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200127163609843" list="$:/jd/fullscreen-editor/EditButton $:/core/ui/Buttons/delete $:/core/ui/Buttons/cancel $:/core/ui/Buttons/save" modified="20200304200339220" tags="tb" title="$:/tags/EditToolbar">
@@ -15857,6 +15864,239 @@ Ramus praised Quintilian for his idea of 'dividing and composing' to indicate th
 ** Scooter
 ** Walk the dog</pre>
 </div>
+<div title="hypothesis.html" type="text/html">
+<pre>&lt;html&gt;&lt;head&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://jonudell.info/hlib/hlib.css&quot;&gt;
+  &lt;style&gt;
+    body {
+      margin-top:0px;
+    }
+    
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    svg {
+      fill:#582108b5;
+    }
+    
+    #widget {
+      display: none;
+    }
+
+    #title {
+      font-size: smaller;
+    }
+
+    .controlsContainer {
+      display: flex;
+      font-size: smaller;
+    }
+
+    .copyIdButton {
+      display: none;
+    }
+
+    .counter {
+      color: #795548;
+    }
+
+    .deleteButton {
+      font-weight: bold;
+      cursor: pointer;
+      font-size:smaller;
+      margin-top: 2px;
+    }
+
+    .deleteButton a {
+      color: black;
+      margin-left: 4px;
+    }
+
+    .host {
+      color: #b5805a;
+      font-size: smaller;
+    }
+
+    .tagAdder {
+      font-size: x-large;
+      cursor: pointer;
+      margin-left: 4px;
+    }
+
+    .tagEditor .editOrSaveIcon .icon-pencil {
+      margin-top: 6px;
+    }
+
+    .tagEditor .editOrSaveIcon {
+      display: none;
+    }
+    
+    .textEditor {
+      display: flex;
+      line-height: 1;
+    }
+
+    .tagEditor {
+      display: flex;
+    }
+
+    .textEditor .editOrSaveIcon .icon-pencil {
+      margin-top: 16px;
+    }
+
+    .toggleMajor {
+      color: #795548;
+      font-size: larger;
+      cursor: pointer;
+    }
+
+    .preformatted {
+      white-space: pre;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      white-space: -moz-pre-wrap;
+      white-space: -pre-wrap;
+      white-space: -o-pre-wrap;
+      word-wrap: break-word;
+    }
+
+    .urlHeading {
+      font-size: 10pt;
+    }
+
+    
+  &lt;/style&gt;
+  &lt;script src=&quot;https://jonudell.info/hlib/hlib2.bundle.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://jonudell.info/hlib/showdown.min.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;&lt;body&gt;
+
+  
+  &lt;svg style=&quot;position: absolute; width: 0; height: 0; overflow: hidden&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;
+  &lt;defs&gt;
+    &lt;symbol id=&quot;icon-floppy&quot; viewBox=&quot;0 0 353.073 353.073&quot;&gt;
+        &lt;path d=&quot;M340.969,0H12.105C5.423,0,0,5.423,0,12.105v328.863c0,6.68,5.423,12.105,12.105,12.105h328.864
+        c6.679,0,12.104-5.426,12.104-12.105V12.105C353.073,5.423,347.647,0,340.969,0z M67.589,18.164h217.895v101.884H67.589V18.164z
+        M296.082,327.35H57.003V176.537h239.079V327.35z M223.953,33.295h30.269v72.638h-30.269V33.295z M274.135,213.863H78.938v-12.105
+        h195.197V213.863z M274.135,256.231H78.938v-12.105h195.197V256.231z M274.135,297.087H78.938v-12.105h195.197V297.087z&quot;&gt;&lt;/path&gt;
+      &lt;title&gt;save&lt;/title&gt;
+    &lt;/symbol&gt;
+    &lt;symbol id=&quot;icon-pencil&quot; viewBox=&quot;0 0 512 512&quot;&gt;
+      &lt;title&gt;edit&lt;/title&gt;
+      &lt;path d=&quot;M311.18,78.008L32.23,356.958L0.613,485.716c-1.771,7.209,0.355,14.818,5.604,20.067
+        c5.266,5.266,12.88,7.368,20.067,5.604l128.759-31.617l278.95-278.95L311.18,78.008z M40.877,471.123l10.871-44.271l33.4,33.4
+        L40.877,471.123z&quot;&gt;&lt;/path&gt;
+      &lt;path d=&quot;M502.598,86.818L425.182,9.402c-12.536-12.536-32.86-12.536-45.396,0l-30.825,30.825l122.812,122.812l30.825-30.825
+        C515.134,119.679,515.134,99.354,502.598,86.818z&quot;&gt;&lt;/path&gt;
+    &lt;/symbol&gt;
+    &lt;symbol id=&quot;icon-delete&quot; viewBox=&quot;0 0 348.333 348.334&quot;&gt;
+        &lt;title&gt;delete&lt;/title&gt;
+        &lt;path d=&quot;M336.559,68.611L231.016,174.165l105.543,105.549c15.699,15.705,15.699,41.145,0,56.85
+        c-7.844,7.844-18.128,11.769-28.407,11.769c-10.296,0-20.581-3.919-28.419-11.769L174.167,231.003L68.609,336.563
+        c-7.843,7.844-18.128,11.769-28.416,11.769c-10.285,0-20.563-3.919-28.413-11.769c-15.699-15.698-15.699-41.139,0-56.85
+        l105.54-105.549L11.774,68.611c-15.699-15.699-15.699-41.145,0-56.844c15.696-15.687,41.127-15.687,56.829,0l105.563,105.554
+        L279.721,11.767c15.705-15.687,41.139-15.687,56.832,0C352.258,27.466,352.258,52.912,336.559,68.611z&quot;&gt;&lt;/path&gt;
+    &lt;/symbol&gt;
+    &lt;title&gt;view/edit/reply&lt;/title&gt;
+    &lt;symbol id=&quot;icon-external-link&quot; viewBox=&quot;0 0 26 26&quot;&gt;
+        &lt;path d=&quot;M18,17.759v3.366C18,22.159,17.159,23,16.125,23H4.875C3.841,23,3,22.159,3,21.125V9.875
+          C3,8.841,3.841,8,4.875,8h3.429l3.001-3h-6.43C2.182,5,0,7.182,0,9.875v11.25C0,23.818,2.182,26,4.875,26h11.25
+          C18.818,26,21,23.818,21,21.125v-6.367L18,17.759z&quot;&gt;&lt;/path&gt;
+        &lt;path d=&quot;M22.581,0H12.322c-1.886,0.002-1.755,0.51-0.76,1.504l3.22,3.22l-5.52,5.519
+          c-1.145,1.144-1.144,2.998,0,4.141l2.41,2.411c1.144,1.141,2.996,1.142,4.14-0.001l5.52-5.52l3.16,3.16
+          c1.101,1.1,1.507,1.129,1.507-0.757L26,3.419C25.999-0.018,26.024-0.001,22.581,0z&quot;&gt;&lt;/path&gt;
+    &lt;/symbol&gt;
+  &lt;/defs&gt;
+  &lt;/svg&gt;
+  
+  
+  
+
+  &lt;p id=&quot;title&quot;&gt;
+    &lt;pre class=&quot;params&quot;&gt;&quot;&lt;span class=&quot;params key&quot;&gt;user&lt;/span&gt;&quot; : &quot;&lt;span class=&quot;params value&quot;&gt;chrisaldrich&lt;/span&gt;&quot;, &quot;&lt;span class=&quot;params key&quot;&gt;tag&lt;/span&gt;&quot; : &quot;&lt;span class=&quot;params value&quot;&gt;TiddlyWiki&lt;/span&gt;&quot;, &quot;&lt;span class=&quot;params key&quot;&gt;max&lt;/span&gt;&quot; : &quot;&lt;span class=&quot;params value&quot;&gt;100&lt;/span&gt;&quot;, &quot;&lt;span class=&quot;params key&quot;&gt;addQuoteContext&lt;/span&gt;&quot; : &quot;&lt;span class=&quot;params value&quot;&gt;false&lt;/span&gt;&quot;, &quot;&lt;span class=&quot;params key&quot;&gt;groupName&lt;/span&gt;&quot; : &quot;&lt;span class=&quot;params value&quot;&gt;All&lt;/span&gt;&quot;&lt;/pre&gt; 
+    annotations &lt;span id=&quot;annoCount&quot;&gt;2&lt;/span&gt;, 
+    replies &lt;span id=&quot;replyCount&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;div id=&quot;progress&quot;&gt;&lt;/div&gt;
+  &lt;p&gt;&lt;/p&gt;
+
+  &lt;div id=&quot;widget&quot; style=&quot;display: block;&quot;&gt;&lt;h1 id=&quot;heading_counter_1&quot; class=&quot;urlHeading&quot;&gt;
+      &lt;a title=&quot;expand&quot; href=&quot;javascript:hlib.toggle('counter_1')&quot;&gt; &lt;span class=&quot;toggle&quot; title=&quot;expand&quot;&gt;▶&lt;/span&gt;&lt;/a&gt;
+      &lt;span class=&quot;counter&quot;&gt;&amp;nbsp;1&amp;nbsp;&lt;/span&gt;
+      &lt;a class=&quot;urlTitle&quot; title=&quot;visit annotated page&quot; target=&quot;annotatedPage&quot; href=&quot;https://tiddlywiki.com/static/Philosophy%20of%20Tiddlers.html&quot;&gt;Philosophy of Tiddlers: TiddlyWiki — a non-linear personal web notebook&lt;/a&gt; 
+      &lt;span class=&quot;host&quot;&gt;tiddlywiki.com&lt;/span&gt;
+      &lt;/h1&gt;
+      &lt;div id=&quot;cards_counter_1&quot;&gt;
+        
+    
+    &lt;div class=&quot;annotationCard annotation&quot; id=&quot;_pJHyJnw5EeqFMHPADRfbDQ&quot; style=&quot;display: none; margin-left: 0px;&quot;&gt;
+      &lt;annotation-editor state=&quot;viewing&quot;&gt;
+        
+        &lt;div class=&quot;annotationHeader&quot;&gt;
+          &lt;span class=&quot;user&quot;&gt;
+            &lt;a title=&quot;search user&quot; target=&quot;_user&quot; href=&quot;https://jonudell.info/h/facet/?user=chrisaldrich&quot;&gt;chrisaldrich&lt;/a&gt;
+          &lt;/span&gt;
+          &lt;span&gt;&amp;nbsp;&lt;/span&gt;
+          &lt;span class=&quot;dateTime&quot;&gt;4/11/2020 9:16 PM&lt;/span&gt;
+          &lt;span&gt;&amp;nbsp;&lt;/span&gt;
+          &lt;span class=&quot;groupSlug&quot;&gt;in Public&lt;/span&gt;
+          &lt;span&gt;&amp;nbsp;&lt;/span&gt;
+          &lt;span class=&quot;externalLink&quot;&gt;&lt;a target=&quot;_standalone&quot; href=&quot;https://hypothes.is/a/pJHyJnw5EeqFMHPADRfbDQ&quot; title=&quot;view/edit/reply&quot;&gt;&lt;svg style=&quot;display:inline; width:.6em; height:.6em; margin-left:2px;margin-top:3px; fill:#2c1409b5&quot; class=&quot;icon-external-link&quot;&gt;&lt;use xlink:href=&quot;#icon-external-link&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;deleteButton&quot;&gt;&lt;/span&gt;
+          &lt;span&gt;&amp;nbsp;&lt;/span&gt;
+          &lt;span class=&quot;copyIdButton&quot;&gt;
+    &lt;button onclick=&quot;(function(){navigator.clipboard.writeText('pJHyJnw5EeqFMHPADRfbDQ')})();&quot;&gt;pJHyJnw5EeqFMHPADRfbDQ&lt;/button&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;annotationQuote&quot;&gt;
+          &lt;span title=&quot;quote&quot; class=&quot;quoteExact&quot;&gt;The purpose of recording and organising information is so that it can be used again. The value of recorded information is directly proportional to the ease with which it can be re-used.The philosophy of tiddlers is that we maximise the possibilities for re-use by slicing information up into the smallest semantically meaningful units with rich modelling of relationships between them. Then we use aggregation and composition to weave the fragments together to present narrative stories.TiddlyWiki aspires to provide an algebra for tiddlers, a concise way of expressing and exploring the relationships between items of information.&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;annotationText&quot;&gt;
+          &lt;p&gt;This also seems like a great underlying philosophy for open educational resources.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div is=&quot;annotation-tags-editor&quot; state=&quot;viewing&quot; class=&quot;annotationTags&quot; user-can-edit=&quot;false&quot; tags=&quot;%5B%22OER%22%2C%22TiddlyWiki%22%5D&quot;&gt;&lt;div class=&quot;annotationTag&quot;&gt;&lt;a target=&quot;_tag&quot; href=&quot;https://jonudell.info/h/facet/?tag=OER&quot;&gt;OER&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;annotationTag&quot;&gt;&lt;a target=&quot;_tag&quot; href=&quot;https://jonudell.info/h/facet/?tag=TiddlyWiki&quot;&gt;TiddlyWiki&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;/annotation-editor&gt;
+    &lt;/div&gt;
+      &lt;/div&gt;&lt;h1 id=&quot;heading_counter_2&quot; class=&quot;urlHeading&quot;&gt;
+      &lt;a title=&quot;expand&quot; href=&quot;javascript:hlib.toggle('counter_2')&quot;&gt; &lt;span class=&quot;toggle&quot; title=&quot;expand&quot;&gt;▶&lt;/span&gt;&lt;/a&gt;
+      &lt;span class=&quot;counter&quot;&gt;&amp;nbsp;1&amp;nbsp;&lt;/span&gt;
+      &lt;a class=&quot;urlTitle&quot; title=&quot;visit annotated page&quot; target=&quot;annotatedPage&quot; href=&quot;https://tw5.immateriel.fr/wiki/7switch/book/aHR0cHM6Ly9jYXRhbG9ndWUuaW1tYXRlcmllbC5mci9yZXNvdXJjZXMvYTYvMTIvMDcyMDhkOTdhZjdmYWZkMjkyNzRhN2MwNDU1YS5lcHVi&quot;&gt;Great Expectations —&lt;/a&gt; 
+      &lt;span class=&quot;host&quot;&gt;tw5.immateriel.fr&lt;/span&gt;
+      &lt;/h1&gt;
+      &lt;div id=&quot;cards_counter_2&quot;&gt;
+        
+    
+    &lt;div class=&quot;annotationCard annotation&quot; id=&quot;_B1EDdGucEeqgKkdYN877rQ&quot; style=&quot;display: none; margin-left: 0px;&quot;&gt;
+      &lt;annotation-editor state=&quot;viewing&quot;&gt;
+        
+        &lt;div class=&quot;annotationHeader&quot;&gt;
+          &lt;span class=&quot;user&quot;&gt;
+            &lt;a title=&quot;search user&quot; target=&quot;_user&quot; href=&quot;https://jonudell.info/h/facet/?user=chrisaldrich&quot;&gt;chrisaldrich&lt;/a&gt;
+          &lt;/span&gt;
+          &lt;span&gt;&amp;nbsp;&lt;/span&gt;
+          &lt;span class=&quot;dateTime&quot;&gt;3/21/2020 5:47 PM&lt;/span&gt;
+          &lt;span&gt;&amp;nbsp;&lt;/span&gt;
+          &lt;span class=&quot;groupSlug&quot;&gt;in Public&lt;/span&gt;
+          &lt;span&gt;&amp;nbsp;&lt;/span&gt;
+          &lt;span class=&quot;externalLink&quot;&gt;&lt;a target=&quot;_standalone&quot; href=&quot;https://hypothes.is/a/B1EDdGucEeqgKkdYN877rQ&quot; title=&quot;view/edit/reply&quot;&gt;&lt;svg style=&quot;display:inline; width:.6em; height:.6em; margin-left:2px;margin-top:3px; fill:#2c1409b5&quot; class=&quot;icon-external-link&quot;&gt;&lt;use xlink:href=&quot;#icon-external-link&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;deleteButton&quot;&gt;&lt;/span&gt;
+          &lt;span&gt;&amp;nbsp;&lt;/span&gt;
+          &lt;span class=&quot;copyIdButton&quot;&gt;
+    &lt;button onclick=&quot;(function(){navigator.clipboard.writeText('B1EDdGucEeqgKkdYN877rQ')})();&quot;&gt;B1EDdGucEeqgKkdYN877rQ&lt;/button&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;annotationQuote&quot;&gt;
+          &lt;span title=&quot;quote&quot; class=&quot;quoteExact&quot;&gt;“Where have you been, you young monkey?”&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;annotationText&quot;&gt;
+          &lt;p&gt;Testing out annotations on Hypothes.is with a TiddlyWiki published book.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div is=&quot;annotation-tags-editor&quot; state=&quot;viewing&quot; class=&quot;annotationTags&quot; user-can-edit=&quot;false&quot; tags=&quot;%5B%22TiddlyWiki%22%2C%22Hypothes.is%22%2C%22publishing%22%5D&quot;&gt;&lt;div class=&quot;annotationTag&quot;&gt;&lt;a target=&quot;_tag&quot; href=&quot;https://jonudell.info/h/facet/?tag=TiddlyWiki&quot;&gt;TiddlyWiki&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;annotationTag&quot;&gt;&lt;a target=&quot;_tag&quot; href=&quot;https://jonudell.info/h/facet/?tag=Hypothes.is&quot;&gt;Hypothes.is&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;annotationTag&quot;&gt;&lt;a target=&quot;_tag&quot; href=&quot;https://jonudell.info/h/facet/?tag=publishing&quot;&gt;publishing&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;/annotation-editor&gt;
+    &lt;/div&gt;
+      &lt;/div&gt;&lt;/div&gt;
+
+  &lt;script src=&quot;./iframe.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+
+
+&lt;/body&gt;&lt;/html&gt;</pre>
+</div>
 <div color="#ff0000" created="20200320002125622" creator="chrisaldrich" modified="20200407200841209" modifier="Chris Aldrich" tags="Contents" title="IndieWeb">
 <pre>&lt;$list filter=&quot;[!has[draft.of]tag[IndieWeb]!tag[done]sort[created]]&quot;&gt;
 
@@ -16973,9 +17213,6 @@ Below each tiddler (note card) is a list of links to any other tiddlers that lin
 </div>
 <div title="Untitled 1">
 <pre>http://tw.boffosocko.com/favicon.ico</pre>
-</div>
-<div title="Untitled 3">
-<pre>https://hypothes.is/users/chrisaldrich</pre>
 </div>
 <div created="20200414212144934" creator="Chris Aldrich" modified="20200417163020083" modifier="Chris Aldrich" tags="IndieWeb Articles TiddlyWiki" title="Webmention for TiddlyWiki">
 <pre>[[Webmention for TiddlyWiki]] to enable website to website notifications and communication
