@@ -203,6 +203,8 @@ Error message and password prompt
 
 <li>$:/.user/CreateBook</li>
 
+<li>$:/.user/CreateJournalArticle</li>
+
 <li>$:/boffosockostyles</li>
 
 <li>$:/build</li>
@@ -284,6 +286,8 @@ Error message and password prompt
 <li>$:/config/Plugins/Disabled/$:/plugins/bj/tiddlyclip</li>
 
 <li>$:/config/RelinkOnRename</li>
+
+<li>$:/config/TextEditor/EditorHeight/Mode</li>
 
 <li>$:/config/TextEditor/EnableToolbar</li>
 
@@ -423,6 +427,8 @@ Error message and password prompt
 
 <li>$:/jab/viewtemplate/book</li>
 
+<li>$:/jab/viewtemplate/journalarticle</li>
+
 <li>$:/jd/fullscreen-editor/EditButton</li>
 
 <li>$:/language</li>
@@ -498,6 +504,8 @@ Error message and password prompt
 <li>$:/state/showeditpreview</li>
 
 <li>$:/state/sidebar</li>
+
+<li>$:/state/tab--1170504833</li>
 
 <li>$:/state/tab--1498284803</li>
 
@@ -789,6 +797,10 @@ Error message and password prompt
 
 <li>2020-05-02 11:01:51 Mark Farar mnemonics references</li>
 
+<li>2020-05-02 21:23:47 TiddlyBlink and book tweaks</li>
+
+<li>2020-05-02 22:24:30 new Journal Article button</li>
+
 <li>3. Topics, sources and outlines?</li>
 
 <li>4. My own notetaking process in TiddlyBlink</li>
@@ -980,6 +992,8 @@ Error message and password prompt
 <li>Journal</li>
 
 <li>Journal Article</li>
+
+<li>Journal Article meta data template</li>
 
 <li>Judith Rodin</li>
 
@@ -1262,8 +1276,28 @@ Error message and password prompt
 
 </pre>
 </div>
-<div caption="journal articles" created="20200424032124159" creator="Chris Aldrich" modified="20200424032832788" modifier="Chris Aldrich" tags="tb meta" title=".articlesList">
+<div caption="journal articles" created="20200424032124159" creator="Chris Aldrich" modified="20200503052019212" modifier="Chris Aldrich" tags="tb meta" title=".articlesList">
 <pre>Tag tiddlers with the tag `Journal Article` if they are journal articles. They will appear here and will also appear as references below the tiddlers linked to from them.
+
+&lt;$button tooltip=&quot;Add a Journal Article&quot;&gt;Add a Journal Article
+&lt;$action-createtiddler
+$basetitle='New Journal Article'
+text=&quot;
+---
+{{||$:/jab/viewtemplate/journalarticle}}&quot;
+tags='[[Journal Article]]'
+bookauthor=' '
+bookmarkdate=' '
+startdate=' '
+enddate=' '
+journalurl=' '
+$savetitle='$:/.user/CreateJournalArticle!!newjournalarticle'
+/&gt;
+
+&lt;$action-sendmessage
+$message=&quot;tm-edit-tiddler&quot;
+$param={{$:/.user/CreateJournalArticle!!newjournalarticle}}/&gt;
+&lt;/$button&gt;
 
 &lt;&lt;list-search
 &quot;[!is[system]tag[Journal Article]sort[title]]&quot;
@@ -1282,8 +1316,31 @@ placeholder:&quot;&quot; &gt;&gt;</pre>
 &quot;$:/core/ui/ListItemTemplate&quot;
 placeholder:&quot;&quot; &gt;&gt;</pre>
 </div>
-<div caption="books" created="20200424031442549" creator="Chris Aldrich" modified="20200424031906677" modifier="Chris Aldrich" tags="tb meta" title=".booksList">
+<div caption="books" created="20200424031442549" creator="Chris Aldrich" modified="20200503040833891" modifier="Chris Aldrich" tags="tb meta" title=".booksList">
 <pre>Tag tiddlers with the tag `Books` if they are books. They will appear here and will also appear as references below the tiddlers linked to from them.
+
+&lt;$button tooltip=&quot;Add a book&quot;&gt;Add a book
+&lt;$action-createtiddler
+$basetitle='New Book'
+text=&quot;&lt;$list filter=&amp;quote;[!has[draft.of]tag[TagNameTK]sort[created]]&amp;quote;&gt;
+&lt;$link to={{!!title}}&gt;
+&lt;$view field=&amp;quote;title&amp;quote;/&gt;
+&lt;/$link&gt;
+&lt;/$list&gt;
+
+{{||$:/jab/viewtemplate/book}}&quot;
+tags='Books'
+bookauthor=' '
+startdate=' '
+enddate=' '
+goodreads=' '
+$savetitle='$:/.user/CreateBook!!newBook'
+/&gt;
+
+&lt;$action-sendmessage
+$message=&quot;tm-edit-tiddler&quot;
+$param={{$:/.user/CreateBook!!newBook}}/&gt;
+&lt;/$button&gt;
 
 &lt;&lt;list-search
 &quot;[!is[system]tag[Books]sort[title]]&quot;
@@ -1584,7 +1641,7 @@ Click here: {{$:/core/ui/Buttons/palette}}
 &lt;/$vars&gt;
 </pre>
 </div>
-<div caption="links" created="20200126143031898" creator="Chris Aldrich" modified="20200424045234552" modifier="Chris Aldrich" tags="refs tb $:/tags/ViewTemplate" title="$:/.giffmex/ViewTemplate/refslinks">
+<div caption="links" created="20200126143031898" creator="Chris Aldrich" modified="20200503040435120" modifier="Chris Aldrich" tags="refs tb $:/tags/ViewTemplate" title="$:/.giffmex/ViewTemplate/refslinks">
 <pre>\define mycrit() (?i)\b$(searchspx)$\b
 
 &lt;hr&gt;References: 
@@ -1595,7 +1652,7 @@ Click here: {{$:/core/ui/Buttons/palette}}
 &lt;/$vars&gt;
 </pre>
 </div>
-<div caption="simple transclusion" created="20200126142157739" creator="Chris Aldrich" modified="20200424045220802" modifier="Chris Aldrich" tags="refs tb" title="$:/.giffmex/ViewTemplate/refstranscludeclean">
+<div caption="simple transclusion" created="20200126142157739" creator="Chris Aldrich" modified="20200503040435119" modifier="Chris Aldrich" tags="refs tb" title="$:/.giffmex/ViewTemplate/refstranscludeclean">
 <pre>&lt;hr&gt;
 
 References: &lt;br&gt;
@@ -1754,7 +1811,10 @@ placeholder=&quot;$placeholder$&quot;/&gt;
 &lt;/$reveal&gt;
 \end</pre>
 </div>
-<div created="20200410232939044" creator="Chris Aldrich" modified="20200502181437863" modifier="Chris Aldrich" newBook="New Book" newbook="New Book" title="$:/.user/CreateBook">
+<div created="20200410232939044" creator="Chris Aldrich" modified="20200503053656896" modifier="Chris Aldrich" newBook="New Book" newbook="New Book" title="$:/.user/CreateBook">
+<pre></pre>
+</div>
+<div created="20200503043936283" creator="Chris Aldrich" modified="20200503063530987" modifier="Chris Aldrich" newjournalarticle="New Journal Article" tags="" title="$:/.user/CreateJournalArticle">
 <pre></pre>
 </div>
 <div created="20200412043025936" creator="Chris Aldrich" modified="20200412043237892" modifier="Chris Aldrich" tags="$:/tags/Stylesheet" title="$:/boffosockostyles" type="text/css">
@@ -1893,6 +1953,9 @@ color: #e65915;
 </div>
 <div created="20200106214031452" creator="Chris Aldrich" modified="20200502181534001" modifier="Chris Aldrich" tags="tb" title="$:/config/RelinkOnRename">
 <pre>yes</pre>
+</div>
+<div created="20200503063155044" creator="Chris Aldrich" modified="20200503063208249" modifier="Chris Aldrich" title="$:/config/TextEditor/EditorHeight/Mode">
+<pre>auto</pre>
 </div>
 <div created="20200319023009680" creator="chrisaldrich" modified="20200319023010611" modifier="chrisaldrich" title="$:/config/TextEditor/EnableToolbar">
 <pre>yes</pre>
@@ -11358,13 +11421,13 @@ tc-page-container tc-page-view-$(storyviewTitle)$ tc-language-$(languageTitle)$
 
 &lt;/$set&gt;</pre>
 </div>
-<div created="20200106211749103" creator="Chris Aldrich" modified="20200422074935307" modifier="Chris Aldrich" tags="tb" title="$:/DefaultTiddlers">
+<div created="20200106211749103" creator="Chris Aldrich" modified="20200503054047945" modifier="Chris Aldrich" tags="tb" title="$:/DefaultTiddlers">
 <pre>[[.]]
 [[Articles]]
-[[Wiki Session for IndieWeb]]
-[[ToDo]]
 [[task]]
-[[TiddlyBlink home]]
+[[ToDo]]
+[[Books]]
+[[Journal Article]]
 </pre>
 </div>
 <div created="20200412082049334" creator="Chris Aldrich" modified="20200412082051243" modifier="Chris Aldrich" title="$:/favicon.ico" type="image/x-icon">
@@ -11520,9 +11583,17 @@ tc-page-container tc-page-view-$(storyviewTitle)$ tc-language-$(languageTitle)$
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20200410232912951" creator="Chris Aldrich" modified="20200411201458643" modifier="Chris Aldrich" tags="" title="$:/jab/viewtemplate/book">
+<div created="20200410232912951" creator="Chris Aldrich" modified="20200503053412617" modifier="Chris Aldrich" tags="" title="$:/jab/viewtemplate/book">
 <pre>* Author: {{!!bookauthor}}
-* &lt;a href={{!!goodreads}}&gt;Goodreads&lt;/a&gt;
+* &lt;a href={{!!goodreads}}  target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Goodreads&lt;/a&gt;
+* Bookmark date: {{!!bookmarkdate}}
+* Started reading: {{!!startdate}}
+* Finished reading: {{!!enddate}}</pre>
+</div>
+<div created="20200503042942394" creator="Chris Aldrich" modified="20200503053424015" modifier="Chris Aldrich" tags="" title="$:/jab/viewtemplate/journalarticle">
+<pre>* Author: {{!!bookauthor}}
+* &lt;a href={{!!journalurl}}  target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Journal URL&lt;/a&gt;
+* Bookmark date: {{!!bookmarkdate}}
 * Started reading: {{!!startdate}}
 * Finished reading: {{!!enddate}}</pre>
 </div>
@@ -15342,7 +15413,10 @@ exports.context = contextWidget;
 <div created="20200420035939423" creator="Chris Aldrich" modified="20200502091348978" modifier="Chris Aldrich" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20200420040855088" creator="Chris Aldrich" modified="20200424223953342" modifier="Chris Aldrich" title="$:/state/tab--1498284803">
+<div created="20200503041345809" creator="Chris Aldrich" modified="20200503063545128" modifier="Chris Aldrich" title="$:/state/tab--1170504833">
+<pre>.articlesList</pre>
+</div>
+<div created="20200420040855088" creator="Chris Aldrich" modified="20200503063259456" modifier="Chris Aldrich" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Standard</pre>
 </div>
 <div created="20200427023732570" creator="Chris Aldrich" modified="20200427023739565" modifier="Chris Aldrich" title="$:/state/tab--1568374741">
@@ -15357,14 +15431,14 @@ exports.context = contextWidget;
 <div title="$:/state/tab--2048066401">
 <pre>$:/core/ui/TiddlerInfo/Fields</pre>
 </div>
-<div created="20200422053348389" creator="Chris Aldrich" modified="20200424050913075" modifier="Chris Aldrich" title="$:/state/tab--2112689675">
-<pre>$:/core/ui/ControlPanel/Basics</pre>
+<div created="20200422053348389" creator="Chris Aldrich" modified="20200503062915847" modifier="Chris Aldrich" title="$:/state/tab--2112689675">
+<pre>$:/core/ui/ControlPanel/Advanced</pre>
 </div>
 <div created="20200422053350756" creator="Chris Aldrich" modified="20200424045917483" modifier="Chris Aldrich" title="$:/state/tab--959111941">
 <pre>$:/core/ui/ControlPanel/TiddlerFields</pre>
 </div>
-<div created="20200424023242836" creator="Chris Aldrich" modified="20200501213139546" modifier="Chris Aldrich" title="$:/state/tab-11433013">
-<pre>.sourcesList</pre>
+<div created="20200424023242836" creator="Chris Aldrich" modified="20200503051943692" modifier="Chris Aldrich" title="$:/state/tab-11433013">
+<pre>.articlesList</pre>
 </div>
 <div created="20200422043634987" creator="Chris Aldrich" modified="20200422043638291" modifier="Chris Aldrich" title="$:/state/tab-1163638994">
 <pre>$:/core/ui/MoreSideBar/Plugins/Plugins</pre>
@@ -15384,8 +15458,8 @@ exports.context = contextWidget;
 <div created="20200421210443948" creator="Chris Aldrich" modified="20200424223628341" modifier="Chris Aldrich" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20200421041846067" creator="Chris Aldrich" modified="20200502090841574" modifier="Chris Aldrich" title="$:/state/tab/sidebar--595412856">
-<pre>Books</pre>
+<div created="20200421041846067" creator="Chris Aldrich" modified="20200503064028961" modifier="Chris Aldrich" title="$:/state/tab/sidebar--595412856">
+<pre>Contents</pre>
 </div>
 <div created="20200421044255149" creator="Chris Aldrich" modified="20200424050141883" modifier="Chris Aldrich" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
@@ -15396,8 +15470,8 @@ exports.context = contextWidget;
 <div created="20200422062825234" creator="Chris Aldrich" modified="20200422062825234" modifier="Chris Aldrich" title="$:/state/toc/Books-The Art of Memory-1823460956">
 <pre>close</pre>
 </div>
-<div created="20200427051733859" creator="Chris Aldrich" modified="20200427051733859" modifier="Chris Aldrich" title="$:/state/toc/Contents-Articles-1843068618">
-<pre>open</pre>
+<div created="20200427051733859" creator="Chris Aldrich" modified="20200503062011347" modifier="Chris Aldrich" title="$:/state/toc/Contents-Articles-1843068618">
+<pre>close</pre>
 </div>
 <div created="20200422072857427" creator="Chris Aldrich" modified="20200422073136021" modifier="Chris Aldrich" title="$:/state/toc/Contents-Home school-1843068618">
 <pre>close</pre>
@@ -15405,7 +15479,7 @@ exports.context = contextWidget;
 <div title="$:/state/toc/Contents-IndieWeb-1843068618">
 <pre>close</pre>
 </div>
-<div created="20200420040235346" creator="Chris Aldrich" modified="20200423195258026" modifier="Chris Aldrich" title="$:/state/toc/Contents-Journal-1843068618">
+<div created="20200420040235346" creator="Chris Aldrich" modified="20200503062012743" modifier="Chris Aldrich" title="$:/state/toc/Contents-Journal-1843068618">
 <pre>close</pre>
 </div>
 <div created="20200422071600285" creator="Chris Aldrich" modified="20200422071637694" modifier="Chris Aldrich" title="$:/state/toc/Contents-Journal-390914735">
@@ -15420,7 +15494,7 @@ exports.context = contextWidget;
 <div created="20200421213726883" creator="Chris Aldrich" modified="20200425051925351" modifier="Chris Aldrich" title="$:/state/toc/Contents-Tasks-1843068618">
 <pre>close</pre>
 </div>
-<div created="20200421041848800" creator="Chris Aldrich" modified="20200425051926259" modifier="Chris Aldrich" title="$:/state/toc/Contents-TiddlyWiki-1843068618">
+<div created="20200421041848800" creator="Chris Aldrich" modified="20200503062015131" modifier="Chris Aldrich" title="$:/state/toc/Contents-TiddlyWiki-1843068618">
 <pre>close</pre>
 </div>
 <div created="20200422071613426" creator="Chris Aldrich" modified="20200422071614623" modifier="Chris Aldrich" title="$:/state/toc/Contents-TiddlyWiki-390914735">
@@ -15429,16 +15503,16 @@ exports.context = contextWidget;
 <div created="20200421213731705" creator="Chris Aldrich" modified="20200421213731705" modifier="Chris Aldrich" title="$:/state/toc/Contents-WordPress-1843068618">
 <pre>close</pre>
 </div>
-<div created="20200421213732647" creator="Chris Aldrich" modified="20200429013400303" modifier="Chris Aldrich" title="$:/state/toc/Contents-Words-1843068618">
-<pre>open</pre>
+<div created="20200421213732647" creator="Chris Aldrich" modified="20200503025744665" modifier="Chris Aldrich" title="$:/state/toc/Contents-Words-1843068618">
+<pre>close</pre>
 </div>
-<div created="20200427051740298" creator="Chris Aldrich" modified="20200427051740298" modifier="Chris Aldrich" title="$:/state/toc/Contents/Articles-Bookmarklet for pasting content into TiddlyWiki-1843068618">
-<pre>open</pre>
+<div created="20200427051740298" creator="Chris Aldrich" modified="20200503025746448" modifier="Chris Aldrich" title="$:/state/toc/Contents/Articles-Bookmarklet for pasting content into TiddlyWiki-1843068618">
+<pre>close</pre>
 </div>
 <div title="$:/state/toc/Contents/IndieWeb-MediaWiki-1843068618">
 <pre>open</pre>
 </div>
-<div created="20200425050420828" creator="Chris Aldrich" modified="20200425050420828" modifier="Chris Aldrich" title="$:/state/toc/Contents/TiddlyWiki-TiddlyWiki Changelog-1843068618">
+<div created="20200425050420828" creator="Chris Aldrich" modified="20200503042558388" modifier="Chris Aldrich" title="$:/state/toc/Contents/TiddlyWiki-TiddlyWiki Changelog-1843068618">
 <pre>close</pre>
 </div>
 <div created="20200422072447703" creator="Chris Aldrich" modified="20200422072447703" modifier="Chris Aldrich" title="$:/state/toc/IndieWeb-MediaWiki--805417555">
@@ -15459,7 +15533,7 @@ exports.context = contextWidget;
 <div created="20200319022404294" creator="h" modified="20200402074333095" modifier="Chris ldrich" title="$:/status/UserName">
 <pre>Chris Aldrich</pre>
 </div>
-<div created="20200502203755677" creator="Chris Aldrich" list="." modified="20200503001741470" modifier="Chris Aldrich" title="$:/StoryList">
+<div list=". Articles task ToDo Books [[Journal Article]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200127163609843" list="$:/jd/fullscreen-editor/EditButton $:/core/ui/Buttons/delete $:/core/ui/Buttons/cancel $:/core/ui/Buttons/save" modified="20200304200339220" tags="tb" title="$:/tags/EditToolbar">
@@ -15474,8 +15548,8 @@ exports.context = contextWidget;
 <div created="20200127144249151" list="$:/.giffmex/ViewToolbar/new-note-here $:/.giffmex/ViewToolbar/new-note-here-datetime $:/.giffmex/viewtoolbar/viewrefs $:/jd/fullscreen-editor/EditButton $:/core/ui/Buttons/more-tiddler-actions $:/core/ui/Buttons/info $:/core/ui/Buttons/new-here $:/core/ui/Buttons/new-journal-here $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/edit $:/core/ui/Buttons/delete $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/core/ui/Buttons/open-window $:/core/ui/Buttons/close-others $:/core/ui/Buttons/close $:/core/ui/Buttons/fold-others $:/core/ui/Buttons/fold" modified="20200304200401109" tags="tb" title="$:/tags/ViewToolbar">
 <pre></pre>
 </div>
-<div created="20200420040853437" creator="Chris Aldrich" modified="20200424225216396" modifier="Chris Aldrich" title="$:/temp/advancedsearch">
-<pre>wikis</pre>
+<div created="20200420040853437" creator="Chris Aldrich" modified="20200503063252715" modifier="Chris Aldrich" title="$:/temp/advancedsearch">
+<pre>$:/tags/TextEditor/Snippet</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -15535,7 +15609,7 @@ exports.context = contextWidget;
     }
 }</pre>
 </div>
-<div created="20200424032003839" creator="Chris Aldrich" modified="20200427060745709" modifier="Chris Aldrich" title="$:/temp/list-search-example">
+<div created="20200424032003839" creator="Chris Aldrich" modified="20200503041909270" modifier="Chris Aldrich" title="$:/temp/list-search-example">
 <pre></pre>
 </div>
 <div created="20200421073823368" creator="Chris Aldrich" modified="20200503004939852" modifier="Chris Aldrich" title="$:/temp/NewTagName">
@@ -15544,8 +15618,8 @@ exports.context = contextWidget;
 <div created="20200424053408609" creator="Chris Aldrich" modified="20200424053417551" modifier="Chris Aldrich" title="$:/temp/sbartidddisplayvalue">
 <pre>Wiki Session for IndieWeb</pre>
 </div>
-<div created="20200420040849447" creator="Chris Aldrich" modified="20200502233637573" modifier="Chris Aldrich" title="$:/temp/search">
-<pre>roth</pre>
+<div created="20200420040849447" creator="Chris Aldrich" modified="20200503063252716" modifier="Chris Aldrich" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200402080210759" creator="Chris Aldrich" modified="20200424045933554" modifier="Chris Aldrich" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -17193,6 +17267,18 @@ The following list includes a number of books, in order of author, that contain 
 
 &lt;&lt;&lt;---via [[Mnemonics- References|http://www.markfarrar.co.uk/mneref01.htm]]</pre>
 </div>
+<div created="20200503042347888" creator="Chris Aldrich" modified="20200503042540631" modifier="Chris Aldrich" tags="[[TiddlyWiki Changelog]]" title="2020-05-02 21:23:47 TiddlyBlink and book tweaks">
+<pre>Added the &quot;add a book&quot; button to the TiddlyBlink .bookList page.
+
+Added TiddlyBlink Home to sidebar for easier access.
+
+Put Books onto home page.</pre>
+</div>
+<div created="20200503052440107" creator="Chris Aldrich" modified="20200503052604539" modifier="Chris Aldrich" tags="[[TiddlyWiki Changelog]]" title="2020-05-02 22:24:30 new Journal Article button">
+<pre>Modified the [[Journal Article]] tiddler to include a &quot;new Journal Article&quot; button.
+
+It should create a new tiddler tagged as &quot;Journal Article&quot; and add some additional meta data.</pre>
+</div>
 <div created="20200131204708032" modified="20200201142455128" tags="starthere meta" title="3. Topics, sources and outlines?" type="application/x-tiddler">
 <pre>I have created some optional features for ~TiddlyBlink. Feel free to ignore them and just create notes and connect them by links. But you may find some of these features helpful:
 
@@ -17388,7 +17474,7 @@ See Also
 
 {{||$:/jab/viewtemplate/book}}</pre>
 </div>
-<div created="20200502172947434" creator="Chris Aldrich" modified="20200502173026172" modifier="Chris Aldrich" tags="stenography Books [[want to read]]" title="An Essay Intended to Establish a Standard for an Universal System of Stenography, or Short Hand Writing">
+<div bookauthor="Samuel Taylor" created="20200502172947434" creator="Chris Aldrich" modified="20200503040244016" modifier="Chris Aldrich" tags="stenography Books [[want to read]]" title="An Essay Intended to Establish a Standard for an Universal System of Stenography, or Short Hand Writing">
 <pre>by [[Samuel Taylor]]
 
 ---
@@ -17595,7 +17681,7 @@ Tts_version 2.1-final-6-g58a4a27
 
 {{||$:/jab/viewtemplate/book}}</pre>
 </div>
-<div created="20200429182825962" creator="Chris Aldrich" modified="20200502064556801" modifier="Chris Aldrich" tags="[[Journal Article]] read" title="Book review: &quot;Loisette&quot; exposed, together with Loisette’s Complete System of Physiological Memory.">
+<div bookauthor="Staff" bookmarkdate="2020-04-29" created="20200429182825962" creator="Chris Aldrich" enddate="2020-04-29" journalurl="https://science.sciencemag.org/content/ns-12/285/31.4" modified="20200503061942751" modifier="Chris Aldrich" tags="[[Journal Article]] read" title="Book review: &quot;Loisette&quot; exposed, together with Loisette’s Complete System of Physiological Memory.">
 <pre>[[&quot;Loisette&quot; exposed, together with Loisette’s Complete System of Physiological Memory. By G. S. FELLOWS. New York, The Author. 8‡ 25 cents; Science|https://science.sciencemag.org/content/ns-12/285/31.4]]
 
 &quot;&quot;&quot;
@@ -17614,21 +17700,19 @@ Review of three articles:
 
 References Dr. [[Ebbinghaus|Hermann Ebbinghaus]] on the second paper, but chastises the author for apparently not looking at sources in the original languages. Is it possible [[Bruno Furst]] saw this journal article at some point?
 
+* 2020-05-02: We also now know that Furst was introduced to the topic by his mentor [[Christof Ludwig Poehlmann]].
+
 Mentions the use of adding large items to loaned bathroom keys to ensure their return.
 
 Mentions pledges of secrecy to be initiated into a group with special knowledge. Apparently sacred or protected knowledge is even a phenomenon in modern settings and not just those of indigenous cultures as described by [[Lynne Kelly]].
 
-[[Memory]]</pre>
+[[Memory]]
+
+---
+{{||$:/jab/viewtemplate/book}}</pre>
 </div>
-<div caption="Book meta data template" created="20200422070411054" creator="Chris Aldrich" modified="20200424044819590" modifier="Chris Aldrich" tags="$:/tags/TextEditor/Snippet meta" title="Book template">
-<pre>&lt;$list filter=&quot;[!has[draft.of]tag[BookTitleTK]sort[created]]&quot;&gt;
-
-&lt;$link to={{!!title}}&gt;
-     &lt;$view field=&quot;title&quot;/&gt;
-&lt;/$link&gt;
-
-&lt;/$list&gt;
-
+<div caption="Book meta data template" created="20200422070411054" creator="Chris Aldrich" modified="20200503063450014" modifier="Chris Aldrich" tags="$:/tags/TextEditor/Snippet meta" title="Book template">
+<pre>
 ---
 {{||$:/jab/viewtemplate/book}}</pre>
 </div>
@@ -17713,19 +17797,16 @@ And of course if you know how to pipe content into a TW5 instance by means of RS
 
 Sadly, it appears that none of them are quite what I'm looking for. [[Scott Kingery]]'s comes somewhat close...</pre>
 </div>
-<div color="#008040" created="20200407192320592" creator="Chris Aldrich" icon="$:/images/fa5/solid/book" list-before="$:/core/ui/SideBar/Open" modified="20200424034701954" modifier="Chris Aldrich" tags="$:/tags/SideBar hide" title="Books">
+<div color="#008040" created="20200407192320592" creator="Chris Aldrich" icon="$:/images/fa5/solid/book" list-before="$:/core/ui/SideBar/Open" modified="20200503053654482" modifier="Chris Aldrich" tags="$:/tags/SideBar hide" title="Books">
 <pre>&lt;$button tooltip=&quot;Add a book&quot;&gt;Add a book
 &lt;$action-createtiddler
 $basetitle='New Book'
-text=&quot;&lt;$list filter=&amp;quote;[!has[draft.of]tag[TagNameTK]sort[created]]&amp;quote;&gt;
-&lt;$link to={{!!title}}&gt;
-&lt;$view field=&amp;quote;title&amp;quote;/&gt;
-&lt;/$link&gt;
-&lt;/$list&gt;
-
+text=&quot;
+---
 {{||$:/jab/viewtemplate/book}}&quot;
 tags='Books'
 bookauthor=' '
+bookmarkdate=' '
 startdate=' '
 enddate=' '
 goodreads=' '
@@ -18176,7 +18257,7 @@ List of other alternate names: https://portal.dnb.de/opac.htm?method=simpleSearc
 
 * //Conrad Celtis, the German arch-humanist//. by Lewis William Spitz (1895-) Cambridge : Harvard University Press, 1957, Bibliographical references included in &quot;Notes&quot; (p. 121-132). x+142 pages</pre>
 </div>
-<div color="#e65915" created="20200318205811900" creator="Chris Aldrich" list-before="$:/core/ui/SideBar/Open" modified="20200424040327825" modifier="Chris Aldrich" tags="$:/tags/SideBar hide" title="Contents">
+<div color="#e65915" created="20200318205811900" creator="Chris Aldrich" list-before="$:/core/ui/SideBar/Open" modified="20200503041936343" modifier="Chris Aldrich" tags="$:/tags/SideBar hide" title="Contents">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc-selective-expandable 'Contents' sort[title]&gt;&gt;
 &lt;/div&gt;</pre>
@@ -18542,8 +18623,64 @@ He wrote many controversial works. He is known also for a 1520 book on the art o
 
 &lt;&lt;list-links &quot;[tag[Journal]!sort[created]limit[20]]&quot;&gt;&gt;</pre>
 </div>
-<div color="#8000ff" created="20200424032758149" creator="Chris Aldrich" icon="$:/images/fa5/solid/book" modified="20200424045021032" modifier="Chris Aldrich" tags="hide" title="Journal Article">
-<pre>&lt;&lt;list-links &quot;[tag[Journal Article]!sort[created]]&quot;&gt;&gt;</pre>
+<div color="#8000ff" created="20200424032758149" creator="Chris Aldrich" icon="$:/images/fa5/solid/book" modified="20200503063415160" modifier="Chris Aldrich" tags="hide" title="Journal Article">
+<pre>&lt;$button tooltip=&quot;Add a Journal Article&quot;&gt;Add a Journal Article
+&lt;$action-createtiddler
+$basetitle='New Journal Article'
+text=&quot;
+---
+{{||$:/jab/viewtemplate/journalarticle}}&quot;
+tags='[[Journal Article]]'
+bookauthor=' '
+bookmarkdate=' '
+startdate=' '
+enddate=' '
+journalurl=' '
+$savetitle='$:/.user/CreateJournalArticle!!newjournalarticle'
+/&gt;
+
+&lt;$action-sendmessage
+$message=&quot;tm-edit-tiddler&quot;
+$param={{$:/.user/CreateJournalArticle!!newjournalarticle}}/&gt;
+&lt;/$button&gt;
+
+----
+!! Want to read
+
+&lt;$list filter=&quot;[!has[draft.of]tag[Journal Article]tag[want to read]sort[updated]]&quot;&gt;
+
+&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt; by &lt;$view field=&quot;bookauthor&quot;/&gt;&lt;/$link&gt;
+
+&lt;/$list&gt;
+
+!! Reading
+
+&lt;$list filter=&quot;[!has[draft.of]tag[Journal Article]tag[reading]sort[created]]&quot;&gt;
+
+&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt; by &lt;$view field=&quot;bookauthor&quot;/&gt;&lt;/$link&gt;
+
+&lt;/$list&gt;
+
+!! Read (Finished)
+
+&lt;$list filter=&quot;[!has[draft.of]tag[Journal Article]tag[read]sort[updated]]&quot;&gt;
+
+&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt; by &lt;$view field=&quot;bookauthor&quot;/&gt;&lt;/$link&gt;
+
+&lt;/$list&gt;
+
+!! Remainder
+
+&lt;$list filter=&quot;[!has[draft.of]tag[Journal Article]!tag[read]!tag[want to read]!tag[reading]!sort[created]]&quot;&gt;
+
+&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt; by &lt;$view field=&quot;bookauthor&quot;/&gt;&lt;/$link&gt;
+
+&lt;/$list&gt;</pre>
+</div>
+<div caption="Journal Article meta data template" created="20200503062425526" creator="Chris Aldrich" modified="20200503063810391" modifier="Chris Aldrich" tags="$:/tags/TextEditor/Snippet meta" title="Journal Article meta data template">
+<pre>
+---
+{{||$:/jab/viewtemplate/journalarticle}}</pre>
 </div>
 <div created="20200424044118861" creator="Chris Aldrich" modified="20200424044118861" modifier="Chris Aldrich" tags="author" title="Judith Rodin">
 <pre></pre>
@@ -18894,12 +19031,15 @@ evidence the survival of this primitive memoria technica
 
 New Latin, literally, artificial memory</pre>
 </div>
-<div created="20200502090313507" creator="Chris Aldrich" modified="20200502090505310" modifier="Chris Aldrich" tags="[[Journal Article]] Memory [[want to read]]" title="Memoria Technica Japonica: A Study of Mnemonics">
+<div bookauthor="Hisako Takahashi" bookmarkdate="2020-04-30" created="20200502090313507" creator="Chris Aldrich" journalurl="http://stepanov.lk.net/mnemo/takahae.html" modified="20200503060600368" modifier="Chris Aldrich" tags="[[Journal Article]] Memory [[want to read]]" title="Memoria Technica Japonica: A Study of Mnemonics">
 <pre>Memoria Technica Japonica: A Study of Mnemonics by Hisako Takahashi
 
 http://stepanov.lk.net/mnemo/takahae.html
 
-References [[memoria technica]] by [[Lewis Carroll]]</pre>
+References [[memoria technica]] by [[Lewis Carroll]]
+
+---
+{{||$:/jab/viewtemplate/journalarticle}}</pre>
 </div>
 <div color="#8080c0" created="20200410230418745" creator="Chris Aldrich" icon="$:/images/fa5/regular/lightbulb" modified="20200410230720899" modifier="Chris Aldrich" title="Memory">
 <pre></pre>
@@ -19747,7 +19887,7 @@ At 15 minute mark before topic coverage, do a group photo for those who would li
 <pre>; Parataxis 
 : (from Greek παράταξις &quot;act of placing side by side&quot;, from παρα para &quot;beside&quot; + τάξις táxis &quot;arrangement&quot;) is a literary technique, in writing or speaking, that favors short, simple sentences, without conjunctions or with the use of coordinating, but not with subordinating conjunctions. It contrasts with syntaxis and hypotaxis.</pre>
 </div>
-<div created="20200415184642530" creator="Chris Aldrich" modified="20200424040007335" modifier="Chris Aldrich" tags="Contents hide" title="People">
+<div color="#00ff80" created="20200415184642530" creator="Chris Aldrich" modified="20200503040107597" modifier="Chris Aldrich" tags="Contents hide" title="People">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc-selective-expandable 'People' sort[title]&gt;&gt;
 &lt;/div&gt;</pre>
@@ -19885,7 +20025,7 @@ Llull is known to have written at least 265 works, including:
 <div color="#80ffff" created="20200411181230332" creator="Chris Aldrich" icon="$:/images/fa5/solid/glasses" modified="20200411181315765" modifier="Chris Aldrich" title="reading">
 <pre></pre>
 </div>
-<div created="20200502010327808" creator="Chris Aldrich" enddate="2020-05-01" modified="20200502011846595" modifier="Chris Aldrich" tags="[[Journal Article]] Memory read" title="Review of Ars Reminiscendi: Mind and Memory in Renaissance Culture">
+<div bookauthor="Asaph Ben-Tov" bookmarkdate="2020-05-01" created="20200502010327808" creator="Chris Aldrich" enddate="2020-05-01" journalurl="https://www.h-net.org/reviews/showrev.php?id=25903" modified="20200503061506926" modifier="Chris Aldrich" tags="[[Journal Article]] Memory read" title="Review of Ars Reminiscendi: Mind and Memory in Renaissance Culture">
 <pre>&lt;&lt;&lt;Donald Beecher, Grant Williams, eds. [[Ars Reminiscendi: Mind and Memory in Renaissance Culture]]. Publications of the Centre for Reformation and Renaissance Studies. Toronto: Centre for Reformation and Renaissance Studies, 2009. 440 pp. $37.00 (paper), ISBN 978-0-7727-2048-1.
 
 Reviewed by Asaph Ben-Tov (Minerva Foundation / Forschungszentrum Gotha)
@@ -19893,17 +20033,14 @@ Reviewed by Asaph Ben-Tov (Minerva Foundation / Forschungszentrum Gotha)
 Published on H-German (January, 2010)
 Commissioned by Susan R. Boettcher
 
+
+[This work is licensed under a Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 United States License.]
 &lt;&lt;&lt;---via [[H-Net Reviews|https://www.h-net.org/reviews/showrev.php?id=25903]]
 
-&lt;&lt;&lt;Citation: Asaph Ben-Tov. Review of Beecher, Donald; Williams, Grant, eds., Ars Reminiscendi: Mind and Memory in Renaissance Culture. H-German, H-Net Reviews. January, 2010.
-URL: http://www.h-net.org/reviews/showrev.php?id=25903
+Solid sounding review of many pieces in the whole. I'd like to get this for some of the historical parts, some of the coverage of [[commonplace books]], but I'm not sure it's going to uncover some of the history I may currently be after. ---2020-05-01
 
-	This work is licensed under a Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 United States License.
-&lt;&lt;&lt;---via [[H-Net Reviews|https://www.h-net.org/reviews/showrev.php?id=25903]]
-
-Read on 2020-05-01
-
-Solid sounding review of many pieces in the whole. I'd like to get this for some of the historical parts, some of the coverage of [[commonplace books]], but I'm not sure it's going to uncover some of the history I may currently be after. ---2020-05-01</pre>
+---
+{{||$:/jab/viewtemplate/journalarticle}}</pre>
 </div>
 <div created="20200502041820725" creator="Chris Aldrich" modified="20200502204225256" modifier="Chris Aldrich" tags="Memory" title="Richard Frederick Foster">
 <pre>&lt;&lt;&lt;In 1907 The Mercury (a Hobart, Tasmania newspaper) compares the  [[Loisette|Alphonse Loisette]] and Pelman memory training systems and wrote that while Loisette relied upon the co-relation of ideas [[Pelman|Christof Ludwig Poehlmann]]  used a series of mental exercises and therefore the Pelman system:
@@ -20361,10 +20498,11 @@ by [[Mary Carruthers]]
 
 {{||$:/jab/viewtemplate/book}}</pre>
 </div>
-<div created="20200430213514838" creator="Chris Aldrich" modified="20200430213705324" modifier="Chris Aldrich" tags="[[Journal Article]] [[want to read]] Memory" title="The Duty of Memory: the Contradictions in Conrad Celtis’ Oratio (1492)">
+<div bookauthor="Danièle Letocha" bookmarkdate="" created="20200430213514838" creator="Chris Aldrich" journalurl="http://danieleletocha.com/index_htm_files/Letocha_ConradCeltis4.pdf" modified="20200503060357150" modifier="Chris Aldrich" tags="[[Journal Article]] Memory [[want to read]]" title="The Duty of Memory: the Contradictions in Conrad Celtis’ Oratio (1492)">
 <pre>[[The Duty of Memory: the Contradictions in Conrad Celtis’ Oratio (1492)|http://danieleletocha.com/index_htm_files/Letocha_ConradCeltis4.pdf]] by [[Danièle Letocha]]
 
-</pre>
+---
+{{||$:/jab/viewtemplate/journalarticle}}</pre>
 </div>
 <div created="20200427055358780" creator="Chris Aldrich" modified="20200427060523478" modifier="Chris Aldrich" tags="IndieWeb TiddlyWiki" title="The Garden and The Stream">
 <pre>!! an IndieWeb-like mini session about wikis
@@ -20426,7 +20564,7 @@ Chapter 7 has a section that lays out the [[memoria technica]] of [[Lewis Carrol
 ---
 {{||$:/jab/viewtemplate/book}}</pre>
 </div>
-<div bookauthor=" " created="20200502180915527" creator="Chris Aldrich" enddate=" " goodreads=" " modified="20200502181023778" modifier="Chris Aldrich" startdate=" " tags="Books [[want to read]] Memory" title="The Making of Memory in the Middle Ages">
+<div bookauthor=" Lucie Doležalová (ed,)" created="20200502180915527" creator="Chris Aldrich" enddate=" " goodreads=" " modified="20200503040308640" modifier="Chris Aldrich" startdate=" " tags="Books [[want to read]] Memory" title="The Making of Memory in the Middle Ages">
 <pre>by [[Lucie Doležalová]]  (Editor)
 
 ---
@@ -20500,7 +20638,7 @@ Below each tiddler (note card) is a list of links to any other tiddlers that lin
 
 &lt;span class=&quot;indent1&quot;&gt;&lt;$list filter=&quot;[is[system]tag[meta]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;caption&quot;/&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt;&lt;/span&gt;</pre>
 </div>
-<div created="20200128030902225" creator="Chris Aldrich" modified="20200424035452538" modifier="Chris Aldrich" tags="tb meta TiddlyWiki" title="TiddlyBlink home">
+<div caption="Home" created="20200128030902225" creator="Chris Aldrich" list-before="$:/core/ui/SideBar/Open" modified="20200503041854156" modifier="Chris Aldrich" tags="tb meta TiddlyWiki $:/tags/SideBar" title="TiddlyBlink home">
 <pre>&lt;&lt;tabs &quot;TiddlyBlink .topicList  .authorsList .booksList .articlesList .sourcesList  .hideList&quot; &quot;TiddlyBlink&quot; &gt;&gt;</pre>
 </div>
 <div color="#ffff00" created="20200405050432123" creator="Chris Aldrich" icon="$:/core/icon" modified="20200425012427217" modifier="Chris Aldrich" tags="Contents" title="TiddlyWiki">
@@ -20772,17 +20910,22 @@ c. 1800–1867 [[Major Bartlomiej Beniowski]] (Major System)
 tiddlywiki --rendertiddler $:/core/templates/static.template.html static.html text/plain
 tiddlywiki --rendertiddler $:/core/templates/static.template.css static/static.css text/plain&lt;/code&gt;&lt;/pre&gt;&lt;p style=&quot;box-sizing: border-box; color: rgb(0, 0, 0);&quot;&gt;I got an error&lt;span&gt; &lt;/span&gt;&lt;code style=&quot;box-sizing: border-box; font-family: SFMono-Regular, Consolas, &amp;quot;Liberation Mono&amp;quot;, Menlo, Courier, monospace; font-size: 1em; color: rgb(187, 0, 170); background-color: rgb(247, 247, 249); border: 1px solid rgb(225, 225, 232); white-space: pre-wrap; padding: 0px 3px 2px; border-radius: 3px;&quot;&gt;TypeError: Math.seedrandom is not a function&lt;/code&gt;&lt;span&gt; &lt;/span&gt;which was caused by the Shuffle plugin I use to generate&lt;span&gt; &lt;/span&gt;&lt;a class=&quot;tc-tiddlylink tc-tiddlylink-resolves&quot; href=&quot;https://rudimentarylathe.org/#Random%20Quote&quot; style=&quot;box-sizing: border-box; background-color: transparent; color: rgb(87, 120, 216); text-decoration: none; font-weight: normal; user-select: inherit; font-style: normal;&quot;&gt;Random Quote&lt;/a&gt;s. I disabled the plugin and re-ran the export with no errors.&lt;/p&gt;&lt;p style=&quot;box-sizing: border-box; color: rgb(0, 0, 0);&quot;&gt;See also:&lt;span&gt; &lt;/span&gt;&lt;a href=&quot;https://www.didaxy.com/exporting-static-sites-from-tiddlywiki&quot; class=&quot;tc-tiddlylink-external&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;box-sizing: border-box; background-color: inherit; color: rgb(17, 0, 153); text-decoration: none; font-weight: normal;&quot;&gt;https://www.didaxy.com/exporting-static-sites-from-tiddlywiki&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</pre>
 </div>
-<div created="20200430213840012" creator="Chris Aldrich" modified="20200430214219370" modifier="Chris Aldrich" tags="[[Journal Article]] Memory [[want to read]]" title="Valentinus de Monteviridi (Grünberg) and and the art of memory of Conrad Celtis">
+<div bookauthor="Farkas Gabor Kiss" bookmarkdate="2020-04-30 21:38:40012" created="20200430213840012" creator="Chris Aldrich" journalurl="https://www.academia.edu/1534795/_Valentinus_de_Monteviridi_Gr%C3%BCnberg_and_and_the_art_of_memory_of_Conrad_Celtis_in_Culture_of_Memory_in_East_Central_Europe_in_the_Late_Middle_Ages_and_the_Early_Modern_Period_ed._Rafa%C5%82_W%C3%B3jcik_Poznan_Biblioteka_Uniwersytecka_2008_105-118" modified="20200503060918126" modifier="Chris Aldrich" tags="[[Journal Article]] Memory [[want to read]]" title="Valentinus de Monteviridi (Grünberg) and and the art of memory of Conrad Celtis">
 <pre>&lt;&lt;&lt;Valentinus de Monteviridi (Grünberg) and and the art of memory of [[Conrad Celtis]] by [[Farkas Gabor Kiss]] in
 
 Culture of Memory in East Central Europe in the Late Middle Ages and the Early Modern Period, ed. Rafał Wójcik, Poznan: Biblioteka Uniwersytecka, 2008, 105-118.
 
 tags: art of memory Conrad Celtis Valentinus de Monteviridi lists Hungary late Middle Ages rhetoric
 
-&lt;&lt;&lt;---via [[Valentinus de Monteviridi (Grünberg) and and the art of memory of Conrad Celtis, in Culture of Memory in East Central Europe in the Late Middle Ages and the Early Modern Period, ed. Rafał Wójcik, Poznan: Biblioteka Uniwersytecka, 2008, 105-118. -  Farkas Gabor Kiss - Academia.edu|https://www.academia.edu/1534795/_Valentinus_de_Monteviridi_Gr%C3%BCnberg_and_and_the_art_of_memory_of_Conrad_Celtis_in_Culture_of_Memory_in_East_Central_Europe_in_the_Late_Middle_Ages_and_the_Early_Modern_Period_ed._Rafa%C5%82_W%C3%B3jcik_Poznan_Biblioteka_Uniwersytecka_2008_105-118]]</pre>
+&lt;&lt;&lt;---via [[Valentinus de Monteviridi (Grünberg) and and the art of memory of Conrad Celtis, in Culture of Memory in East Central Europe in the Late Middle Ages and the Early Modern Period, ed. Rafał Wójcik, Poznan: Biblioteka Uniwersytecka, 2008, 105-118. -  Farkas Gabor Kiss - Academia.edu|https://www.academia.edu/1534795/_Valentinus_de_Monteviridi_Gr%C3%BCnberg_and_and_the_art_of_memory_of_Conrad_Celtis_in_Culture_of_Memory_in_East_Central_Europe_in_the_Late_Middle_Ages_and_the_Early_Modern_Period_ed._Rafa%C5%82_W%C3%B3jcik_Poznan_Biblioteka_Uniwersytecka_2008_105-118]]
+
+{{||$:/jab/viewtemplate/journalarticle}}</pre>
 </div>
-<div created="20200424023645943" creator="Chris Aldrich" modified="20200424032732027" modifier="Chris Aldrich" tags="[[Journal Article]]" title="Waiting for Einstein: The dawn of a unified theory of biology may finally be upon us by Steven Wiley">
-<pre>[[Waiting for Einstein: The dawn of a unified theory of biology may finally be upon us by Steven Wiley - Sep 30, 2008, The Scientist Magazine|https://www.the-scientist.com/column/waiting-for-einstein-44755]]</pre>
+<div bookauthor="Steven Wiley" bookmarkdate="" created="20200424023645943" creator="Chris Aldrich" enddate="2020-04-23" journalurl="https://www.the-scientist.com/column/waiting-for-einstein-44755" modified="20200503055701545" modifier="Chris Aldrich" tags="[[Journal Article]] read" title="Waiting for Einstein: The dawn of a unified theory of biology may finally be upon us by Steven Wiley">
+<pre>[[Waiting for Einstein: The dawn of a unified theory of biology may finally be upon us by Steven Wiley - Sep 30, 2008, The Scientist Magazine|https://www.the-scientist.com/column/waiting-for-einstein-44755]]
+
+---
+{{||$:/jab/viewtemplate/journalarticle}}</pre>
 </div>
 <div created="20200430162954646" creator="Chris Aldrich" modified="20200430163045455" modifier="Chris Aldrich" tags="author Memory" title="Walter B. Gibson">
 <pre>Wrote a book [[How to develop an exceptional memory]] (1962)
