@@ -163,6 +163,8 @@ Error message and password prompt
 
 <li>.hideList</li>
 
+<li>.peopleList</li>
+
 <li>.sourcesList</li>
 
 <li>.topicList</li>
@@ -204,6 +206,8 @@ Error message and password prompt
 <li>$:/.user/CreateBook</li>
 
 <li>$:/.user/CreateJournalArticle</li>
+
+<li>$:/.user/CreateSource</li>
 
 <li>$:/boffosockostyles</li>
 
@@ -428,6 +432,8 @@ Error message and password prompt
 <li>$:/jab/viewtemplate/book</li>
 
 <li>$:/jab/viewtemplate/journalarticle</li>
+
+<li>$:/jab/viewtemplate/source</li>
 
 <li>$:/jd/fullscreen-editor/EditButton</li>
 
@@ -857,7 +863,27 @@ Error message and password prompt
 
 <li>2020-05-05 10:49:26 IndieWeb read</li>
 
+<li>2020-05-06</li>
+
+<li>2020-05-07</li>
+
+<li>2020-05-08</li>
+
+<li>2020-05-08 10:35:15 Lecture 22 New Standards in English</li>
+
 <li>2020-05-08 13:43:03 Custom Roam Research Themes</li>
+
+<li>2020-05-08 16:15:13 Adding a Wiki-like Section – Interdependent Thoughts</li>
+
+<li>2020-05-08 16:38:43 tag synonyms</li>
+
+<li>2020-05-08 17:55:26 Manual:Using MediaWiki as a content management system</li>
+
+<li>2020-05-08 23:14:13 TiddlyBlink sources</li>
+
+<li>2020-05-09</li>
+
+<li>2020-05-09 00:16:51 Robert Lowth ending sentences with a preposition</li>
 
 <li>3. Topics, sources and outlines?</li>
 
@@ -910,6 +936,8 @@ Error message and password prompt
 <li>Becoming Free Becoming Black</li>
 
 <li>Biography of Memory</li>
+
+<li>bliki</li>
 
 <li>Book review: &quot;Loisette&quot; exposed, together with Loisette’s Complete System of Physiological Memory.</li>
 
@@ -1000,6 +1028,10 @@ Error message and password prompt
 <li>David M. Roth</li>
 
 <li>Demo of TiddlyBlink for IndieWebCamp session</li>
+
+<li>Desmond Rivet</li>
+
+<li>DIKW pyramid</li>
 
 <li>Displaying Webmentions on TiddlyWiki</li>
 
@@ -1175,6 +1207,8 @@ Error message and password prompt
 
 <li>parataxis</li>
 
+<li>Pelmanism (or Poehlmannism)</li>
+
 <li>People</li>
 
 <li>Peter Ramus</li>
@@ -1219,6 +1253,8 @@ Error message and password prompt
 
 <li>Robert H. Nutt</li>
 
+<li>Robert Lowth</li>
+
 <li>Rodolphus Agricola</li>
 
 <li>Roger Bacon</li>
@@ -1228,6 +1264,8 @@ Error message and password prompt
 <li>RSS and Atom Feeds for TiddlyWiki</li>
 
 <li>Samuel Taylor</li>
+
+<li>Sarah Hibner</li>
 
 <li>Schedule</li>
 
@@ -1317,9 +1355,9 @@ Error message and password prompt
 
 <li>Turn TW5 bookmarklet into Chrome extension</li>
 
-<li>Untitled 1</li>
-
 <li>Valentinus de Monteviridi (Grünberg) and and the art of memory of Conrad Celtis</li>
+
+<li>virtue</li>
 
 <li>Waiting for Einstein: The dawn of a unified theory of biology may finally be upon us by Steven Wiley</li>
 
@@ -1390,14 +1428,14 @@ Error message and password prompt
 
 </pre>
 </div>
-<div caption="journal articles" created="20200424032124159" creator="Chris Aldrich" modified="20200503052019212" modifier="Chris Aldrich" tags="tb meta" title=".articlesList">
+<div caption="journal articles" created="20200424032124159" creator="Chris Aldrich" modified="20200509060647731" modifier="Chris Aldrich" tags="tb meta" title=".articlesList">
 <pre>Tag tiddlers with the tag `Journal Article` if they are journal articles. They will appear here and will also appear as references below the tiddlers linked to from them.
 
 &lt;$button tooltip=&quot;Add a Journal Article&quot;&gt;Add a Journal Article
 &lt;$action-createtiddler
 $basetitle='New Journal Article'
 text=&quot;
----
+
 {{||$:/jab/viewtemplate/journalarticle}}&quot;
 tags='[[Journal Article]]'
 bookauthor=' '
@@ -1420,7 +1458,7 @@ $param={{$:/.user/CreateJournalArticle!!newjournalarticle}}/&gt;
 &quot;$:/core/ui/ListItemTemplate&quot;
 placeholder:&quot;&quot; &gt;&gt;</pre>
 </div>
-<div caption="authors" created="20200424035130538" creator="Chris Aldrich" modified="20200424035421134" modifier="Chris Aldrich" tags="tb meta" title=".authorsList">
+<div caption="authors" created="20200424035130538" creator="Chris Aldrich" modified="20200509054543335" modifier="Chris Aldrich" tags="tb meta" title=".authorsList">
 <pre>Tag tiddlers with the tag `author` if they are the author of a book, journal article, miscellaneous book chapters, lectures, general articles, or webpages. They will appear here and will also appear as references below the tiddlers linked to from them.
 
 &lt;&lt;list-search
@@ -1473,8 +1511,38 @@ placeholder:&quot;&quot; &gt;&gt;</pre>
 &quot;$:/core/ui/ListItemTemplate&quot;
 placeholder:&quot;&quot; &gt;&gt;</pre>
 </div>
-<div caption="sources" created="20200131035322127" creator="Chris Aldrich" modified="20200424033717989" modifier="Chris Aldrich" tags="tb meta" title=".sourcesList">
+<div caption="people" created="20200509054333172" creator="Chris Aldrich" modified="20200509054541069" modifier="Chris Aldrich" tags="meta tb" title=".peopleList">
+<pre>Tag tiddlers with the tag `People` and they will appear here and will also appear as references below the tiddlers linked to from them.
+
+&lt;&lt;list-search
+&quot;[!is[system]tag[People]sort[title]]&quot;
+&quot;search&quot;
+&quot;$:/temp/list-search-example&quot;
+&quot;$:/core/ui/ListItemTemplate&quot;
+placeholder:&quot;&quot; &gt;&gt;</pre>
+</div>
+<div caption="sources" created="20200131035322127" creator="Chris Aldrich" modified="20200509060401457" modifier="Chris Aldrich" tags="tb meta" title=".sourcesList">
 <pre>Tag tiddlers with the tag `sources` if they are miscellaneous book chapters, lectures, general articles, or webpages. They will appear here and will also appear as references below the tiddlers linked to from them.
+
+&lt;$button tooltip=&quot;Add a source&quot;&gt;Add a source
+&lt;$action-createtiddler
+$basetitle='New Source Title'
+text=&quot;
+
+{{||$:/jab/viewtemplate/source}}&quot;
+tags='sources'
+bookauthor=' '
+bookmarkdate=' '
+startdate=' '
+enddate=' '
+journalurl=' '
+$savetitle='$:/.user/CreateSource!!newsource'
+/&gt;
+
+&lt;$action-sendmessage
+$message=&quot;tm-edit-tiddler&quot;
+$param={{$:/.user/CreateSource!!newsource}}/&gt;
+&lt;/$button&gt;
 
 &lt;&lt;list-search
 &quot;[!is[system]tag[sources]sort[title]]&quot;
@@ -1483,11 +1551,11 @@ placeholder:&quot;&quot; &gt;&gt;</pre>
 &quot;$:/core/ui/ListItemTemplate&quot;
 placeholder:&quot;&quot; &gt;&gt;</pre>
 </div>
-<div caption="topics" created="20200128030955660" creator="Chris Aldrich" modified="20200424041033843" modifier="Chris Aldrich" tags="tb meta" title=".topicList">
-<pre>Topics are any notes that do not have `202` in their title field (i.e., tiddlers created with the clock icon buttons), and are not tagged with any of the following tags: `hide`, `meta`, `outlines`, `author`, `books`, `journal articles` or `sources`. 
+<div caption="topics" created="20200128030955660" creator="Chris Aldrich" modified="20200509054719254" modifier="Chris Aldrich" tags="tb meta" title=".topicList">
+<pre>Topics are any notes that do not have `202` in their title field (i.e., tiddlers created with the clock icon buttons), and are not tagged with any of the following tags: `hide`, `meta`, `outlines`, `people`, `author`, `books`, `journal articles` or `sources`. 
 
 &lt;&lt;list-search
-&quot;[!is[system]!tag[task]!tag[sources]!tag[Books]!tag[author]!tag[Journal Article]!tag[meta]!tag[outlines]!tag[hide]!regexp:title[202]sort[title]]&quot;
+&quot;[!is[system]!tag[task]!tag[sources]!tag[Books]!tag[author]!tag[Journal Article]!tag[People]!tag[meta]!tag[outlines]!tag[hide]!regexp:title[202]sort[title]]&quot;
 &quot;search&quot;
 &quot;$:/temp/list-search-example&quot;
 &quot;$:/core/ui/ListItemTemplate&quot;
@@ -1632,7 +1700,7 @@ background-color: &lt;&lt;colour tiddler-info-background&gt;&gt;;}
 &lt;/$vars&gt;
 </pre>
 </div>
-<div caption="{{$:/core/images/new-journal-button}} {{$:/language/Buttons/NewJournal/Caption}}" created="20200102141336827" description="{{$:/language/Buttons/NewJournal/Hint}}" modified="20200304195043957" tags="tb $:/tags/PageControls" title="$:/.giffmex/buttons/newnote-datetime">
+<div caption="{{$:/core/images/new-journal-button}} {{$:/language/Buttons/NewJournal/Caption}}" created="20200102141336827" creator="Chris Aldrich" description="{{$:/language/Buttons/NewJournal/Hint}}" modified="20200509063549364" modifier="Chris Aldrich" tags="tb $:/tags/PageControls" title="$:/.giffmex/buttons/newnote-datetime">
 <pre>\define journalButton()
 &lt;$button tooltip={{$:/language/Buttons/NewJournal/Hint}} aria-label={{$:/language/Buttons/NewJournal/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt; actions={{$:/.giffmex/actions/new-journal}}&gt;
 &lt;$list filter=&quot;[&lt;tv-config-toolbar-icons&gt;match[yes]]&quot;&gt;
@@ -1643,8 +1711,7 @@ background-color: &lt;&lt;colour tiddler-info-background&gt;&gt;;}
 &lt;/$list&gt;
 &lt;/$button&gt;
 \end
-&lt;&lt;journalButton&gt;&gt;
-</pre>
+&lt;&lt;journalButton&gt;&gt;</pre>
 </div>
 <div caption="Customize TiddlyBlink" created="20200127211244101" modified="20200304195100291" tags="tb starthere meta" title="$:/.giffmex/Customize.TiddlyBlink">
 <pre>*Change the title and subtitle of this file
@@ -1774,21 +1841,18 @@ References: &lt;br&gt;
 &lt;$list filter=&quot;[!is[system]all[current]backlinks[]!tag[hide]!tag[outlines]sort[title]] -[is[current]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;span class=&quot;indent1&quot;&gt;&lt;$link&gt;&lt;span class=&quot;graybox&quot;&gt;&lt;$transclude field=&quot;text&quot; mode=&quot;block&quot; /&gt;&lt;/span&gt;&lt;/$link&gt;&lt;/span&gt;&lt;/$list&gt;
 </pre>
 </div>
-<div caption="{{$:/core/images/new-journal-button}} {{$:/language/Buttons/NewJournalHere/Caption}}" created="20200127162624895" description="{{$:/language/Buttons/NewJournalHere/Hint}}" modified="20200304195448159" tags="tb $:/tags/ViewToolbar" title="$:/.giffmex/ViewToolbar/new-note-here">
+<div caption="{{$:/core/images/new-journal-button}} {{$:/language/Buttons/NewJournalHere/Caption}}" created="20200127162624895" creator="Chris Aldrich" description="{{$:/language/Buttons/NewJournalHere/Hint}}" modified="20200509064128528" modifier="Chris Aldrich" tags="tb $:/tags/ViewToolbar" title="$:/.giffmex/ViewToolbar/new-note-here">
 <pre>\define button()
 &lt;$button class=&lt;&lt;tv-config-toolbar-class&gt;&gt; actions=&lt;&lt;actions&gt;&gt;&gt;
 {{$:/core/images/new-button}}
 &lt;/$button&gt;
 \end
-
 \define actions()
 &lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot; title=&lt;&lt;journalTitle&gt;&gt; text=&quot;&quot;&quot;[[$(tid)$]]&quot;&quot;&quot;/&gt;
 \end
-
 &lt;$wikify name=tid text=&lt;&lt;currentTiddler&gt;&gt;&gt;
 &lt;&lt;button&gt;&gt;
-&lt;/$wikify&gt;
-</pre>
+&lt;/$wikify&gt;</pre>
 </div>
 <div caption="{{$:/core/images/new-journal-button}} {{$:/language/Buttons/NewJournalHere/Caption}}" created="20200127185823887" description="{{$:/language/Buttons/NewJournalHere/Hint}}" modified="20200304195454038" tags="tb $:/tags/ViewToolbar" title="$:/.giffmex/ViewToolbar/new-note-here-datetime">
 <pre>\whitespace trim
@@ -1928,7 +1992,10 @@ placeholder=&quot;$placeholder$&quot;/&gt;
 <div created="20200410232939044" creator="Chris Aldrich" modified="20200505050519515" modifier="Chris Aldrich" newbook="New Book" title="$:/.user/CreateBook">
 <pre></pre>
 </div>
-<div created="20200503043936283" creator="Chris Aldrich" modified="20200505161120256" modifier="Chris Aldrich" newjournalarticle="New Journal Article" tags="" title="$:/.user/CreateJournalArticle">
+<div created="20200503043936283" creator="Chris Aldrich" modified="20200509060650252" modifier="Chris Aldrich" newjournalarticle="New Journal Article" tags="" title="$:/.user/CreateJournalArticle">
+<pre></pre>
+</div>
+<div created="20200509060403376" creator="Chris Aldrich" modified="20200509060403376" modifier="Chris Aldrich" newsource="New Source Title" title="$:/.user/CreateSource">
 <pre></pre>
 </div>
 <div created="20200412043025936" creator="Chris Aldrich" modified="20200412043237892" modifier="Chris Aldrich" tags="$:/tags/Stylesheet" title="$:/boffosockostyles" type="text/css">
@@ -11696,16 +11763,26 @@ tc-page-container tc-page-view-$(storyviewTitle)$ tc-language-$(languageTitle)$
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20200410232912951" creator="Chris Aldrich" modified="20200503053412617" modifier="Chris Aldrich" tags="" title="$:/jab/viewtemplate/book">
-<pre>* Author: {{!!bookauthor}}
+<div created="20200410232912951" creator="Chris Aldrich" modified="20200509055647594" modifier="Chris Aldrich" tags="" title="$:/jab/viewtemplate/book">
+<pre>---
+* Author: {{!!bookauthor}}
 * &lt;a href={{!!goodreads}}  target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Goodreads&lt;/a&gt;
 * Bookmark date: {{!!bookmarkdate}}
 * Started reading: {{!!startdate}}
 * Finished reading: {{!!enddate}}</pre>
 </div>
-<div created="20200503042942394" creator="Chris Aldrich" modified="20200503053424015" modifier="Chris Aldrich" tags="" title="$:/jab/viewtemplate/journalarticle">
-<pre>* Author: {{!!bookauthor}}
+<div created="20200503042942394" creator="Chris Aldrich" modified="20200509055704068" modifier="Chris Aldrich" tags="" title="$:/jab/viewtemplate/journalarticle">
+<pre>---
+* Author: {{!!bookauthor}}
 * &lt;a href={{!!journalurl}}  target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Journal URL&lt;/a&gt;
+* Bookmark date: {{!!bookmarkdate}}
+* Started reading: {{!!startdate}}
+* Finished reading: {{!!enddate}}</pre>
+</div>
+<div created="20200509055516437" creator="Chris Aldrich" modified="20200509055709918" modifier="Chris Aldrich" tags="" title="$:/jab/viewtemplate/source">
+<pre>---
+* Author: {{!!bookauthor}}
+* &lt;a href={{!!journalurl}}  target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;URL&lt;/a&gt;
 * Bookmark date: {{!!bookmarkdate}}
 * Started reading: {{!!startdate}}
 * Finished reading: {{!!enddate}}</pre>
@@ -15523,16 +15600,16 @@ exports.context = contextWidget;
 <div created="20200421041733675" creator="Chris Aldrich" modified="20200502013755208" modifier="Chris Aldrich" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200420035939423" creator="Chris Aldrich" modified="20200505173240013" modifier="Chris Aldrich" title="$:/state/sidebar">
+<div created="20200420035939423" creator="Chris Aldrich" modified="20200509074232572" modifier="Chris Aldrich" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20200503041345809" creator="Chris Aldrich" modified="20200505161119173" modifier="Chris Aldrich" title="$:/state/tab--1170504833">
-<pre>.articlesList</pre>
+<div created="20200503041345809" creator="Chris Aldrich" modified="20200509070953717" modifier="Chris Aldrich" title="$:/state/tab--1170504833">
+<pre>.authorsList</pre>
 </div>
-<div created="20200420040855088" creator="Chris Aldrich" modified="20200505052253765" modifier="Chris Aldrich" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
+<div created="20200420040855088" creator="Chris Aldrich" modified="20200509065319499" modifier="Chris Aldrich" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
-<div created="20200427023732570" creator="Chris Aldrich" modified="20200427023739565" modifier="Chris Aldrich" title="$:/state/tab--1568374741">
+<div created="20200427023732570" creator="Chris Aldrich" modified="20200509061017756" modifier="Chris Aldrich" title="$:/state/tab--1568374741">
 <pre>$:/plugins/flibbles/relink/ui/TiddlerInfo/References</pre>
 </div>
 <div created="20200421212241606" creator="Chris Aldrich" modified="20200424045936339" modifier="Chris Aldrich" title="$:/state/tab--1963855381">
@@ -15550,8 +15627,8 @@ exports.context = contextWidget;
 <div created="20200422053350756" creator="Chris Aldrich" modified="20200424045917483" modifier="Chris Aldrich" title="$:/state/tab--959111941">
 <pre>$:/core/ui/ControlPanel/TiddlerFields</pre>
 </div>
-<div created="20200424023242836" creator="Chris Aldrich" modified="20200503051943692" modifier="Chris Aldrich" title="$:/state/tab-11433013">
-<pre>.articlesList</pre>
+<div created="20200424023242836" creator="Chris Aldrich" modified="20200509060838512" modifier="Chris Aldrich" title="$:/state/tab-11433013">
+<pre>TiddlyBlink</pre>
 </div>
 <div created="20200422043634987" creator="Chris Aldrich" modified="20200422043638291" modifier="Chris Aldrich" title="$:/state/tab-1163638994">
 <pre>$:/core/ui/MoreSideBar/Plugins/Plugins</pre>
@@ -15559,8 +15636,8 @@ exports.context = contextWidget;
 <div created="20200429075416311" creator="Chris Aldrich" modified="20200429075417347" modifier="Chris Aldrich" title="$:/state/tab-1528275152">
 <pre>$:/core/ui/DefaultSearchResultList</pre>
 </div>
-<div created="20200421044252317" creator="Chris Aldrich" modified="20200505055207839" modifier="Chris Aldrich" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Info</pre>
+<div created="20200421044252317" creator="Chris Aldrich" modified="20200509061643998" modifier="Chris Aldrich" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
 <div created="20200424043246383" creator="Chris Aldrich" modified="20200424043307235" modifier="Chris Aldrich" title="$:/state/tab-2041214758">
 <pre>$:/plugins/flibbles/relink/ui/TiddlerInfo/References</pre>
@@ -15571,11 +15648,11 @@ exports.context = contextWidget;
 <div created="20200421210443948" creator="Chris Aldrich" modified="20200424223628341" modifier="Chris Aldrich" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20200421041846067" creator="Chris Aldrich" modified="20200507054410076" modifier="Chris Aldrich" title="$:/state/tab/sidebar--595412856">
-<pre>Contents</pre>
+<div created="20200421041846067" creator="Chris Aldrich" modified="20200509074939675" modifier="Chris Aldrich" title="$:/state/tab/sidebar--595412856">
+<pre>TiddlyBlink home</pre>
 </div>
-<div created="20200421044255149" creator="Chris Aldrich" modified="20200503193745898" modifier="Chris Aldrich" title="$:/state/tabs/controlpanel/toolbars-1345989671">
-<pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
+<div created="20200421044255149" creator="Chris Aldrich" modified="20200509070736615" modifier="Chris Aldrich" title="$:/state/tabs/controlpanel/toolbars-1345989671">
+<pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
 <div created="20200422163825227" creator="Chris Aldrich" modified="20200422163825227" modifier="Chris Aldrich" title="$:/state/toc/Books-Books that Matter: The City of God-1823460956">
 <pre>open</pre>
@@ -15592,19 +15669,19 @@ exports.context = contextWidget;
 <div title="$:/state/toc/Contents-IndieWeb-1843068618">
 <pre>close</pre>
 </div>
-<div created="20200420040235346" creator="Chris Aldrich" modified="20200503062012743" modifier="Chris Aldrich" title="$:/state/toc/Contents-Journal-1843068618">
+<div created="20200420040235346" creator="Chris Aldrich" modified="20200509074733650" modifier="Chris Aldrich" title="$:/state/toc/Contents-Journal-1843068618">
 <pre>close</pre>
 </div>
 <div created="20200422071600285" creator="Chris Aldrich" modified="20200422071637694" modifier="Chris Aldrich" title="$:/state/toc/Contents-Journal-390914735">
 <pre>open</pre>
 </div>
-<div created="20200421041908640" creator="Chris Aldrich" modified="20200508054933309" modifier="Chris Aldrich" title="$:/state/toc/Contents-People-1843068618">
-<pre>open</pre>
+<div created="20200421041908640" creator="Chris Aldrich" modified="20200509074323876" modifier="Chris Aldrich" title="$:/state/toc/Contents-People-1843068618">
+<pre>close</pre>
 </div>
-<div created="20200421213725221" creator="Chris Aldrich" modified="20200504025033841" modifier="Chris Aldrich" title="$:/state/toc/Contents-Quotes-1843068618">
-<pre>open</pre>
+<div created="20200421213725221" creator="Chris Aldrich" modified="20200509074740986" modifier="Chris Aldrich" title="$:/state/toc/Contents-Quotes-1843068618">
+<pre>close</pre>
 </div>
-<div created="20200421213726883" creator="Chris Aldrich" modified="20200425051925351" modifier="Chris Aldrich" title="$:/state/toc/Contents-Tasks-1843068618">
+<div created="20200421213726883" creator="Chris Aldrich" modified="20200509074328783" modifier="Chris Aldrich" title="$:/state/toc/Contents-Tasks-1843068618">
 <pre>close</pre>
 </div>
 <div created="20200421041848800" creator="Chris Aldrich" modified="20200503200752669" modifier="Chris Aldrich" title="$:/state/toc/Contents-TiddlyWiki-1843068618">
@@ -15616,8 +15693,8 @@ exports.context = contextWidget;
 <div created="20200421213731705" creator="Chris Aldrich" modified="20200421213731705" modifier="Chris Aldrich" title="$:/state/toc/Contents-WordPress-1843068618">
 <pre>close</pre>
 </div>
-<div created="20200421213732647" creator="Chris Aldrich" modified="20200503025744665" modifier="Chris Aldrich" title="$:/state/toc/Contents-Words-1843068618">
-<pre>close</pre>
+<div created="20200421213732647" creator="Chris Aldrich" modified="20200509074801959" modifier="Chris Aldrich" title="$:/state/toc/Contents-Words-1843068618">
+<pre>open</pre>
 </div>
 <div created="20200427051740298" creator="Chris Aldrich" modified="20200503025746448" modifier="Chris Aldrich" title="$:/state/toc/Contents/Articles-Bookmarklet for pasting content into TiddlyWiki-1843068618">
 <pre>close</pre>
@@ -15646,13 +15723,13 @@ exports.context = contextWidget;
 <div created="20200319022404294" creator="h" modified="20200402074333095" modifier="Chris ldrich" title="$:/status/UserName">
 <pre>Chris Aldrich</pre>
 </div>
-<div created="20200508204355170" creator="Chris Aldrich" list=". Articles task ToDo Books [[Journal Article]]" modified="20200508210543525" modifier="Chris Aldrich" title="$:/StoryList">
+<div created="20200509074334529" creator="Chris Aldrich" list=". Articles task ToDo Books [[Journal Article]]" modified="20200509074804711" modifier="Chris Aldrich" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200127163609843" list="$:/jd/fullscreen-editor/EditButton $:/core/ui/Buttons/delete $:/core/ui/Buttons/cancel $:/core/ui/Buttons/save" modified="20200304200339220" tags="tb" title="$:/tags/EditToolbar">
 <pre></pre>
 </div>
-<div created="20200127183739219" list="$:/core/ui/Buttons/home $:/core/ui/Buttons/close-all $:/core/ui/Buttons/fold-all $:/core/ui/Buttons/unfold-all $:/core/ui/Buttons/permaview $:/core/ui/Buttons/new-tiddler $:/.giffmex/buttons/newnote-datetime $:/core/ui/Buttons/new-journal $:/core/ui/Buttons/new-image $:/core/ui/Buttons/import $:/core/ui/Buttons/export-page $:/core/ui/Buttons/control-panel $:/core/ui/Buttons/advanced-search $:/core/ui/Buttons/manager $:/core/ui/Buttons/tag-manager $:/core/ui/Buttons/language $:/core/ui/Buttons/palette $:/core/ui/Buttons/theme $:/core/ui/Buttons/storyview $:/core/ui/Buttons/encryption $:/core/ui/Buttons/timestamp $:/core/ui/Buttons/full-screen $:/core/ui/Buttons/print $:/core/ui/Buttons/save-wiki $:/core/ui/Buttons/refresh $:/core/ui/Buttons/more-page-actions" modified="20200304200346297" tags="tb" title="$:/tags/PageControls">
+<div created="20200127183739219" creator="Chris Aldrich" list="$:/core/ui/Buttons/home $:/core/ui/Buttons/close-all $:/core/ui/Buttons/fold-all $:/core/ui/Buttons/unfold-all $:/core/ui/Buttons/permaview $:/core/ui/Buttons/new-tiddler $:/.giffmex/buttons/newnote-datetime $:/core/ui/Buttons/new-journal $:/core/ui/Buttons/new-image $:/core/ui/Buttons/import $:/core/ui/Buttons/export-page $:/core/ui/Buttons/control-panel $:/core/ui/Buttons/advanced-search $:/core/ui/Buttons/manager $:/core/ui/Buttons/tag-manager $:/core/ui/Buttons/language $:/core/ui/Buttons/palette $:/core/ui/Buttons/theme $:/core/ui/Buttons/storyview $:/core/ui/Buttons/encryption $:/core/ui/Buttons/timestamp $:/core/ui/Buttons/full-screen $:/core/ui/Buttons/print $:/core/ui/Buttons/save-wiki $:/core/ui/Buttons/refresh $:/core/ui/Buttons/more-page-actions" modified="20200509061804210" modifier="Chris Aldrich" tags="tb" title="$:/tags/PageControls">
 <pre></pre>
 </div>
 <div created="20200128153730498" list="$:/core/ui/ViewTemplate/title $:/core/ui/ViewTemplate/unfold $:/core/ui/ViewTemplate/subtitle $:/core/ui/ViewTemplate/tags $:/core/ui/ViewTemplate/classic $:/core/ui/ViewTemplate/body $:/.giffmex/ViewTemplate/viewfullnotes $:/.giffmex/ViewTemplate/refscontext $:/.giffmex/ViewTemplate/refslinks $:/.giffmex/ViewTemplate/refstranscludecollapse" modified="20200304200353810" tags="tb" title="$:/tags/ViewTemplate">
@@ -15661,8 +15738,8 @@ exports.context = contextWidget;
 <div created="20200127144249151" list="$:/.giffmex/ViewToolbar/new-note-here $:/.giffmex/ViewToolbar/new-note-here-datetime $:/.giffmex/viewtoolbar/viewrefs $:/jd/fullscreen-editor/EditButton $:/core/ui/Buttons/more-tiddler-actions $:/core/ui/Buttons/info $:/core/ui/Buttons/new-here $:/core/ui/Buttons/new-journal-here $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/edit $:/core/ui/Buttons/delete $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/core/ui/Buttons/open-window $:/core/ui/Buttons/close-others $:/core/ui/Buttons/close $:/core/ui/Buttons/fold-others $:/core/ui/Buttons/fold" modified="20200304200401109" tags="tb" title="$:/tags/ViewToolbar">
 <pre></pre>
 </div>
-<div created="20200420040853437" creator="Chris Aldrich" modified="20200508205226007" modifier="Chris Aldrich" title="$:/temp/advancedsearch">
-<pre>org mode</pre>
+<div created="20200420040853437" creator="Chris Aldrich" modified="20200509065312581" modifier="Chris Aldrich" title="$:/temp/advancedsearch">
+<pre>$:/.giffmex/buttons/newnote-datetime</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -15722,8 +15799,8 @@ exports.context = contextWidget;
     }
 }</pre>
 </div>
-<div created="20200424032003839" creator="Chris Aldrich" modified="20200505065027983" modifier="Chris Aldrich" title="$:/temp/list-search-example">
-<pre>celtes</pre>
+<div created="20200424032003839" creator="Chris Aldrich" modified="20200509054206285" modifier="Chris Aldrich" title="$:/temp/list-search-example">
+<pre></pre>
 </div>
 <div created="20200421073823368" creator="Chris Aldrich" modified="20200505161347090" modifier="Chris Aldrich" title="$:/temp/NewTagName">
 <pre></pre>
@@ -15731,7 +15808,7 @@ exports.context = contextWidget;
 <div created="20200424053408609" creator="Chris Aldrich" modified="20200503194126030" modifier="Chris Aldrich" title="$:/temp/sbartidddisplayvalue">
 <pre>Timeline of Memory</pre>
 </div>
-<div created="20200420040849447" creator="Chris Aldrich" modified="20200508205226008" modifier="Chris Aldrich" title="$:/temp/search">
+<div created="20200420040849447" creator="Chris Aldrich" modified="20200509074800108" modifier="Chris Aldrich" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20200402080210759" creator="Chris Aldrich" modified="20200424045933554" modifier="Chris Aldrich" title="$:/theme">
@@ -17621,11 +17698,12 @@ Although [[Celtis|Conrad Celtes]] rejected the use of such figurative letters an
 
 [[Bruno Furst]] would definitely have had access to data like this in the Encyclopedia Bitannica at the time he began studying with [[Christof Ludwig Poehlmann]] in 1911 as he's indicated.</pre>
 </div>
-<div created="20200505070826986" creator="Chris Aldrich" modified="20200505071215565" modifier="Chris Aldrich" tags="" title="2020-05-04 14:37:26 Marcus Dwight Larrowe Obituary">
-<pre>&lt;&lt;&lt;Obituary record of the graduates of the undergraduate schools, deceased 1860-70--1950/51
+<div created="20200505070826986" creator="Chris Aldrich" modified="20200509054121379" modifier="Chris Aldrich" tags="Memory" title="2020-05-04 14:37:26 Marcus Dwight Larrowe Obituary">
+<pre>[[Obituary record of the graduates of the undergraduate schools, deceased 1860-70--1950/51 : Yale University |https://archive.org/details/1890t1900obituary00yaleuoft/page/386/mode/2up/search/loisette]]
 
-&lt;&lt;&lt;---via [[Obituary record of the graduates of the undergraduate schools, deceased 1860-70--1950/51 : Yale University : Free Download, Borrow, and Streaming : Internet Archive|https://archive.org/details/1890t1900obituary00yaleuoft/page/386/mode/2up/search/loisette]]
+Entire entry reads as follows:
 
+&lt;&lt;&lt;
 [[Marcus Dwight Larrowe|Alphonse Loisette]]
 , son of John and Elizabeth (Holmes)  
 
@@ -17651,7 +17729,9 @@ and he died in the Palace Hotel of the latter city on February 5 1896, two weeks
 He was married August 16, 1864, to Nina, daughter of James
 Churchman, of Austin, Nev. The marriage was an unhappy one and they were subsequently divorced. He was married again,
 April 14, 1891, to Ida M. Hough, of New York City, who survives him.
-</pre>
+&lt;&lt;&lt;
+
+hat tip to [[Pelmanism (or Poehlmannism)]] for the reference</pre>
 </div>
 <div created="20200505053534209" creator="Chris Aldrich" modified="20200505053657032" modifier="Chris Aldrich" tags="" title="2020-05-04 22:35:34 Celtes primacy in alphabet">
 <pre>5/4/2020 11:33 PM
@@ -17749,6 +17829,54 @@ chrisaldrich, can you make sure any &quot;number of people who are thinking abou
 
 </pre>
 </div>
+<div created="20200509074536633" creator="Chris Aldrich" modified="20200509074609029" modifier="Chris Aldrich" tags="Journal" title="2020-05-06">
+<pre>!! Weather
+
+
+!!Notes
+
+
+!! Tiddlers Created
+{{{ [sameday:created[20200506]]+[!is[system]] }}}
+{{{ [sameday:created[20200506]]+[is[system]] }}}
+
+</pre>
+</div>
+<div created="20200509074458012" creator="Chris Aldrich" modified="20200509074617055" modifier="Chris Aldrich" tags="Journal" title="2020-05-07">
+<pre>!! Weather
+
+
+!!Notes
+
+
+!! Tiddlers Created
+{{{ [sameday:created[20200507]]+[!is[system]] }}}
+{{{ [sameday:created[20200507]]+[is[system]] }}}
+
+</pre>
+</div>
+<div created="20200508234022350" creator="Chris Aldrich" modified="20200509074628032" modifier="Chris Aldrich" tags="Journal" title="2020-05-08">
+<pre>!! Weather
+84 F sunny but hazy
+
+!!Notes
+
+
+!! Tiddlers Created
+{{{ [sameday:created[20200508]]+[!is[system]] }}}
+{{{ [sameday:created[20200508]]+[is[system]] }}}
+
+</pre>
+</div>
+<div created="20200509072015531" creator="Chris Aldrich" modified="20200509073456677" modifier="Chris Aldrich" tags="" title="2020-05-08 10:35:15 Lecture 22 New Standards in English">
+<pre>&lt;&lt;&lt;
+Lexicography and the success of Johnson's &lt;em&gt;Dictionary&lt;/em&gt; fed into the larger debate about how language should be studied and taught. Here, meet several influential writers from the late 18th century who crystallized this debate. Also, look at several words that reflect the larger cultural problem of linguistic usage and social behavior.
+&lt;&lt;&lt;
+
+Discussion of prescriptivist [[Robert Lowth]] compared with [[Joseph Priestley]]
+
+[[The History of the English Language, 2nd Edition]]</pre>
+</div>
 <div created="20200508204303926" creator="Chris Aldrich" modified="20200508204453893" modifier="Chris Aldrich" tags="" title="2020-05-08 13:43:03 Custom Roam Research Themes">
 <pre>&lt;&lt;&lt;
 You can write your own custom [[RoamResearch.com|Roam Research]] themes using the stylus extension in chrome. Maggie Appleton has came up with the idea to override the styles with your own.
@@ -17758,6 +17886,60 @@ I’ve been maintaining a Night Owl theme (s/o to Sarah Drasner for the original
 &lt;&lt;&lt;---via [[Custom Roam Research Themes|https://www.ianjones.us/blog/rr-themes/]]
 
 [[wikis]]</pre>
+</div>
+<div created="20200508231513010" creator="Chris Aldrich" modified="20200508231741282" modifier="Chris Aldrich" syndication="https://hyp.is/vmN7NpGBEeqt56vB-3P8Fg/www.zylstra.org/blog/2018/04/adding-a-wiki-like-section/" tags="" title="2020-05-08 16:15:13 Adding a Wiki-like Section – Interdependent Thoughts">
+<pre>&lt;&lt;&lt;In short to add wiki-style functionality to my blog, the only functionality that is really needed is that 1) I myself have a edit button on static items, 2) the ability to categorise and tag those items, and 3) keep those items outside of the blog posting stream on the front page, and outside of the RSS feed. WordPress pages fit that description, when I’m logged in, and after adding a plugin to allow categories and tags on pages. So a page based section it is, or rather, will be over time.
+
+&lt;&lt;&lt;---via [[Adding a Wiki-like Section – Interdependent Thoughts|https://www.zylstra.org/blog/2018/04/adding-a-wiki-like-section/]]
+
+I like the idea of this and the overall structure. It reminds me a bit of [[Wikity]] which may provide this functionality plus a bit more. I really need to spin up a version and play around with it to see if it will give me what I'm looking for in terms of a blog linked with [[wiki|wikis]]-like functionality.</pre>
+</div>
+<div created="20200508233843359" creator="Chris Aldrich" modified="20200508234020872" modifier="Chris Aldrich" tags="" title="2020-05-08 16:38:43 tag synonyms">
+<pre>I quite like the idea of having a system that could handle tag synonyms for redirection. 
+
+Particularly think of the variations of the idea of ars memoria across space and time that I'd love to have.
+
+Stack Exchange has an interesting set up for this: 
+https://math.stackexchange.com/tags/mnemonic/synonyms
+
+[[taxonomies]]</pre>
+</div>
+<div created="20200509005526627" creator="Chris Aldrich" modified="20200509005646973" modifier="Chris Aldrich" tags="" title="2020-05-08 17:55:26 Manual:Using MediaWiki as a content management system">
+<pre>&lt;&lt;&lt;This manual page is outdated. It was written for an older version of MediaWiki and may not apply to the most recent version. If you have checked or updated this page and found the content to be suitable, please remove this notice. See the talk page for a possible discussion on this.
+MediaWiki can be used as a &quot;CMS&quot; content management system, e.g. if you want to create a [[bliki]] (combination blog/wiki). Before going this route, you may want to consider factors involved in deciding whether to use a wiki as your website type.
+
+&lt;&lt;&lt;---via [[Manual:Using MediaWiki as a content management system - MediaWiki|https://www.mediawiki.org/wiki/Manual:Using_MediaWiki_as_a_content_management_system]]
+
+There are some useful bits hiding on this page for using [[MediaWiki]] as a single user CMS.</pre>
+</div>
+<div created="20200509061413721" creator="Chris Aldrich" modified="20200509063803664" modifier="Chris Aldrich" tags="[[TiddlyWiki Changelog]]" title="2020-05-08 23:14:13 TiddlyBlink sources">
+<pre>Updated TiddlyBlink home to add a button on sources to more quickly add sources and appropriate metadata.
+
+Tweaked the templates for books, journal articles to include the horizontal line in the template rather than separately in the Tiddler itself.
+
+Added a `people` tab and had the other appropriate tabs filter out that tag as necessary.
+
+Got rid of empty line at the bottom of $:/.giffmex/buttons/newnote-datetime which removed extra white space in the Page Toolbar after the clock icon.
+</pre>
+</div>
+<div created="20200509074630925" creator="Chris Aldrich" modified="20200509074653627" modifier="Chris Aldrich" tags="Journal" title="2020-05-09">
+<pre>!! Weather
+
+
+!!Notes
+
+
+!! Tiddlers Created
+{{{ [sameday:created[20200509]]+[!is[system]] }}}
+{{{ [sameday:created[20200509]]+[is[system]] }}}
+
+</pre>
+</div>
+<div created="20200509071651085" creator="Chris Aldrich" modified="20200509071809050" modifier="Chris Aldrich" tags="" title="2020-05-09 00:16:51 Robert Lowth ending sentences with a preposition">
+<pre>&lt;&lt;&lt;[[His|Robert Lowth]] most famous contribution to the study of [[grammar]] may have been his tentative suggestion that sentences ending with a preposition—such as &quot;what did you ask for?&quot;—are inappropriate in formal writing. (This is known as preposition stranding.)
+
+&lt;&lt;&lt;---via [[Robert Lowth - Wikipedia|https://en.wikipedia.org/wiki/Robert_Lowth]]
+</pre>
 </div>
 <div created="20200131204708032" modified="20200201142455128" tags="starthere meta" title="3. Topics, sources and outlines?" type="application/x-tiddler">
 <pre>I have created some optional features for ~TiddlyBlink. Feel free to ignore them and just create notes and connect them by links. But you may find some of these features helpful:
@@ -17800,8 +17982,8 @@ I’ve been maintaining a Night Owl theme (s/o to Sarah Drasner for the original
 *The ~TiddlyWiki [[Google group|https://groups.google.com/forum/#!forum/tiddlywiki]]
 *[ext[TiddlyWiki toolmap|https://dynalist.io/d/zUP-nIWu2FFoXH-oM7L7d9DM]], a list of plugins you can use with ~TiddlyBlink</pre>
 </div>
-<div bookauthor="Major Beniowski" created="20200428234826065" creator="Chris Aldrich" enddate="2020-04-28" goodreads="https://www.goodreads.com/review/show/3307135886" modified="20200429011257995" modifier="Chris Aldrich" startdate="2020-04-28" tags="Books read" title="A Handbook of Phrenotypics">
-<pre>&lt;a href=&quot;https://www.goodreads.com/book/show/53291623-a-handbook-of-phrenotypics-for-teachers-and-students-part-1&quot; style=&quot;float: left; padding-right: 20px&quot;&gt;&lt;img border=&quot;0&quot; alt=&quot;A Handbook of Phrenotypics for Teachers and Students, Part 1&quot; src=&quot;https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1588111732l/53291623._SY160_.jpg&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/53291623-a-handbook-of-phrenotypics-for-teachers-and-students-part-1&quot;&gt;A Handbook of Phrenotypics for Teachers and Students, Part 1&lt;/a&gt; by [[Major Beniowski]]&lt;br/&gt;
+<div bookauthor="Major Beniowski" created="20200428234826065" creator="Chris Aldrich" enddate="2020-04-28" goodreads="https://www.goodreads.com/review/show/3307135886" modified="20200509055239748" modifier="Chris Aldrich" startdate="2020-04-28" tags="Books read" title="A Handbook of Phrenotypics">
+<pre>&lt;a href=&quot;https://www.goodreads.com/book/show/53291623-a-handbook-of-phrenotypics-for-teachers-and-students-part-1&quot; style=&quot;float: left; padding-right: 20px&quot;&gt;&lt;img border=&quot;0&quot; alt=&quot;A Handbook of Phrenotypics for Teachers and Students, Part 1&quot; src=&quot;https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1588111732l/53291623._SY160_.jpg&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/53291623-a-handbook-of-phrenotypics-for-teachers-and-students-part-1&quot;&gt;A Handbook of Phrenotypics for Teachers and Students, Part 1&lt;/a&gt; by [[Major Bartlomiej Beniowski]]&lt;br/&gt;
 &lt;br /&gt;
 &lt;br /&gt;
 
@@ -18234,6 +18416,9 @@ Tts_version 2.1-final-6-g58a4a27
 
 {{||$:/jab/viewtemplate/book}}</pre>
 </div>
+<div created="20200509005444095" creator="Chris Aldrich" modified="20200509005511422" modifier="Chris Aldrich" tags="Words" title="bliki">
+<pre>Portmanteau of the words blog and [[wiki|wikis]].</pre>
+</div>
 <div bookauthor="Staff" bookmarkdate="2020-04-29" created="20200429182825962" creator="Chris Aldrich" enddate="2020-04-29" journalurl="https://science.sciencemag.org/content/ns-12/285/31.4" modified="20200503061942751" modifier="Chris Aldrich" tags="[[Journal Article]] read" title="Book review: &quot;Loisette&quot; exposed, together with Loisette’s Complete System of Physiological Memory.">
 <pre>[[&quot;Loisette&quot; exposed, together with Loisette’s Complete System of Physiological Memory. By G. S. FELLOWS. New York, The Author. 8‡ 25 cents; Science|https://science.sciencemag.org/content/ns-12/285/31.4]]
 
@@ -18376,7 +18561,7 @@ And of course if you know how to pipe content into a TW5 instance by means of RS
 
 Sadly, it appears that none of them are quite what I'm looking for. [[Scott Kingery]]'s comes somewhat close...</pre>
 </div>
-<div color="#008040" created="20200407192320592" creator="Chris Aldrich" icon="$:/images/fa5/solid/book" list-before="$:/core/ui/SideBar/Open" modified="20200503053654482" modifier="Chris Aldrich" tags="$:/tags/SideBar hide" title="Books">
+<div color="#008040" created="20200407192320592" creator="Chris Aldrich" icon="$:/images/fa5/solid/book" list-before="$:/core/ui/SideBar/Open" modified="20200509064302148" modifier="Chris Aldrich" tags="$:/tags/SideBar hide" title="Books">
 <pre>&lt;$button tooltip=&quot;Add a book&quot;&gt;Add a book
 &lt;$action-createtiddler
 $basetitle='New Book'
@@ -18754,7 +18939,7 @@ Ramus praised Quintilian for his idea of 'dividing and composing' to indicate th
 <div created="20200422174708734" creator="Chris Aldrich" modified="20200424040925678" modifier="Chris Aldrich" tags="hide" title="Chris Aldrich">
 <pre>[[About]]</pre>
 </div>
-<div created="20200502014258050" creator="Chris Aldrich" modified="20200502204645998" modifier="Chris Aldrich" tags="author Memory" title="Christof Ludwig Poehlmann">
+<div created="20200502014258050" creator="Chris Aldrich" modified="20200509053509738" modifier="Chris Aldrich" tags="author Memory" title="Christof Ludwig Poehlmann">
 <pre>''[[Christof Ludwig Poehlmann]]'' aka ''Christopher Louis Pelman'' (Anglicized) aka ''Ludwig Poehlmann'' (as known to [[Bruno Furst]] in Germany)
 
 Born: 1867 according to https://www.nli.org.il/en/books/NNL_ALEPH990030898980205171/NLI
@@ -18775,7 +18960,13 @@ https://www.ennever.com/histories/history386p.php?sitever=standard  which indica
 &lt;&lt;&lt;Christof Ludwig Poehlmann, as he was known in his own training booklets, had returned to Germany from London in about 1910 where he became a book publisher in Charlottenburg, Berlin and by about 1914 had published not only the books listed above but also a series of booklets teaching a memory system described as Poehlmann's 'world-renowned method in the tried and tested self-teaching of long-term memorization' (translated from the German). This was a correspondence course with ten booklets and answer sheets which, on completion, were returned to Poehlmann, annotated and returned to the student, exactly as the Pelman school courses were managed.
 
 &lt;&lt;&lt;---via [[The Pelman Schools, The Pelman Institute and Pelmanism]]
-</pre>
+
+
+!! Publications
+* The 1905 Gedächtnislehre: ihre Regeln und deren Anwendung aufs praktische Leben (Memory teaching: its Laws and their application to practical life - the German equivalent of booklets mentioned at the Ennever site as published in the 1880s-90s with author Christopher Louis Pelman)
+* 1911 Die Kunst zu denken: richtig, erfolgreich zu denken (The art of thinking: true, successful thinking)
+* 1914 Poehlmann's Geistes-Schulung und -Pflege (Poehlmann's mind-training and maintenance)
+* 1914 Erfolge: Lebenserfahrungen eines alten Mannes, niedergeschrieben für solche, die etwas erreichen wollen (Successes: life experiences of an old man, written for those who want to achieve something).</pre>
 </div>
 <div created="20200424225455118" creator="Chris Aldrich" modified="20200424225547373" modifier="Chris Aldrich" tags="author" title="Christopher Alexander">
 <pre>!! Books
@@ -18892,6 +19083,19 @@ https://geniimagazine.com/wiki/index.php?title=David_M._Roth
 </div>
 <div created="20200427063102387" creator="Chris Aldrich" modified="20200427063328299" modifier="Chris Aldrich" tags="task" title="Demo of TiddlyBlink for IndieWebCamp session">
 <pre>https://indieweb.org/2020/Pop-ups/Demos#The_Garden_and_the_Stream_Demos</pre>
+</div>
+<div created="20200509000152836" creator="Chris Aldrich" modified="20200509005437113" modifier="Chris Aldrich" tags="People IndieWeb" title="Desmond Rivet">
+<pre>* [[Wiki|wikis]]: https://wiki.desmondrivet.com/
+* Website: https://desmondrivet.com/
+
+Ran into the word [[bliki]] on his site.</pre>
+</div>
+<div created="20200508230927032" creator="Chris Aldrich" modified="20200508231057211" modifier="Chris Aldrich" tags="" title="DIKW pyramid">
+<pre>&lt;&lt;&lt;The DIKW pyramid, also known variously as the DIKW hierarchy, wisdom hierarchy, knowledge hierarchy, information hierarchy, and the data pyramid,[1] refers loosely to a class of models[2] for representing purported structural and/or functional relationships between data, information, knowledge, and wisdom. &quot;Typically information is defined in terms of data, knowledge in terms of information, and wisdom in terms of knowledge&quot;.
+
+&lt;&lt;&lt;---via [[DIKW pyramid - Wikipedia|https://en.wikipedia.org/wiki/DIKW_pyramid]]
+
+This could be interesting to explore, but feels very &quot;soft&quot; on it's face. How might it fit into a broader contextualization with respect to [[Memory]] and history? What about within [[Lynne Kelly]]'s overarching theory?</pre>
 </div>
 <div created="20200426234731459" creator="Chris Aldrich" modified="20200427050053794" modifier="Chris Aldrich" tags="IndieWeb TiddlyWiki Articles" title="Displaying Webmentions on TiddlyWiki">
 <pre>I've previously written about setting up receiving [[Webmention for TiddlyWiki]] by logging into webmention.io and creating an account to delegate the receipt of the notifications.
@@ -20607,15 +20811,22 @@ At 15 minute mark before topic coverage, do a group photo for those who would li
 
 [[The Garden and The Stream]]</pre>
 </div>
-<div created="20200501215850349" creator="Chris Aldrich" modified="20200501215942960" modifier="Chris Aldrich" tags="Words" title="panegyric">
-<pre>; pan·e·gyr·ic
-/ˌpanəˈjirik/ noun
+<div created="20200501215850349" creator="Chris Aldrich" modified="20200509061201582" modifier="Chris Aldrich" tags="Words" title="panegyric">
+<pre>pan·e·gyr·ic /ˌpanəˈjirik/ noun
 
+; panegyric
 : a public speech or published text in praise of someone or something.</pre>
 </div>
-<div created="20200417210854923" creator="Chris Aldrich" modified="20200417210938097" modifier="Chris Aldrich" tags="Words" title="parataxis">
-<pre>; Parataxis 
-: (from Greek παράταξις &quot;act of placing side by side&quot;, from παρα para &quot;beside&quot; + τάξις táxis &quot;arrangement&quot;) is a literary technique, in writing or speaking, that favors short, simple sentences, without conjunctions or with the use of coordinating, but not with subordinating conjunctions. It contrasts with syntaxis and hypotaxis.</pre>
+<div created="20200417210854923" creator="Chris Aldrich" modified="20200509061335377" modifier="Chris Aldrich" tags="Words" title="parataxis">
+<pre>; parataxis 
+: a literary technique, in writing or speaking, that favors short, simple sentences, without conjunctions or with the use of coordinating, but not with subordinating conjunctions. It contrasts with syntaxis and hypotaxis.
+
+(from Greek παράταξις &quot;act of placing side by side&quot;, from παρα para &quot;beside&quot; + τάξις táxis &quot;arrangement&quot;)</pre>
+</div>
+<div bookauthor="Ray Girvan" created="20200509053652427" creator="Chris Aldrich" journalurl="http://jsbookreader.blogspot.com/2009/08/pelmanism-or-poehlmannism.html" modified="20200509053841006" modifier="Chris Aldrich" tags="sources" title="Pelmanism (or Poehlmannism)">
+<pre>http://jsbookreader.blogspot.com/2009/08/pelmanism-or-poehlmannism.html
+
+[[Christof Ludwig Poehlmann]], [[Alphonse Loisette]]</pre>
 </div>
 <div color="#00ff80" created="20200415184642530" creator="Chris Aldrich" modified="20200503040107597" modifier="Chris Aldrich" tags="Contents hide" title="People">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
@@ -20683,14 +20894,14 @@ Example:
 <div color="#0080ff" created="20200405050418448" creator="Chris Aldrich" modified="20200405050418448" modifier="Chris Aldrich" title="productivity">
 <pre></pre>
 </div>
-<div created="20200503200757829" creator="Chris Aldrich" modified="20200503201022206" modifier="Chris Aldrich" tags="Words" title="protreptic">
-<pre>; protreptic 
-: an utterance (such as a speech) designed to instruct and persuade
-
-pro·​trep·​tic | \ prō-ˈtrep-tik  \
+<div created="20200503200757829" creator="Chris Aldrich" modified="20200509061239303" modifier="Chris Aldrich" tags="Words" title="protreptic">
+<pre>pro·​trep·​tic | \ prō-ˈtrep-tik  \
 noun
 
 protreptic, adjective
+
+; protreptic 
+: an utterance (such as a speech) designed to instruct and persuade
 
 First Known Use of protreptic
 1678, in the meaning defined above
@@ -20859,6 +21070,19 @@ Son: Robert H Nutt Jr (1929-2009)
 
 Lots of personal history in this FCC document: https://books.googleusercontent.com/books/content?req=AKW5Qae2V4o3yV80ftS60xAOVBOepCag0k3jwq5tKhLUoi7ZxEa0D5TgJ5jVdQk1j84BOX2Exk5KfebfcDpOAn6aWuMCzCv_LetKd9GxL3PrniOQXQWu04I8qgnnFZE8gKld1vEz4pGaEdjWvFVsf9AJ72ThY6ghHDj3nK8LO2cJ3P5lDnLObRxFBzJfZTn8EEnlD-gWan60WppnHaXTkyuX96ssuJGYqd_0y3_CRAexYmjN-klsTVN3pDtie0VsCOCw2NWtucVNx0gmNnjwqC_zrrh-oqFWVaWP3T-FnuLGvxQ0KYQzcEY</pre>
 </div>
+<div created="20200509070946585" creator="Chris Aldrich" modified="20200509074012896" modifier="Chris Aldrich" tags="author" title="Robert Lowth">
+<pre>''Robert Lowth'' FRS (/laʊð/; 27 November 1710 – 3 November 1787) was a Bishop of the Church of England, Oxford Professor of Poetry and the author of one of the most influential textbooks of English grammar.
+
+[img  width=150 [https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Robert_Lowth%2C_after_RE_Pine.jpg/330px-Robert_Lowth%2C_after_RE_Pine.jpg]]
+
+!! Grammar
+{{2020-05-09 00:16:51 Robert Lowth ending sentences with a preposition}}
+
+!! Publications
+* Praelectiones Academicae de Sacra Poesi Hebraeorum (On the Sacred Poetry of the Hebrews) (1754)
+** An English translation was published by George Gregory in 1787 as &quot;Lectures on the Sacred Poetry of the Hebrews&quot;. This and subsequent editions include the life of Bishop Lowth as a preface. There was a further [[edition issued in 1815|https://books.google.com/books?id=V0AAAAAAYAAJ&amp;pg=PR1&amp;dq=editions:ISBN0766188558#v=onepage&amp;q=editions%3AISBN0766188558&amp;f=false]]. This was republished in North America in 1829 with some additional notes. However, apart from those notes, the 1829 edition is less useful to a modern reader.
+* [[A Short Introduction to English Grammar]] (1762)</pre>
+</div>
 <div created="20200429213152644" creator="Chris Aldrich" modified="20200429214221299" modifier="Chris Aldrich" tags="author Memory" title="Rodolphus Agricola">
 <pre>&lt;&lt;&lt;''Rodolphus Agricola'' (Latin: ''Rudolphus Agricola Phrisius''; August 28, 1443 or February 17, 1444[1] – October 27, 1485) was a pre-Erasmian humanist of the northern Low Countries, famous for his supple Latin and one of the first north of the Alps to know Greek well. Agricola was a Hebrew scholar towards the end of his life, an educator, musician and builder of a church organ, a poet in Latin as well as the vernacular, a diplomat and a sportsman of sorts (boxing).[citation needed] He is best known today as the author of De inventione dialectica, as the father of northern European humanism and as a zealous anti-scholastic in the late-fifteenth century.
 
@@ -20957,6 +21181,20 @@ He also published a book on angling in 1800, titled Angling in All Its Branches.
 * Melin, Olof Werling. Stenografiens historia. 1. osa. Tukholma: Nordiska Bokhandeln, 1927.
 
 &lt;&lt;&lt;---via [[Samuel Taylor (stenographer) - Wikipedia|https://en.wikipedia.org/wiki/Samuel_Taylor_(stenographer)]]</pre>
+</div>
+<div created="20200508230009886" creator="Chris Aldrich" modified="20200508230247092" modifier="Chris Aldrich" tags="People" title="Sarah Hibner">
+<pre>*bhttp://sarah-hibner.com/ 
+* https://mastodon.technology/@universal_traveler
+
+&lt;&lt;&lt;Hello world, my name's Sarah – I'm constantly curious and easily distracted. The intersection between #media, #tech and #culture fascinate me because they're bidirectional forces that affect and are affected by society. My current personal projects involve media analysis and online bookmarking.
+
+Pinned toot
+Jun 11, 2018
+
+Some of my other interests include #design, #futurology, #humanism, #webdev, #science, learning #programming, and exploring the human #mind.
+&lt;&lt;&lt;
+
+Attended [[The Garden and The Stream]] session</pre>
 </div>
 <div created="20200422072837499" creator="Chris Aldrich" modified="20200422072911416" modifier="Chris Aldrich" tags="[[Home school]]" title="Schedule">
 <pre>* 8:05 line up
@@ -21421,7 +21659,7 @@ Chapter 7 has a section that lays out the [[memoria technica]] of [[Lewis Carrol
 
  [[Mike Caulfield]]</pre>
 </div>
-<div created="20200502041923587" creator="Chris Aldrich" modified="20200505070322078" modifier="Chris Aldrich" tags="sources Memory [[want to read]]" title="The Pelman Schools, The Pelman Institute and Pelmanism">
+<div created="20200502041923587" creator="Chris Aldrich" modified="20200508234239013" modifier="Chris Aldrich" tags="sources Memory [[want to read]] task" title="The Pelman Schools, The Pelman Institute and Pelmanism">
 <pre>https://www.ennever.com/histories/history386p.php?sitever=standard
 
 by Barry Ennever
@@ -21449,8 +21687,8 @@ Below each tiddler (note card) is a list of links to any other tiddlers that lin
 
 &lt;span class=&quot;indent1&quot;&gt;&lt;$list filter=&quot;[is[system]tag[meta]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;caption&quot;/&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt;&lt;/span&gt;</pre>
 </div>
-<div caption="Home" created="20200128030902225" creator="Chris Aldrich" list-before="$:/core/ui/SideBar/Open" modified="20200503041854156" modifier="Chris Aldrich" tags="tb meta TiddlyWiki $:/tags/SideBar" title="TiddlyBlink home">
-<pre>&lt;&lt;tabs &quot;TiddlyBlink .topicList  .authorsList .booksList .articlesList .sourcesList  .hideList&quot; &quot;TiddlyBlink&quot; &gt;&gt;</pre>
+<div caption="Home" created="20200128030902225" creator="Chris Aldrich" list-before="$:/core/ui/SideBar/Open" modified="20200509060833471" modifier="Chris Aldrich" tags="tb meta TiddlyWiki $:/tags/SideBar" title="TiddlyBlink home">
+<pre>&lt;&lt;tabs &quot;TiddlyBlink .topicList  .authorsList .booksList .articlesList .sourcesList .peopleList .hideList&quot; &quot;TiddlyBlink&quot; &gt;&gt;</pre>
 </div>
 <div color="#ffff00" created="20200405050432123" creator="Chris Aldrich" icon="$:/core/icon" modified="20200425012427217" modifier="Chris Aldrich" tags="Contents" title="TiddlyWiki">
 <pre>''[[TiddlyWiki|https://tiddlywiki.com]]'' is the software that runs this website.
@@ -21722,11 +21960,6 @@ c. 1800–1867 [[Major Bartlomiej Beniowski]] (Major System)
 
 [[Chrome extension]] [[bookmarklets]]</pre>
 </div>
-<div title="Untitled 1">
-<pre>&lt;div class=&quot;tc-tiddler-title&quot; style=&quot;box-sizing: border-box; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;div class=&quot;tc-titlebar&quot; style=&quot;box-sizing: border-box; font-weight: 500; font-size: 2.35em; line-height: 1.2em; color: rgb(24, 41, 85); margin: 0px; overflow: hidden;&quot;&gt;&lt;span style=&quot;box-sizing: border-box;&quot;&gt;&lt;h2 class=&quot;tc-title&quot; style=&quot;box-sizing: border-box; line-height: 1.2; font-weight: 500; font-size: 1em; display: inline; margin-top: 0.3em; margin-bottom: 0.3em;&quot;&gt;Exporting TiddlyWiki as static website&lt;/h2&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot; tc-reveal&quot; style=&quot;box-sizing: border-box; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;div class=&quot;tc-subtitle&quot; style=&quot;box-sizing: border-box; font-size: 0.9em; color: rgb(192, 192, 192); font-weight: 500;&quot;&gt;Apr 22nd 2020&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot; tc-reveal&quot; style=&quot;box-sizing: border-box; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;div class=&quot;tc-tags-wrapper&quot; style=&quot;box-sizing: border-box; margin: 4px 0px 14px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;tc-tiddler-body tc-reveal&quot; style=&quot;box-sizing: border-box; clear: both; zoom: 1; font-size: 15px; line-height: 22px; font-weight: 500; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;p style=&quot;box-sizing: border-box; color: rgb(0, 0, 0);&quot;&gt;&lt;a href=&quot;https://nesslabs.com/tiddlywiki-static-website-generator&quot; class=&quot;tc-tiddlylink-external&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;box-sizing: border-box; background-color: inherit; color: rgb(17, 0, 153); text-decoration: none; font-weight: normal;&quot;&gt;This post&lt;/a&gt;&lt;span&gt; &lt;/span&gt;from&lt;span&gt; &lt;/span&gt;&lt;a class=&quot;tc-tiddlylink tc-tiddlylink-resolves&quot; href=&quot;https://rudimentarylathe.org/#Anne-Laure%20Le%20Cunff&quot; style=&quot;box-sizing: border-box; background-color: transparent; color: rgb(87, 120, 216); text-decoration: none; font-weight: normal; user-select: inherit; font-style: normal;&quot;&gt;Anne-Laure Le Cunff&lt;/a&gt;&lt;span&gt; &lt;/span&gt;got me thinking about making the wiki into a static website.&lt;/p&gt;&lt;p style=&quot;box-sizing: border-box; color: rgb(0, 0, 0);&quot;&gt;Commands are below. I had to run these in bash rather than&lt;span&gt; &lt;/span&gt;&lt;a class=&quot;tc-tiddlylink tc-tiddlylink-resolves&quot; href=&quot;https://rudimentarylathe.org/#Fish%20Shell&quot; style=&quot;box-sizing: border-box; background-color: transparent; color: rgb(87, 120, 216); text-decoration: none; font-weight: normal; user-select: inherit; font-style: normal;&quot;&gt;Fish Shell&lt;/a&gt;&lt;span&gt; &lt;/span&gt;because Fish threw errors. I think it's probably due to the&lt;span&gt; &lt;/span&gt;&lt;code style=&quot;box-sizing: border-box; font-family: SFMono-Regular, Consolas, &amp;quot;Liberation Mono&amp;quot;, Menlo, Courier, monospace; font-size: 1em; color: rgb(187, 0, 170); background-color: rgb(247, 247, 249); border: 1px solid rgb(225, 225, 232); white-space: pre-wrap; padding: 0px 3px 2px; border-radius: 3px;&quot;&gt;$&lt;/code&gt;&lt;span&gt; &lt;/span&gt;so I'll figure out escaping those later.&lt;/p&gt;&lt;pre style=&quot;box-sizing: border-box; font-family: SFMono-Regular, Consolas, &amp;quot;Liberation Mono&amp;quot;, Menlo, Courier, monospace; font-size: 1em; display: block; margin-top: 1em; margin-bottom: 1em; word-break: normal; overflow-wrap: break-word; white-space: pre-wrap; background-color: rgb(245, 245, 245); border: 1px solid rgb(204, 204, 204); padding: 0px 3px 2px; border-radius: 3px;&quot;&gt;&lt;code style=&quot;box-sizing: border-box; font-family: SFMono-Regular, Consolas, &amp;quot;Liberation Mono&amp;quot;, Menlo, Courier, monospace; font-size: 1em; color: inherit; background-color: inherit; border: none; white-space: pre-wrap; padding: 0px; border-radius: 3px;&quot;&gt;tiddlywiki --rendertiddlers [!is[system]] $:/core/templates/static.tiddler.html static text/plain
-tiddlywiki --rendertiddler $:/core/templates/static.template.html static.html text/plain
-tiddlywiki --rendertiddler $:/core/templates/static.template.css static/static.css text/plain&lt;/code&gt;&lt;/pre&gt;&lt;p style=&quot;box-sizing: border-box; color: rgb(0, 0, 0);&quot;&gt;I got an error&lt;span&gt; &lt;/span&gt;&lt;code style=&quot;box-sizing: border-box; font-family: SFMono-Regular, Consolas, &amp;quot;Liberation Mono&amp;quot;, Menlo, Courier, monospace; font-size: 1em; color: rgb(187, 0, 170); background-color: rgb(247, 247, 249); border: 1px solid rgb(225, 225, 232); white-space: pre-wrap; padding: 0px 3px 2px; border-radius: 3px;&quot;&gt;TypeError: Math.seedrandom is not a function&lt;/code&gt;&lt;span&gt; &lt;/span&gt;which was caused by the Shuffle plugin I use to generate&lt;span&gt; &lt;/span&gt;&lt;a class=&quot;tc-tiddlylink tc-tiddlylink-resolves&quot; href=&quot;https://rudimentarylathe.org/#Random%20Quote&quot; style=&quot;box-sizing: border-box; background-color: transparent; color: rgb(87, 120, 216); text-decoration: none; font-weight: normal; user-select: inherit; font-style: normal;&quot;&gt;Random Quote&lt;/a&gt;s. I disabled the plugin and re-ran the export with no errors.&lt;/p&gt;&lt;p style=&quot;box-sizing: border-box; color: rgb(0, 0, 0);&quot;&gt;See also:&lt;span&gt; &lt;/span&gt;&lt;a href=&quot;https://www.didaxy.com/exporting-static-sites-from-tiddlywiki&quot; class=&quot;tc-tiddlylink-external&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;box-sizing: border-box; background-color: inherit; color: rgb(17, 0, 153); text-decoration: none; font-weight: normal;&quot;&gt;https://www.didaxy.com/exporting-static-sites-from-tiddlywiki&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</pre>
-</div>
 <div bookauthor="Farkas Gabor Kiss" bookmarkdate="2020-04-30 21:38:40012" created="20200430213840012" creator="Chris Aldrich" enddate="2020-05-04 15:40" journalurl="https://www.academia.edu/1534795/_Valentinus_de_Monteviridi_Gr%C3%BCnberg_and_and_the_art_of_memory_of_Conrad_Celtis_in_Culture_of_Memory_in_East_Central_Europe_in_the_Late_Middle_Ages_and_the_Early_Modern_Period_ed._Rafa%C5%82_W%C3%B3jcik_Poznan_Biblioteka_Uniwersytecka_2008_105-118" modified="20200505013340261" modifier="Chris Aldrich" tags="[[Journal Article]] Memory read" title="Valentinus de Monteviridi (Grünberg) and and the art of memory of Conrad Celtis">
 <pre>&lt;&lt;&lt;Valentinus de Monteviridi (Grünberg) and and the art of memory of [[Conrad Celtis]] by [[Farkas Gabor Kiss]] in
 
@@ -21737,6 +21970,25 @@ tags: art of memory Conrad Celtis Valentinus de Monteviridi lists Hungary late M
 &lt;&lt;&lt;---via [[Valentinus de Monteviridi (Grünberg) and and the art of memory of Conrad Celtis, in Culture of Memory in East Central Europe in the Late Middle Ages and the Early Modern Period, ed. Rafał Wójcik, Poznan: Biblioteka Uniwersytecka, 2008, 105-118. -  Farkas Gabor Kiss - Academia.edu|https://www.academia.edu/1534795/_Valentinus_de_Monteviridi_Gr%C3%BCnberg_and_and_the_art_of_memory_of_Conrad_Celtis_in_Culture_of_Memory_in_East_Central_Europe_in_the_Late_Middle_Ages_and_the_Early_Modern_Period_ed._Rafa%C5%82_W%C3%B3jcik_Poznan_Biblioteka_Uniwersytecka_2008_105-118]]
 
 {{||$:/jab/viewtemplate/journalarticle}}</pre>
+</div>
+<div created="20200509073502499" creator="Chris Aldrich" modified="20200509074231146" modifier="Chris Aldrich" tags="Words task" title="virtue">
+<pre>vir·tue /ˈvərCHo͞o/ noun
+
+noun: virtue; plural noun: virtues
+
+;virtue
+:behavior showing high moral standards.
+example: &quot;paragons of virtue&quot;
+
+:(in traditional Christian angelology) the seventh highest order of the ninefold celestial hierarchy.
+
+
+!!Origin
+Middle English: from Old French vertu, from Latin virtus ‘valor, merit, moral perfection’, from vir ‘man’.
+
+[img  width=450 [https://www.gstatic.com/onebox/dictionary/etymology/en/desktop/555c334284f1da38b69f33e1b471ccbfda3fcb376d35e4174112ce2e582eaf34.png]]
+
+Discussion of the progression of the word appears in [[Lecture 22|2020-05-08 10:35:15 Lecture 22 New Standards in English]] of [[The History of the English Language, 2nd Edition]] at about 10:58 into the lecture.</pre>
 </div>
 <div bookauthor="Steven Wiley" bookmarkdate="" created="20200424023645943" creator="Chris Aldrich" enddate="2020-04-23" journalurl="https://www.the-scientist.com/column/waiting-for-einstein-44755" modified="20200503055701545" modifier="Chris Aldrich" tags="[[Journal Article]] read" title="Waiting for Einstein: The dawn of a unified theory of biology may finally be upon us by Steven Wiley">
 <pre>[[Waiting for Einstein: The dawn of a unified theory of biology may finally be upon us by Steven Wiley - Sep 30, 2008, The Scientist Magazine|https://www.the-scientist.com/column/waiting-for-einstein-44755]]
